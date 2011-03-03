@@ -1,0 +1,8 @@
+{% extends "localboats/base.html" %}
+
+{% block title %} {{ block.super }} : No. {{ boat.number }}, {{ boat.name }}{% endblock %}
+
+{% block content %}
+	<h1>{{ boat.name }}<h2>
+{% endblock %}
+{{ boat }}

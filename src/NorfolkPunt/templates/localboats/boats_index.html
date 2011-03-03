@@ -1,0 +1,15 @@
+{% extends "localboats/base.html" %}
+
+{% block title %}{{ block.super }} : Boats{% endblock %}
+
+{% block content %}
+	<ul>
+	{% for boat in boats %}
+	    <li><a href="/boats/{{ boat.number }}/">{{ boat.name }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}
+
+
+
+

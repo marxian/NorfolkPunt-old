@@ -1,0 +1,527 @@
+[
+  {
+    "pk": "Arthur R Batchelor", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "C. W. Stewart", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Colin McDougall", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Dr B.M. Tracey", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Dr M. Tracey", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Dr R Farman", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Dr R.U. Carr", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "G. Dunthorne", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "H A Morris", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "J Cooke", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "J. M. Evans", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Jane Pye", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "John Parker", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "M. Boardman", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Mrs B.M. Tracey", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Mrs R. Farman", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "N. Monk", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "National Maritime Museum", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Norfolk Education Committee", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "P. Butters", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Richard Parker", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Rupert Redington", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "S. Butters", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "S. H. Morris", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Theta Club", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Unknown", 
+    "model": "localboats.person", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Colin McDougall", 
+    "model": "localboats.boatbuilder", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Eastwood and Whelpton of Upton", 
+    "model": "localboats.boatbuilder", 
+    "fields": {}
+  }, 
+  {
+    "pk": "H G Woods", 
+    "model": "localboats.boatbuilder", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Unknown", 
+    "model": "localboats.boatbuilder", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Dick Wyche", 
+    "model": "localboats.designer", 
+    "fields": {}
+  }, 
+  {
+    "pk": "Unknown", 
+    "model": "localboats.designer", 
+    "fields": {}
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": "Dick Wyche", 
+      "name": "Hard Chine"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": "Unknown", 
+      "name": "Traditional"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "GRP"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Wood"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1978, 
+      "name": "Grebe", 
+      "handicap": 908, 
+      "builder": "Colin McDougall", 
+      "construction": 1, 
+      "design": 1
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1962, 
+      "name": "Wild Goose", 
+      "handicap": 908, 
+      "builder": "Eastwood and Whelpton of Upton", 
+      "construction": 2, 
+      "design": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": null, 
+      "year_built": 1916, 
+      "name": "Shrimp", 
+      "handicap": null, 
+      "builder": "H G Woods", 
+      "construction": 2, 
+      "design": 2
+    }
+  }, 
+  {
+    "pk": 0, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": null, 
+      "year_built": 1936, 
+      "name": "Sanderling", 
+      "handicap": null, 
+      "builder": "Unknown", 
+      "construction": 2, 
+      "design": 2
+    }
+  }, 
+  {
+    "pk": -1, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 20.0, 
+      "year_built": 1936, 
+      "name": "Blue Winged Olive", 
+      "handicap": null, 
+      "builder": "Unknown", 
+      "construction": 2, 
+      "design": 2
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Rupert Redington", 
+      "owned_from": 2010, 
+      "owned_to": null, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Jane Pye", 
+      "owned_from": 2002, 
+      "owned_to": null, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "P. Butters", 
+      "owned_from": 2000, 
+      "owned_to": 2010, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "S. Butters", 
+      "owned_from": 2000, 
+      "owned_to": 2010, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "J Cooke", 
+      "owned_from": 2000, 
+      "owned_to": null, 
+      "boat": 0
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "National Maritime Museum", 
+      "owned_from": 1994, 
+      "owned_to": null, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Dr R Farman", 
+      "owned_from": 1991, 
+      "owned_to": 2000, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Mrs R. Farman", 
+      "owned_from": 1991, 
+      "owned_to": 2000, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "J. M. Evans", 
+      "owned_from": 1991, 
+      "owned_to": 1994, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Colin McDougall", 
+      "owned_from": 1989, 
+      "owned_to": 1991, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "John Parker", 
+      "owned_from": 1989, 
+      "owned_to": 1989, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "C. W. Stewart", 
+      "owned_from": 1988, 
+      "owned_to": 1989, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Richard Parker", 
+      "owned_from": 1985, 
+      "owned_to": 1998, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "John Parker", 
+      "owned_from": 1983, 
+      "owned_to": null, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "N. Monk", 
+      "owned_from": 1979, 
+      "owned_to": 1983, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "G. Dunthorne", 
+      "owned_from": 1978, 
+      "owned_to": 1985, 
+      "boat": 66
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Dr R.U. Carr", 
+      "owned_from": 1975, 
+      "owned_to": 1979, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Norfolk Education Committee", 
+      "owned_from": 1967, 
+      "owned_to": 1991, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Theta Club", 
+      "owned_from": 1965, 
+      "owned_to": 2000, 
+      "boat": 0
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Dr B.M. Tracey", 
+      "owned_from": 1962, 
+      "owned_to": 1975, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Dr M. Tracey", 
+      "owned_from": 1962, 
+      "owned_to": 1962, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Mrs B.M. Tracey", 
+      "owned_from": 1962, 
+      "owned_to": 1962, 
+      "boat": 53
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Unknown", 
+      "owned_from": 1936, 
+      "owned_to": 1965, 
+      "boat": 0
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "Arthur R Batchelor", 
+      "owned_from": 1936, 
+      "owned_to": null, 
+      "boat": -1
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "M. Boardman", 
+      "owned_from": 1930, 
+      "owned_to": 1967, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "S. H. Morris", 
+      "owned_from": 1924, 
+      "owned_to": 1930, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": "H A Morris", 
+      "owned_from": 1916, 
+      "owned_to": 1924, 
+      "boat": 1
+    }
+  }
+]
