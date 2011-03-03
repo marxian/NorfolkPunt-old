@@ -43,8 +43,8 @@ class Construction(models.Model):
         return self.name
     
 class Boat(models.Model):
-    number = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
+    sail_number = models.IntegerField(blank=True)
     loa = models.FloatField(blank=True, null=True)
     handicap = models.IntegerField(blank=True, null=True)
     construction = models.ForeignKey(Construction, blank=True, related_name='examples')
@@ -54,7 +54,9 @@ class Boat(models.Model):
     design = models.ForeignKey(Design, blank=True, related_name='examples')
     
     class Meta:
-        ordering = ['-number']
+        ordering = ['-sail_number']
+        unique_together = (("name", "sail_number"),)
+
     
     def __unicode__(self):
         return self.name

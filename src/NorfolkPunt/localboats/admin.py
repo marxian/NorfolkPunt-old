@@ -7,10 +7,10 @@ class OwnershipInline(admin.StackedInline):
 
 class BoatAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['name', 'number', 'year_built']}),
+        (None,               {'fields': ['name', 'sail_number', 'year_built']}),
         ('Details', {'fields': ['handicap', 'loa', 'design', 'builder', 'construction'], 'classes': ['collapse']}),
     ]
-    list_display = ('name', 'number')
+    list_display = ('name', 'sail_number')
 
 
     inlines = [OwnershipInline]

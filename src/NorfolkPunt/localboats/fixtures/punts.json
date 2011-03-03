@@ -179,18 +179,18 @@
     "pk": 1, 
     "model": "localboats.construction", 
     "fields": {
-      "name": "GRP"
+      "name": "Fibreglass"
     }
   }, 
   {
     "pk": 2, 
     "model": "localboats.construction", 
     "fields": {
-      "name": "Wood"
+      "name": "All Wood"
     }
   }, 
   {
-    "pk": 66, 
+    "pk": 1, 
     "model": "localboats.boat", 
     "fields": {
       "loa": 22.0, 
@@ -199,11 +199,12 @@
       "handicap": 908, 
       "builder": "Colin McDougall", 
       "construction": 1, 
-      "design": 1
+      "design": 1,
+	  "sail_number": 66
     }
   }, 
   {
-    "pk": 53, 
+    "pk": 2, 
     "model": "localboats.boat", 
     "fields": {
       "loa": 22.0, 
@@ -212,11 +213,12 @@
       "handicap": 908, 
       "builder": "Eastwood and Whelpton of Upton", 
       "construction": 2, 
-      "design": 1
+      "design": 1,
+	  "sail_number": 53
     }
   }, 
   {
-    "pk": 1, 
+    "pk": 3, 
     "model": "localboats.boat", 
     "fields": {
       "loa": null, 
@@ -225,11 +227,12 @@
       "handicap": null, 
       "builder": "H G Woods", 
       "construction": 2, 
-      "design": 2
+      "design": 2,
+	  "sail_number": 1
     }
   }, 
   {
-    "pk": 0, 
+    "pk": 4, 
     "model": "localboats.boat", 
     "fields": {
       "loa": null, 
@@ -238,11 +241,12 @@
       "handicap": null, 
       "builder": "Unknown", 
       "construction": 2, 
-      "design": 2
+      "design": 2,
+	  "sail_number": 0
     }
   }, 
   {
-    "pk": -1, 
+    "pk": 5, 
     "model": "localboats.boat", 
     "fields": {
       "loa": 20.0, 
@@ -251,7 +255,8 @@
       "handicap": null, 
       "builder": "Unknown", 
       "construction": 2, 
-      "design": 2
+      "design": 2,
+	  "sail_number": 0
     }
   }, 
   {
@@ -261,7 +266,7 @@
       "owner": "Rupert Redington", 
       "owned_from": 2010, 
       "owned_to": null, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -271,7 +276,7 @@
       "owner": "Jane Pye", 
       "owned_from": 2002, 
       "owned_to": null, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -281,7 +286,7 @@
       "owner": "P. Butters", 
       "owned_from": 2000, 
       "owned_to": 2010, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -291,7 +296,7 @@
       "owner": "S. Butters", 
       "owned_from": 2000, 
       "owned_to": 2010, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -301,7 +306,7 @@
       "owner": "J Cooke", 
       "owned_from": 2000, 
       "owned_to": null, 
-      "boat": 0
+      "boat": 4
     }
   }, 
   {
@@ -311,7 +316,7 @@
       "owner": "National Maritime Museum", 
       "owned_from": 1994, 
       "owned_to": null, 
-      "boat": 1
+      "boat": 3
     }
   }, 
   {
@@ -321,7 +326,7 @@
       "owner": "Dr R Farman", 
       "owned_from": 1991, 
       "owned_to": 2000, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -331,7 +336,7 @@
       "owner": "Mrs R. Farman", 
       "owned_from": 1991, 
       "owned_to": 2000, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -341,7 +346,7 @@
       "owner": "J. M. Evans", 
       "owned_from": 1991, 
       "owned_to": 1994, 
-      "boat": 1
+      "boat": 3
     }
   }, 
   {
@@ -351,7 +356,7 @@
       "owner": "Colin McDougall", 
       "owned_from": 1989, 
       "owned_to": 1991, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -361,7 +366,7 @@
       "owner": "John Parker", 
       "owned_from": 1989, 
       "owned_to": 1989, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -371,7 +376,7 @@
       "owner": "C. W. Stewart", 
       "owned_from": 1988, 
       "owned_to": 1989, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -381,7 +386,7 @@
       "owner": "Richard Parker", 
       "owned_from": 1985, 
       "owned_to": 1998, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -391,7 +396,7 @@
       "owner": "John Parker", 
       "owned_from": 1983, 
       "owned_to": null, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -401,7 +406,7 @@
       "owner": "N. Monk", 
       "owned_from": 1979, 
       "owned_to": 1983, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -411,7 +416,7 @@
       "owner": "G. Dunthorne", 
       "owned_from": 1978, 
       "owned_to": 1985, 
-      "boat": 66
+      "boat": 1
     }
   }, 
   {
@@ -421,7 +426,7 @@
       "owner": "Dr R.U. Carr", 
       "owned_from": 1975, 
       "owned_to": 1979, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -431,7 +436,7 @@
       "owner": "Norfolk Education Committee", 
       "owned_from": 1967, 
       "owned_to": 1991, 
-      "boat": 1
+      "boat": 3
     }
   }, 
   {
@@ -441,7 +446,7 @@
       "owner": "Theta Club", 
       "owned_from": 1965, 
       "owned_to": 2000, 
-      "boat": 0
+      "boat": 4
     }
   }, 
   {
@@ -451,7 +456,7 @@
       "owner": "Dr B.M. Tracey", 
       "owned_from": 1962, 
       "owned_to": 1975, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -461,7 +466,7 @@
       "owner": "Dr M. Tracey", 
       "owned_from": 1962, 
       "owned_to": 1962, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -471,7 +476,7 @@
       "owner": "Mrs B.M. Tracey", 
       "owned_from": 1962, 
       "owned_to": 1962, 
-      "boat": 53
+      "boat": 2
     }
   }, 
   {
@@ -481,7 +486,7 @@
       "owner": "Unknown", 
       "owned_from": 1936, 
       "owned_to": 1965, 
-      "boat": 0
+      "boat": 4
     }
   }, 
   {
@@ -491,7 +496,7 @@
       "owner": "Arthur R Batchelor", 
       "owned_from": 1936, 
       "owned_to": null, 
-      "boat": -1
+      "boat": 5
     }
   }, 
   {
@@ -501,7 +506,7 @@
       "owner": "M. Boardman", 
       "owned_from": 1930, 
       "owned_to": 1967, 
-      "boat": 1
+      "boat": 3
     }
   }, 
   {
@@ -511,7 +516,7 @@
       "owner": "S. H. Morris", 
       "owned_from": 1924, 
       "owned_to": 1930, 
-      "boat": 1
+      "boat": 3
     }
   }, 
   {
@@ -521,7 +526,7 @@
       "owner": "H A Morris", 
       "owned_from": 1916, 
       "owned_to": 1924, 
-      "boat": 1
+      "boat": 3
     }
   }
 ]
