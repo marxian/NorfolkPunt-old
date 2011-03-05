@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
         
-    (r'^boats/', include('localboats.urls')),
+    (r'^punts/', include('localboats.urls')),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:

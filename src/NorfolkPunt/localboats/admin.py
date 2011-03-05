@@ -1,19 +1,30 @@
 from django.contrib import admin
-from models import Boat, Person, Ownership, Design, Designer, Boatbuilder, Construction
+from models import (Boat, 
+                    Person, 
+                    Ownership, 
+                    Design, 
+                    Designer, 
+                    Boatbuilder, 
+                    Construction,
+                    Note)
 
 class OwnershipInline(admin.StackedInline):
     model = Ownership
     extra = 0
+    
+class NotesInline(admin.StackedInline):
+    model = Note
+    extra = 0
 
 class BoatAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['name', 'sail_number', 'year_built']}),
+        (None,               {'fields': ['name', 'sail_number', 'year_built', 'previous_names']}),
         ('Details', {'fields': ['handicap', 'loa', 'design', 'builder', 'construction'], 'classes': ['collapse']}),
     ]
     list_display = ('name', 'sail_number')
 
 
-    inlines = [OwnershipInline]
+    inlines = [OwnershipInline, NotesInline]
     
     class Media:
         """Collapse the inline forms for Ownerships"""

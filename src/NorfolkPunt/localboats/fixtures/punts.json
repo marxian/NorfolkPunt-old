@@ -199,8 +199,9 @@
       "handicap": 908, 
       "builder": "Colin McDougall", 
       "construction": 1, 
-      "design": 1,
-	  "sail_number": 66
+      "design": 1, 
+      "sail_number": 66, 
+      "slug": "grebe"
     }
   }, 
   {
@@ -213,8 +214,9 @@
       "handicap": 908, 
       "builder": "Eastwood and Whelpton of Upton", 
       "construction": 2, 
-      "design": 1,
-	  "sail_number": 53
+      "design": 1, 
+      "sail_number": 53, 
+      "slug": "wild-goose"
     }
   }, 
   {
@@ -227,8 +229,9 @@
       "handicap": null, 
       "builder": "H G Woods", 
       "construction": 2, 
-      "design": 2,
-	  "sail_number": 1
+      "design": 2, 
+      "sail_number": 1, 
+      "slug": "shrimp"
     }
   }, 
   {
@@ -241,8 +244,9 @@
       "handicap": null, 
       "builder": "Unknown", 
       "construction": 2, 
-      "design": 2,
-	  "sail_number": 0
+      "design": 2, 
+      "sail_number": 0, 
+      "slug": "sanderling"
     }
   }, 
   {
@@ -255,8 +259,17 @@
       "handicap": null, 
       "builder": "Unknown", 
       "construction": 2, 
-      "design": 2,
-	  "sail_number": 0
+      "design": 2, 
+      "sail_number": 0, 
+      "slug": "blue-winged-olive"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.note", 
+    "fields": {
+      "text": "The first production Fibreglass punt. The mold was taken from Shoveller, and the first prototype was Golden Jubilee", 
+      "refers_to": 1
     }
   }, 
   {

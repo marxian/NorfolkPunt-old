@@ -1,14 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}Norfolk Punt Owners Association{% endblock title %}</title>
+	<meta charset="utf-8">
+	<title>{% block title %}Norfolk Punt Owners Association{% endblock title %}</title>
+	<link rel="stylesheet" type="text/css" href="/site_media/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/site_media/css/main.css">
 </head>
-
 <body>
-    <div id="content">
-        {% block content %}{% endblock content %}
-    </div>
+
+	<img src="/site_media/images/bg/bw-broad.jpg" class="bg" alt="Wide blue skies, soft water.">
+	
+	<div id="page-wrap">
+		<div id="header" class="black80 shadow">
+			<h1><a href="/"><strong>Norfolk Punt</strong><br/><em>Owners Association</em></a></h1>
+		</div>
+		<div id="content">
+			{% block content %}{% endblock content %}
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/site_media/js/jquery-1.4.4.min.js"></script>
+	{% block scripts %}{% endblock scripts %}
 </body>
 </html>

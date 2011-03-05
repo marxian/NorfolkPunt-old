@@ -1,6 +1,6 @@
-from django.conf.urls.defaults import patterns
+from django.conf.urls.defaults import *
 
 urlpatterns = patterns('localboats.views',
-    (r'^$', 'index'),
-    (r'^(?P<boat_number>\d+)/$', 'boat'),
+    url(r'^$', 'index'),
+    url(r'^(?P<slug>[a-zA-Z0-9_.-]+)/$', 'boat', name="boat_view"),
 )

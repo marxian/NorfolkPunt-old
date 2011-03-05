@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.template.defaultfilters import slugify
 
 YEAR_CHOICES = [(x,x) for x in list(reversed(range(1890, 2020)))]
 
@@ -41,7 +41,7 @@ class Construction(models.Model):
     
     def __unicode__(self):
         return self.name
-    
+       
 class Boat(models.Model):
     name = models.CharField(max_length=50)
     sail_number = models.IntegerField(blank=True)
@@ -52,17 +52,31 @@ class Boat(models.Model):
     owners = models.ManyToManyField(Person, blank=True, through='Ownership')  
     builder = models.ForeignKey(Boatbuilder, blank=True, related_name='built')
     design = models.ForeignKey(Design, blank=True, related_name='examples')
+    previous_names = models.CharField(max_length=100, blank=True)
+    
+    slug = models.SlugField(editable=False)
     
     class Meta:
         ordering = ['-sail_number']
         unique_together = (("name", "sail_number"),)
-
-    
+   
     def __unicode__(self):
         return self.name
-
-        
     
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Boat, self).save(*args, **kwargs)
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('boat_view', [self.slug])
+
+    
+class Note(models.Model):
+    text = models.TextField()
+    refers_to = models.ForeignKey(Boat, related_name='notes')
+
+  
 class Ownership(models.Model):
     
     boat = models.ForeignKey(Boat)
