@@ -1,0 +1,13 @@
+{% extends "localboats/base.html" %}
+
+{% block title %} {{ block.super }} : Gallery{% endblock %}
+
+{% block content %}
+	<h1>Gallery<h2>
+	<ul id="gallery">
+		{% for picture in pictures %}
+			<li><a href="{{ picture.get_absolute_url }}" ><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a></li>
+		{% endfor %}
+	</ul>		
+{% endblock %}
+{{ boat }}

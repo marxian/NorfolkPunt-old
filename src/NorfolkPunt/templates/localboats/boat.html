@@ -4,5 +4,15 @@
 
 {% block content %}
 	<h1>{{ boat.name }}<h2>
+		
+	{% if boat.pictures.count %}
+		<section id="pictures">
+			{% for picture in boat.pictures.all %}
+				<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
+			{% endfor %}
+		</section>
+	{% endif %}
+	
+	
 {% endblock %}
 {{ boat }}

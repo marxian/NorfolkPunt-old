@@ -24,5 +24,13 @@
       "expire_date": "2011-04-17 21:11:11", 
       "session_data": "gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k\ncy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjU1ODIzZmJmNThlOTE4OGY0NTg1\nNjczMjM1ZmZlYjNh\n"
     }
-  }
+  },
+  {
+  	"pk": 1, 
+	"model": "sites.site", 
+	"fields": {
+		"domain": "localhost:8080", 
+		"name": "Norfolk Punt Owners Association"
+	}
+   }
 ]

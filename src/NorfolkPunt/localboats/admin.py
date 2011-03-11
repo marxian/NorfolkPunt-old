@@ -1,12 +1,7 @@
 from django.contrib import admin
-from models import (Boat, 
-                    Person, 
-                    Ownership, 
-                    Design, 
-                    Designer, 
-                    Boatbuilder, 
-                    Construction,
-                    Note)
+from django.contrib.contenttypes import generic
+
+from models import *
 
 class OwnershipInline(admin.StackedInline):
     model = Ownership
@@ -29,6 +24,24 @@ class BoatAdmin(admin.ModelAdmin):
     class Media:
         """Collapse the inline forms for Ownerships"""
         js = ['/site_media/js/collapsed_stacked_inlines.js']
+        
+class BoatDepictionInline(admin.StackedInline):
+    model = BoatDepiction
+    fields = ['boat']
+    extra = 0
+    
+class PersonDepictionInline(admin.StackedInline):
+    model = PersonDepiction
+    fields = ['person']
+    extra = 0
+    
+class PictureAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,{'fields': ['title', 'caption', 'created', 'image']})
+    ]
+    list_display = ('title','caption','added','created','depiction_count','admin_thumbnail')
+    inlines = [BoatDepictionInline, PersonDepictionInline]
+
 
 admin.site.register(Boat, BoatAdmin)
 admin.site.register(Person)
@@ -36,3 +49,4 @@ admin.site.register(Design)
 admin.site.register(Designer)
 admin.site.register(Boatbuilder)
 admin.site.register(Construction)
+admin.site.register(Picture, PictureAdmin)

@@ -1,7 +1,42 @@
 from django.db import models
-from django.template.defaultfilters import slugify
+from django.template.defaultfilters import slugify, truncatewords
+from datetime import datetime
+from photologue.models import ImageModel
 
 YEAR_CHOICES = [(x,x) for x in list(reversed(range(1890, 2020)))]
+
+def slugify_uniquely(value, model, slugfield="slug"):
+        """Returns a slug on a name which is unique within a model's table
+
+        This code suffers a race condition between when a unique
+        slug is determined and when the object with that slug is saved.
+        It's also not exactly database friendly if there is a high
+        likelyhood of common slugs being attempted.
+
+        A good usage pattern for this code would be to add a custom save()
+        method to a model with a slug field along the lines of:
+
+                from django.template.defaultfilters import slugify
+
+                def save(self):
+                    if not self.id:
+                        # replace self.name with your prepopulate_from field
+                        self.slug = slugify_uniquely(self.name, self.__class__)
+                super(self.__class__, self).save()
+
+        Original pattern discussed at
+        http://www.b-list.org/weblog/2006/11/02/django-tips-auto-populated-fields
+        """
+        suffix = 0
+        potential = base = slugify(value)
+        while True:
+                if suffix:
+                        potential = "-".join([base, str(suffix)])
+                if not model.objects.filter(**{slugfield: potential}).count():
+                        return potential
+                # we hit a conflicting slug, so bump the suffix & try again
+                suffix += 1
+
 
 class Agent(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
@@ -12,6 +47,7 @@ class Agent(models.Model):
         return self.name
 
 class Person(Agent):
+    
     class Meta:
         ordering = ['name']
         verbose_name = 'person'
@@ -55,6 +91,7 @@ class Boat(models.Model):
     previous_names = models.CharField(max_length=100, blank=True)
     
     slug = models.SlugField(editable=False)
+
     
     class Meta:
         ordering = ['-sail_number']
@@ -64,6 +101,7 @@ class Boat(models.Model):
         return self.name
     
     def save(self, *args, **kwargs):
+        
         self.slug = slugify(self.name)
         return super(Boat, self).save(*args, **kwargs)
     
@@ -94,3 +132,52 @@ class Ownership(models.Model):
             return "%s (%s to present)" % (self.owner, self.owned_from)
         if not self.owned_from and self.owned_to:
             return "%s (until %s)" % (self.owner, self.owned_to)
+
+class Picture(ImageModel):
+
+    title = models.CharField('title', max_length=100)
+    
+    slug = models.SlugField(editable=False, unique=True)
+    
+    caption = models.TextField('caption', blank=True)
+    added = models.DateTimeField('date added', default=datetime.now, editable=False)
+    created = models.DateField(blank=True)    
+    boats = models.ManyToManyField(Boat, blank=True, through='BoatDepiction', related_name='pictures') 
+    people = models.ManyToManyField(Person, blank=True, through='PersonDepiction', related_name='pictures') 
+    
+    @property
+    def depiction_count(self):
+        return self.boats.count() + self.people.count()
+    
+    def __unicode__(self):
+        return truncatewords(self.title, 8)
+    
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify_uniquely(self.title, self.__class__)
+        return super(Picture, self).save(*args, **kwargs)
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('picture_view', [self.slug])
+
+        
+class Depiction(models.Model):
+    class Meta:
+        abstract = True
+    image = models.ForeignKey(Picture)
+    top = models.IntegerField(blank=True, null=True)
+    left = models.IntegerField(blank=True, null=True)
+    width = models.IntegerField(blank=True, null=True)
+    height = models.IntegerField(blank=True, null=True)
+        
+class BoatDepiction(Depiction):
+    
+    boat = models.ForeignKey(Boat, related_name="depictions")
+
+class PersonDepiction(Depiction):
+    person = models.ForeignKey(Person, related_name="depictions")
+
+
+    
+

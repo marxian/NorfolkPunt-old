@@ -1,0 +1,71 @@
+{% extends "localboats/base.html" %}
+
+{% block title %} {{ block.super }} : {{ picture.title }}{% endblock %}
+{% block styles %} 
+	{{ block.super }}
+	<link rel="stylesheet" type="text/css" href="/site_media/css/imagenotes.css">
+{% endblock styles %} 
+
+{% block content %}
+	<div id="picturewrap">
+		<section id="picture">
+			<img class="depictions" src="{{ picture.get_display_url}}" 
+				alt="{{picture.title}}" longdesc="{{picure.caption}}"/>
+			{% if picture.caption %}
+				<p class="caption">{{ picture.caption }}</p>
+			{% endif %}
+			{% if boat_depictions.count %}
+				<ul id="boats">
+					{% for dep in boat_depictions %}
+					  <li class="depiction" 
+						  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{dep.id}},"note":"{{dep.boat.name}}"}'>
+						  <a href="{{dep.boat.get_absolute_url}}">{{dep.boat.name}}</a>
+						  </li>
+					{% endfor %}
+					
+				</ul>
+			{% endif %}
+		</section>
+	</div>
+	
+	<section id="tag_form">
+		<form action="{% url add_boat_depiction %}" method="POST">
+			{% csrf_token %}
+			{{ boat_depiction_form }}
+			<input type="submit" value="save"/>
+		</form>
+		
+	</section>
+	
+	
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript" src="/site_media/js/jquery-ui-1.8.10.custom.min.js"></script>
+	<script type="text/javascript" src="/site_media/js/localboats.depictions.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.depictions').localboatsDepictions({
+				minWidth: 50,
+				minHeight: 50,
+				maxWidth: '',
+				maxHeight: '',
+				aspectRatio: false,
+				allowAdd: true,
+				allowEdit: false,
+				allowDelete: false,
+				allowHide: false,
+				allowReload: false,
+				allowLink: false,
+				allowAuthor: true,
+				dateFormat: 'Y/D/M H:I',
+				hideNotes: false,
+				loadNotes: true,
+				helper: '',
+				maxNotes: null,
+				datasource: '.depiction'
+			});
+		});
+	
+	</script>
+{% endblock scripts %}
