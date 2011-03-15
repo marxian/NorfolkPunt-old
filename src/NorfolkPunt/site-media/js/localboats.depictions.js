@@ -523,45 +523,17 @@
         var _saveNote = function(pointer, id, operation){
         
             var note = $('#jquery-notes_' + pointer + ' .notes .select .text-box textarea').val();
-            var link = $('#jquery-notes_' + pointer + ' .notes .select .text-box input[name="link"]').val();
-            var author = $('#jquery-notes_' + pointer + ' .notes .select .text-box input[name="author"]').val();
-            
-            link = (link == undefined) ? '' : link;
-            author = (author == undefined) ? '' : author;
             
             var position = _getNotePosition(pointer);
             
-            $.ajax({
-                url: settings.operator,
-                global: false,
-                timeout: 15000,
-                dataType: 'json',
-                type: 'POST',
-                beforeSend: function(){
-                    (id == undefined) ? _startLoading(pointer, 'saving note') : _startLoading(pointer, 'editing note');
-                },
-                data: operation + '=true&image=' + ID.image + '&id=' + id + '&position=' + position.left + ',' + position.top + ',' + position.width + ',' + position.height + '&note=' + note + '&link=' + link + '&author=' + author,
-                success: function(data){
-                
-                    if (data) {
-                    
-                        $('#jquery-notes_' + pointer + ' .controller .cancel-note').removeClass('cancel-note').attr({
-                            title: 'add note'
-                        });
-                        
-                        _reload(pointer);
-                        
-                    }
-                    else {
-                    
-                        _stopLoading(pointer);
-                        
-                        alert('Can\'t save note.');
-                        
-                    }
-                    
-                }
-            });
+			var form = $('#boat-depiction-form');
+			
+			$('input[name=top]', form).val(Math.floor(position.top));
+			$('input[name=left]', form).val(Math.floor(position.left));
+			$('input[name=width]', form).val(Math.floor(position.width));
+			$('input[name=height]', form).val(Math.floor(position.height));
+			
+            form.trigger('submit');
             
         }
         

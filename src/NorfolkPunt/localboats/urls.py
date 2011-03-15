@@ -1,14 +1,7 @@
 from django.conf.urls.defaults import url, patterns
-
-urlpatterns = patterns('localboats.forms',
-    # Picture tagging
-    url(r'^pictures/add_boat_depiction/$',
-        'add_boat_depiction',
-        name="add_boat_depiction")
-)
                        
 
-urlpatterns += patterns('localboats.views',
+urlpatterns = patterns('localboats.views',
     # Picture Views
     url(r'^pictures/$', 'pictures', 
         name="localboats:pictures_index"),

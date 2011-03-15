@@ -10,7 +10,6 @@ import json
 
 def boats(request):
     boats = Boat.objects.all()
-    
     # Build a list of unique values for Design for the filter list
     # Surely there's abetter way?
     design_types = {}
@@ -30,7 +29,15 @@ def pictures(request):
 
 def picture(request, slug):
     picture = get_object_or_404(Picture, slug=slug)
-    boat_depiction_form = BoatDepictionForm(initial={'image':picture.id})
+    
+    # Handle posting of new depiction tags to this picture
+    if request.method == 'POST':
+        boat_depiction_form  = BoatDepictionForm(request.POST)
+        if boat_depiction_form.is_valid():
+            boat_depiction_form.save()
+    else:
+        boat_depiction_form = BoatDepictionForm(initial={'image':picture.id})
+        
     return render_to_response('localboats/picture.html', 
                               {'picture': picture,
                                'boat_depictions':BoatDepiction.objects.filter(image=picture),

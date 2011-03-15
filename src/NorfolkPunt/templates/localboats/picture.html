@@ -18,7 +18,7 @@
 				<ul id="boats">
 					{% for dep in boat_depictions %}
 					  <li class="depiction" 
-						  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{dep.id}},"note":"{{dep.boat.name}}"}'>
+						  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{dep.id}},"note":"{{dep.boat.name}}", "type":"boat"}'>
 						  <a href="{{dep.boat.get_absolute_url}}">{{dep.boat.name}}</a>
 						  </li>
 					{% endfor %}
@@ -28,14 +28,12 @@
 		</section>
 	</div>
 	
-	<section id="tag_form">
-		<form action="{% url add_boat_depiction %}" method="POST">
+	<div id="hidden-forms">
+		<form id="boat-depiction-form" action="./" method="POST">
 			{% csrf_token %}
 			{{ boat_depiction_form }}
-			<input type="submit" value="save"/>
 		</form>
-		
-	</section>
+	</div>
 	
 	
 {% endblock %}

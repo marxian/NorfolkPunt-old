@@ -1,13 +1,19 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, HiddenInput
 from models import BoatDepiction
 from django.shortcuts import redirect
 
 
 class BoatDepictionForm(ModelForm):
+    
     class Meta:
         model = BoatDepiction
+        widgets = {
+            'image': HiddenInput(),
+            'top': HiddenInput(),
+            'left': HiddenInput(),
+            'height': HiddenInput(),
+            'width': HiddenInput(),
+        }
 
-def add_boat_depiction(request):
-    form = BoatDepictionForm(request.POST)
-    new_depiction = form.save()
-    return redirect(new_depiction.image)
+
+        
