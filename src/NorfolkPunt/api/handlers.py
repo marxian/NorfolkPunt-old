@@ -1,5 +1,5 @@
 from piston.handler import BaseHandler, AnonymousBaseHandler
-from localboats.models import Boat, BoatDepiction
+from localboats.models import Boat, BoatDepiction, Person
 from localboats.forms import BoatDepictionForm
 from piston.utils import validate, rc
 
@@ -30,6 +30,29 @@ class BoatHandler(BaseHandler):
             return base.get(slug=boat_slug)
         else:
             return base.all()
+        
+class TagLookupHandler(AnonymousBaseHandler):
+    """ Short form boat and person lookups for autocomplete style searches """
+    allowed_methods = ('GET',)
+    
+    def read(self, request):
+        """
+        Returns items matching terms
+
+        """
+        term = request.GET.get('term', None)
+        data = []
+        if term:
+            boats = Boat.objects.filter(name__icontains=term)
+            people = Person.objects.filter(name__icontains=term)
+        
+        
+            for boat in boats:
+                data.append({'label':boat.name, 'id':boat.id, 'category':'Boats'})
+            for person in people:
+                data.append({'label':person.name, 'id':person.name, 'category':'People'})
+            
+        return data
         
 class BoatDepictionHandler(BaseHandler):
     allowed_methods = ('GET', 'POST',)

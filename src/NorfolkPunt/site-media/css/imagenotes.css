@@ -196,7 +196,7 @@
     -webkit-border-radius:5px;
     border-radius:5px;
 }
-.jquery-notes-container .notes .note .text-box a {
+.jquery-notes-container .notes .note .text-box > a {
     position:relative;
     margin:5px 2px 0 2px;
     height:16px;

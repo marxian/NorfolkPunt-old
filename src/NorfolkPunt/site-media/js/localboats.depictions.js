@@ -510,15 +510,28 @@
             
                 ID.move = false;
                 
-                var html = '<div class="text-box">';
+                var html = '<div id="tag-box" class="text-box">';
                              
-                html += '<textarea name="note"></textarea><br />';
+                html += '<input id="tag" name="tag" value=""><br />';
                 
                 html += '<a href="javascript:void(0);" class="save-note" title="save note"></a><a href="javascript:void(0);" class="cancel-note" title="cancel"></a></div>';
                 
                 $('#jquery-notes_' + pointer + ' .notes .select').append(html);
                 
-                _inputFocus(pointer);
+                //_inputFocus(pointer);
+				
+				// Instantiate an autocomplete field
+				$( "#tag" ).autocomplete({
+					appendTo: "#tag-box",
+					source: "/api/lookup",
+					minLength: 2,
+					select: function( event, ui ) {
+						$(this).data({'depicted':ui.item.id,
+									  'depiction_type':ui.item.category});
+						console.log($(this));
+					}
+				});
+
                 
                 $('#jquery-notes_' + pointer + ' .notes .select .text-box .save-note').click(function(){
                     _saveNote(pointer, null, 'add');
