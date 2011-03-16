@@ -232,26 +232,69 @@
         }
         
         /**
-         * @description
-         * removes a surrounding link
-         *
-         * @param required	: int pointer
-         *
-         * @return		: none
-         */
-        var _removeLink = function(pointer){
-        
-            var wrapperLink = $('#jquery-notes_' + pointer).parent('a');
-            
-            if (wrapperLink.length == 1) {
-            
-                $('#jquery-notes_' + pointer + ' .controller').append('<a href="' + $(wrapperLink).attr('href') + '" class="link" title="link" />');
-                
-                $('#jquery-notes_' + pointer).unwrap();
-                
-            }
-            
-        }
+	 * @description
+	 * removes a surrounding link
+	 *
+	 * @param required	: int pointer
+	 *
+	 * @return		: none
+	 */
+	var _removeLink = function(pointer) {
+	    
+	    var wrapperLink = $('#jquery-notes_'+pointer).parent('a');
+	    
+	    if (wrapperLink.length == 1) {
+		
+		$('#jquery-notes_'+pointer+' .controller').append('<a href="'+$(wrapperLink).attr('href')+'" class="link" title="link" />');
+		
+		$('#jquery-notes_'+pointer).unwrap();
+		
+	    }
+	    
+	}
+	
+	/**
+	 * @description
+	 * start loading
+	 *
+	 * @param required	: int pointer
+	 * @param required	: string message
+	 *
+	 * @return		: none
+	 */
+	var _startLoading = function(pointer, message) {
+	    
+	    $('#jquery-notes_'+pointer+' .notes .layer').fadeIn('middle');
+	    $('#jquery-notes_'+pointer+' .notes .loading').fadeIn('middle');
+	    $('#jquery-notes_'+pointer+' .notes .loading .message').text(message);
+	    
+	}
+	
+	/**
+	 * @description
+	 * stop loading
+	 *
+	 * @param required	: int pointer
+	 *
+	 * @return		: none
+	 */
+	var _stopLoading = function(pointer) {
+	    
+	    ID.timeout = undefined;
+	    
+	    (ID.timeout != undefined) ? clearTimeout(ID.timeout) : '';
+	    
+	    ID.timeout = setTimeout(function() {
+		
+		ID.timeout = undefined;
+		
+		$('#jquery-notes_'+pointer+' .notes .layer').fadeOut('middle');
+		$('#jquery-notes_'+pointer+' .notes .loading').fadeOut('middle');
+		$('#jquery-notes_'+pointer+' .notes .loading .message').text('');
+		
+	    }, 1000);
+	    
+	}
         
 
         /**
@@ -522,18 +565,47 @@
          */
         var _saveNote = function(pointer, id, operation){
         
-            var note = $('#jquery-notes_' + pointer + ' .notes .select .text-box textarea').val();
+            //var note = $('#jquery-notes_' + pointer + ' .notes .select .text-box textarea').val();
             
             var position = _getNotePosition(pointer);
             
-			var form = $('#boat-depiction-form');
+			//var form = $('#boat-depiction-form');
 			
-			$('input[name=top]', form).val(Math.floor(position.top));
-			$('input[name=left]', form).val(Math.floor(position.left));
-			$('input[name=width]', form).val(Math.floor(position.width));
-			$('input[name=height]', form).val(Math.floor(position.height));
+			//$('input[name=top]', form).val(Math.floor(position.top));
+			//$('input[name=left]', form).val(Math.floor(position.left));
+			//$('input[name=width]', form).val(Math.floor(position.width));
+			//$('input[name=height]', form).val(Math.floor(position.height));
 			
-            form.trigger('submit');
+            //form.trigger('submit');
+			params = {'top':Math.floor(position.top),
+					  'left':Math.floor(position.left),
+					  'width':Math.floor(position.width),
+					  'height':Math.floor(position.height),
+					  'boat':1,
+					  'image':1}
+			
+			$.ajax({
+				url: settings.postHandler,
+				global: false,
+				timeout: 15000,
+				dataType: 'json',
+				type: 'POST',
+				beforeSend: function() {
+		    		(id == undefined) ? _startLoading(pointer, 'saving note') : _startLoading(pointer, 'editing note');	
+				},
+				data: params,
+				statusCode: {
+					201: function() {
+						_stopLoading(pointer);
+    					$('#jquery-notes_'+pointer+' .controller .cancel-note').removeClass('cancel-note').attr({title: 'add note'});
+						_reload(pointer);
+  					},
+					500: function() {
+						_stopLoading(pointer);
+						alert('Can\'t save note.');
+		    		}
+				}
+	    	});
             
         }
         

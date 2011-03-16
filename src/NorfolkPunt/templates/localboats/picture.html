@@ -40,6 +40,7 @@
 
 {% block scripts %}
 	<script type="text/javascript" src="/site_media/js/jquery-ui-1.8.10.custom.min.js"></script>
+	<script type="text/javascript" src="/site_media/js/json2.js"></script>
 	<script type="text/javascript" src="/site_media/js/localboats.depictions.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -55,13 +56,14 @@
 				allowHide: false,
 				allowReload: false,
 				allowLink: false,
-				allowAuthor: true,
+				allowAuthor: false,
 				dateFormat: 'Y/D/M H:I',
 				hideNotes: false,
 				loadNotes: true,
 				helper: '',
 				maxNotes: null,
-				datasource: '.depiction'
+				datasource: '.depiction',
+				postHandler: '/api/boats/depictions/'
 			});
 		});
 	
