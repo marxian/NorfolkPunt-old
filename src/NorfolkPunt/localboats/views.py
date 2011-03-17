@@ -1,10 +1,6 @@
-from models import Boat, Picture, BoatDepiction
+from models import Boat, Picture, BoatDepiction, PersonDepiction
 from django.shortcuts import render_to_response, get_object_or_404
-from forms import BoatDepictionForm
-from django.template import RequestContext
-from django.core import serializers
-from django.http import HttpResponse
-import json
+
 
 
 
@@ -30,37 +26,12 @@ def pictures(request):
 def picture(request, slug):
     picture = get_object_or_404(Picture, slug=slug)
     
-    # Handle posting of new depiction tags to this picture
-    if request.method == 'POST':
-        boat_depiction_form  = BoatDepictionForm(request.POST)
-        if boat_depiction_form.is_valid():
-            boat_depiction_form.save()
-    else:
-        boat_depiction_form = BoatDepictionForm(initial={'image':picture.id})
-        
+    boats = BoatDepiction.objects.filter(image=picture)
+    people = PersonDepiction.objects.filter(image=picture)
+
+    depictions = [x for x in boats] + [x for x in people]
     return render_to_response('localboats/picture.html', 
                               {'picture': picture,
-                               'boat_depictions':BoatDepiction.objects.filter(image=picture),
-                               'boat_depiction_form':boat_depiction_form},
-                               context_instance=RequestContext(request))
+                               'depictions':depictions})
     
-def picture_depictions(request, slug):
-
-    picture = get_object_or_404(Picture, slug=slug)
-    depictions = BoatDepiction.objects.filter(image=picture)
-    
-    data = []
-    for dep in depictions:
-        data.append({'DATE':'',
-                     'ID':dep.id,
-                     'LINK':'',
-                     'AUTHOR':'',
-                     'LEFT':dep.left,
-                     'TOP':dep.top,
-                     'WIDTH':dep.width,
-                     'HEIGHT':dep.height,
-                     'NOTE':dep.boat.name})
-
-    return HttpResponse(json.dumps(data), mimetype='application/json')
-
     

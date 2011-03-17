@@ -172,11 +172,12 @@ class Depiction(models.Model):
     height = models.IntegerField(blank=True, null=True)
         
 class BoatDepiction(Depiction):
-    
-    boat = models.ForeignKey(Boat, related_name="depictions")
+    type = 'boats'
+    target = models.ForeignKey(Boat, related_name="depictions")
 
 class PersonDepiction(Depiction):
-    person = models.ForeignKey(Person, related_name="depictions")
+    type = 'people'
+    target = models.ForeignKey(Person, related_name="depictions")
 
 
     

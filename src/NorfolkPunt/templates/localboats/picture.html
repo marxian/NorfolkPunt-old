@@ -9,30 +9,26 @@
 {% block content %}
 	<div id="picturewrap">
 		<section id="picture">
+			<h2>{{picture.title}}</h2>
 			<img class="depictions" src="{{ picture.get_display_url}}" 
 				alt="{{picture.title}}" longdesc="{{picure.caption}}"/>
 			{% if picture.caption %}
 				<p class="caption">{{ picture.caption }}</p>
 			{% endif %}
-			{% if boat_depictions.count %}
-				<ul id="boats">
-					{% for dep in boat_depictions %}
-					  <li class="depiction" 
-						  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{dep.id}},"note":"{{dep.boat.name}}", "type":"boat"}'>
-						  <a href="{{dep.boat.get_absolute_url}}">{{dep.boat.name}}</a>
-						  </li>
-					{% endfor %}
-					
+			
+				<ul id="depictions">
+					{% if depictions %}
+						{% for dep in depictions %}
+						  <li class="depiction {{dep.type}}" 
+							  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{forloop.counter}},"note":"{{dep.target.name}}", "type":"{{dep.type}}"}'>
+							  <a href="{{dep.target.get_absolute_url}}">{{dep.target.name}}</a>
+						 </li>
+						{% endfor %}
+					{% endif %}
+					<li><a href="javascript:void(0);" id="add-depiction" title="add"></a></li>
 				</ul>
-			{% endif %}
+			
 		</section>
-	</div>
-	
-	<div id="hidden-forms">
-		<form id="boat-depiction-form" action="./" method="POST">
-			{% csrf_token %}
-			{{ boat_depiction_form }}
-		</form>
 	</div>
 	
 	
@@ -40,7 +36,7 @@
 
 {% block scripts %}
 	<script type="text/javascript" src="/site_media/js/jquery-ui-1.8.10.custom.min.js"></script>
-	<script type="text/javascript" src="/site_media/js/json2.js"></script>
+
 	<script type="text/javascript" src="/site_media/js/localboats.depictions.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -63,7 +59,7 @@
 				helper: '',
 				maxNotes: null,
 				datasource: '.depiction',
-				postHandler: '/api/boats/depictions/'
+				operator: '/api/$type/depictions/'
 			});
 		});
 	

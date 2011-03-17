@@ -25,7 +25,7 @@
             loadNotes: true,
             helper: '',
             maxNotes: null,
-            operator: 'annotations/',
+            operator: '/api/$type/depictions/',
             datasource: '#depictions'
         }, settings);
         
@@ -203,29 +203,30 @@
             
             $('#jquery-notes_' + pointer).append('<div class="controller clearfix" />').width(ID.width);
             
-            var html = '';
+            //var html = '';
             
-            html += '<a href="javascript:void(0);" class="counter" title="0 notes" />';
+            //html += '<a href="javascript:void(0);" class="counter" title="0 notes" />';
             
-            html += (settings.allowAdd) ? '<a href="javascript:void(0);" class="add-note" title="add" />' : '';
+            //html += (settings.allowAdd) ? '<a href="javascript:void(0);" class="add-note" title="add" />' : '';
             
-            html += (settings.allowHide && settings.loadNotes) ? '<a href="javascript:void(0);" class="hide-notes" title="hide" />' : '';
+            //html += (settings.allowHide && settings.loadNotes) ? '<a href="javascript:void(0);" class="hide-notes" title="hide" />' : '';
             
-            html += (settings.allowReload && settings.loadNotes) ? '<a href="javascript:void(0);" class="reload-notes" title="reload" />' : '';
+            //html += (settings.allowReload && settings.loadNotes) ? '<a href="javascript:void(0);" class="reload-notes" title="reload" />' : '';
             
-            $('#jquery-notes_' + pointer + ' .controller').append(html);
+            //$('#jquery-notes_' + pointer + ' .controller').append(html);
             
-            $('#jquery-notes_' + pointer + ' .add-note').click(function(){
+			// Look for an add note button and attatch behaviour
+            $('#add-depiction').click(function(){
                 _startAdd(pointer);
             });
             
-            $('#jquery-notes_' + pointer + ' .hide-notes').click(function(){
-                _hideNotes(pointer);
-            });
+            //$('#jquery-notes_' + pointer + ' .hide-notes').click(function(){
+            //    _hideNotes(pointer);
+            //});
             
-            $('#jquery-notes_' + pointer + ' .reload-notes').click(function(){
-                _reload(pointer);
-            });
+            //$('#jquery-notes_' + pointer + ' .reload-notes').click(function(){
+            //    _reload(pointer);
+            //});
             
             _removeLink(pointer);
             
@@ -512,7 +513,7 @@
                 
                 var html = '<div id="tag-box" class="text-box">';
                              
-                html += '<input id="tag" name="tag" value=""><br />';
+                html += '<input id="depiction-tag" name="tag" value=""><br />';
                 
                 html += '<a href="javascript:void(0);" class="save-note" title="save note"></a><a href="javascript:void(0);" class="cancel-note" title="cancel"></a></div>';
                 
@@ -521,14 +522,13 @@
                 //_inputFocus(pointer);
 				
 				// Instantiate an autocomplete field
-				$( "#tag" ).autocomplete({
+				$( "#depiction-tag" ).autocomplete({
 					appendTo: "#tag-box",
 					source: "/api/lookup",
 					minLength: 2,
 					select: function( event, ui ) {
 						$(this).data({'depicted':ui.item.id,
-									  'depiction_type':ui.item.category});
-						console.log($(this));
+									  'depiction_type':ui.item.type});
 					}
 				});
 
@@ -582,23 +582,16 @@
             
             var position = _getNotePosition(pointer);
             
-			//var form = $('#boat-depiction-form');
-			
-			//$('input[name=top]', form).val(Math.floor(position.top));
-			//$('input[name=left]', form).val(Math.floor(position.left));
-			//$('input[name=width]', form).val(Math.floor(position.width));
-			//$('input[name=height]', form).val(Math.floor(position.height));
-			
-            //form.trigger('submit');
-			params = {'top':Math.floor(position.top),
+			var params = {'top':Math.floor(position.top),
 					  'left':Math.floor(position.left),
 					  'width':Math.floor(position.width),
 					  'height':Math.floor(position.height),
-					  'boat':1,
+					  'target':$('#depiction-tag').data('depicted'),
 					  'image':1}
-			
+			var type = $('#depiction-tag').data('depiction_type');
+			var note = $('#depiction-tag').val();
 			$.ajax({
-				url: settings.postHandler,
+				url: settings.operator.replace('$type', type),
 				global: false,
 				timeout: 15000,
 				dataType: 'json',
@@ -612,6 +605,28 @@
 						_stopLoading(pointer);
     					$('#jquery-notes_'+pointer+' .controller .cancel-note').removeClass('cancel-note').attr({title: 'add note'});
 						_reload(pointer);
+						//Now add the depiction link to the list an use it to repopulate
+						var depiction = {"top":params.top,
+									 "left":params.left,
+									 "width":params.width,
+									 "height":params.height,
+									 "type":type,
+									 "note":note,
+									 "id":params.left + params.top + params.width + params.height}
+						var list_entry = $('<li class="depiction '+depiction.type+'"><a href="#">'+note+'</a>');
+						list_entry.data('depiction', depiction);
+						list_entry.appendTo('#depictions');
+						//Make our links more interactive - ugly copy from _getNotes
+		                list_entry.hover(function(){
+		                    _focusOnNote(pointer, $(this).data('depiction').id);
+		                    $('#jquery-notes_' + pointer + ' .notes #n_' + pointer + '-' + $(this).data('depiction').id).addClass('active');
+		                }, function(){
+		                    _focusOffNote(pointer, $(this).data('depiction').id);
+		                    $('#jquery-notes_' + pointer + ' .notes #n_' + pointer + '-' + $(this).data('depiction').id).removeClass('active');
+		                });
+						_printNote(pointer, depiction);
+						
+						
   					},
 					500: function() {
 						_stopLoading(pointer);

@@ -311,9 +311,42 @@ section#picture {
 	display: inline-block;
 }
 
-section#picture ul.boats {
-	
+section#picture ul#depictions li.depiction {
+	display: block;
+	float: left;
+	margin: 2px 2px 2px 2px;
+	padding: 2px 2px 2px 2px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
 }
+section#picture ul#depictions li.boats {
+	background: #FF0000;
+}
+section#picture ul#depictions li.people {
+	background: #FF0000;
+}
+section#picture ul#depictions a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#add-depiction {
+    margin:2px;
+    height:16px;
+    width:16px;
+    display:block;
+    background:#000;
+    background-repeat:no-repeat;
+    background-position:center center;
+    float:right;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    background-image:url(../images/imagenotes/add.png);
+}
+
+
 
 
 

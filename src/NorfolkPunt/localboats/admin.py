@@ -27,12 +27,12 @@ class BoatAdmin(admin.ModelAdmin):
         
 class BoatDepictionInline(admin.StackedInline):
     model = BoatDepiction
-    fields = ['boat']
+    fields = ['target']
     extra = 0
     
 class PersonDepictionInline(admin.StackedInline):
     model = PersonDepiction
-    fields = ['person']
+    fields = ['target']
     extra = 0
     
 class PictureAdmin(admin.ModelAdmin):
