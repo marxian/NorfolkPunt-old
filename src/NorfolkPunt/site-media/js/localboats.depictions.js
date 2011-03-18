@@ -219,6 +219,7 @@
             $('#add-depiction').click(function(){
                 _startAdd(pointer);
 				
+				
             });
             
             //$('#jquery-notes_' + pointer + ' .hide-notes').click(function(){
@@ -455,7 +456,8 @@
          * @return		: none
          */
         var _addNote = function(pointer, event){
-        
+        	// clear the hint
+			$('#add-depiction span.hint').fadeOut();
             if (ID.add && !ID.set) {
             
                 ID.set = true;
@@ -543,6 +545,7 @@
                     $('#add-depiction.cancel-note').removeClass('cancel-note').attr({
                         title: 'add note'
                     });
+
                     
                     _abort(pointer);
                     
@@ -691,6 +694,7 @@
                     $('#add-depiction').removeClass('cancel-note').attr({
                         title: 'add note'
                     });
+					$('#add-depiction span.hint').fadeOut();
                     
                     _abort(pointer);
                     
@@ -707,6 +711,7 @@
                         $('#add-depiction').addClass('cancel-note').attr({
                             title: 'cancel'
                         });
+						$('#add-depiction span.hint').fadeIn();
                         
                     }
                 

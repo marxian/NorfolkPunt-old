@@ -350,6 +350,21 @@ section#picture ul#depictions a {
     background-image:url(../images/imagenotes/cancel.png);
 }
 
+#add-depiction span.hint {
+	position:absolute;
+	z-index:999;
+	margin-left:18px;
+	padding: 2px;
+    width:150px;
+	font-size: small;
+    display:block;
+    background:#000 ;
+	-moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+	color: #FFFFFF;
+}
+
 
 
 
