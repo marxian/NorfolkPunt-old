@@ -346,6 +346,10 @@ section#picture ul#depictions a {
     background-image:url(../images/imagenotes/add.png);
 }
 
+#add-depiction.cancel-note {
+    background-image:url(../images/imagenotes/cancel.png);
+}
+
 
 
 

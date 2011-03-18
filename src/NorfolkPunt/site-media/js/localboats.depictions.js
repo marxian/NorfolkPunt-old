@@ -218,6 +218,7 @@
 			// Look for an add note button and attatch behaviour
             $('#add-depiction').click(function(){
                 _startAdd(pointer);
+				
             });
             
             //$('#jquery-notes_' + pointer + ' .hide-notes').click(function(){
@@ -539,7 +540,7 @@
                 
                 $('#jquery-notes_' + pointer + ' .notes .select .text-box .cancel-note').click(function(){
                 
-                    $('#jquery-notes_' + pointer + ' .controller .cancel-note').removeClass('cancel-note').attr({
+                    $('#add-depiction.cancel-note').removeClass('cancel-note').attr({
                         title: 'add note'
                     });
                     
@@ -687,7 +688,7 @@
             
                 if (ID.add) {
                 
-                    $('#jquery-notes_' + pointer + ' .controller .cancel-note').removeClass('cancel-note').attr({
+                    $('#add-depiction').removeClass('cancel-note').attr({
                         title: 'add note'
                     });
                     
@@ -703,7 +704,7 @@
                         
                         ID.add = true;
                         
-                        $('#jquery-notes_' + pointer + ' .controller .add-note').addClass('cancel-note').attr({
+                        $('#add-depiction').addClass('cancel-note').attr({
                             title: 'cancel'
                         });
                         
