@@ -11,7 +11,8 @@
 		<section id="picture">
 			<h2>{{picture.title}}</h2>
 			<img class="depictions" src="{{ picture.get_display_url}}" 
-				alt="{{picture.title}}" longdesc="{{picure.caption}}"/>
+				alt="{{picture.title}}" longdesc="{{picure.caption}}"
+				data-picture_id="{{picture.id}}"/>
 			{% if picture.caption %}
 				<p class="caption">{{ picture.caption }}</p>
 			{% endif %}

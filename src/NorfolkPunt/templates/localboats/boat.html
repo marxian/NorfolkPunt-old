@@ -3,16 +3,58 @@
 {% block title %} {{ block.super }} : No. {{ boat.number }}, {{ boat.name }}{% endblock %}
 
 {% block content %}
-	<h1>{{ boat.name }}<h2>
+    <section id="details">
+    	<h1>{{ boat.name }}</h1>
+	    <dl class="boat-details">
+	    	<dt>Sail Number</dt>
+			<dd>{{boat.sail_number}}</dd>
+			{% if boat.previous_names %}
+				<dt>Previous Names</dt>
+				<dd>{{boat.previous_names}}</dd>
+			{% endif %}
+			<dt>Year Built</dt>
+			<dd>{{boat.year_built}}</dd>
+			<dt>Design</dt>
+			<dd>{{boat.design.name}} by {{boat.design.designer.name}}</dd>
+			<dt>L.O.A</dt>
+			<dd>{{boat.loa}} feet</dd>
+			<dt>Builder</dt>
+			<dd>{{boat.builder.name}}</dd>
+			<dt>Construction</dt>
+			<dd>{{boat.construction.name}}</dd>
+			<dt>Handicap</dt>
+			<dd>{{boat.handicap}}</dd>
+	    </dl>
+		{% if has_pics %}
+			<a id="main_pic" href="{{main_pic.get_absolute_url}}"><img src="{{main_pic.get_feature_url}}" alt="{{main_pic.title}}"/></a>
+		{% endif %}
 		
-	{% if boat.pictures.count %}
-		<section id="pictures">
-			{% for picture in boat.pictures.all %}
+		{% if boat.notes.count %}
+			{% for note in boat.notes.all %}
+				<p class="note">{{note.text}}</p>
+			{% endfor %}
+		{% endif %}
+    
+	
+		<section id="ownership">
+			<h2>Ownership History</h2>
+			<ul>
+				{% for owner in boat.ownership.all %}
+					<li>{{owner}}</li>
+				{% endfor %}
+			</ul>	
+		</section>
+		
+		{% if gallery %}
+		<section id="gallery">
+			{% for picture in gallery %}
 				<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
 			{% endfor %}
 		</section>
-	{% endif %}
-	
+		{% endif %}
+		
+		<div style="clear:both;"></div>
+	</section>
 	
 {% endblock %}
 {{ boat }}

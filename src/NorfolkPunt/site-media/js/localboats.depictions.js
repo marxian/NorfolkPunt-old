@@ -58,6 +58,7 @@
             ID.height = image.height();
             ID.left = image.offset().left;
             ID.top = image.offset().top;
+			ID.picture_id = image.data('picture_id');
             
         }
         
@@ -591,7 +592,7 @@
 					  'width':Math.floor(position.width),
 					  'height':Math.floor(position.height),
 					  'target':$('#depiction-tag').data('depicted'),
-					  'image':1}
+					  'image':ID.picture_id}
 			var type = $('#depiction-tag').data('depiction_type');
 			var note = $('#depiction-tag').val();
 			$.ajax({

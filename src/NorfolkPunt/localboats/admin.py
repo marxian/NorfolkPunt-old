@@ -25,6 +25,8 @@ class BoatAdmin(admin.ModelAdmin):
         """Collapse the inline forms for Ownerships"""
         js = ['/site_media/js/collapsed_stacked_inlines.js']
         
+
+        
 class BoatDepictionInline(admin.StackedInline):
     model = BoatDepiction
     fields = ['target']

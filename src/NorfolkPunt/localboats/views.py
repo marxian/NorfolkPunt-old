@@ -17,7 +17,15 @@ def boats(request):
                                                               'designs':designs})
 def boat(request, slug):
     boat = get_object_or_404(Boat, slug=slug)
-    return render_to_response('localboats/boat.html', {'boat': boat})
+    
+    pics = boat.gallery
+    has_pics = len(pics)
+    main_pic = has_pics and pics[0] or None
+    gallery = (has_pics > 1) and pics[1:] or None
+    return render_to_response('localboats/boat.html', {'boat': boat, 
+                                                       'has_pics':has_pics,
+                                                       'main_pic':main_pic,
+                                                       'gallery':gallery})
 
 def pictures(request):
     pictures = Picture.objects.all()

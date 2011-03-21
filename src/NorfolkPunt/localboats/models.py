@@ -90,6 +90,8 @@ class Boat(models.Model):
     design = models.ForeignKey(Design, blank=True, related_name='examples')
     previous_names = models.CharField(max_length=100, blank=True)
     
+    
+    
     slug = models.SlugField(editable=False)
 
     
@@ -108,6 +110,14 @@ class Boat(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('boat_view', [self.slug])
+    
+    @property
+    def gallery(self):
+
+        pics = Picture.objects.filter(boats__id=self.id).annotate(num_boats=models.Count('boats')).order_by('num_boats')
+        listing = pics.all()
+        return [x for x in listing]
+
 
     
 class Note(models.Model):
@@ -117,7 +127,7 @@ class Note(models.Model):
   
 class Ownership(models.Model):
     
-    boat = models.ForeignKey(Boat)
+    boat = models.ForeignKey(Boat, related_name="ownership")
     owner = models.ForeignKey(Person)
     owned_from = models.IntegerField(blank=True, null=True, choices=YEAR_CHOICES)
     owned_to = models.IntegerField(blank=True, null=True, choices=YEAR_CHOICES)
