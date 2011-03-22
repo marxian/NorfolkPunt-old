@@ -1,6 +1,6 @@
 {% extends "localboats/base.html" %}
 
-{% block title %} {{ block.super }} : No. {{ boat.number }}, {{ boat.name }}{% endblock %}
+{% block title %} {{ block.super }} : No. {{ boat.sail_number }}, {{ boat.name }}{% endblock %}
 
 {% block content %}
     <section id="details">
@@ -57,4 +57,3 @@
 	</section>
 	
 {% endblock %}
-{{ boat }}

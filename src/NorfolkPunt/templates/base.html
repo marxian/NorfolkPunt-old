@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>{% block title %}Norfolk Punt Owners Association{% endblock title %}</title>
-	<link rel="stylesheet" type="text/css" href="/site_media/css/reset.css">
+	<!--<link rel="stylesheet" type="text/css" href="/site_media/css/reset.css">-->
 	<link rel="stylesheet" type="text/css" href="/site_media/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/site_media/css/ui-lightness/jquery-ui-1.8.10.custom.css">
 	{% block styles %}
@@ -21,8 +21,10 @@
 				{% url pictures_index as pictures %}
 				<nav id="main">
 					<a href="">home</a>
+					<a href="/history/" {% current_nav '/history/' %}>history</a>
 					<a href="{{boats}}" {% current_nav boats %}>boats</a>
 					<a href="{{pictures}}" {% current_nav pictures %}>pictures</a>
+					<a href="/rules/" {% current_nav '/rules/' %}>rules</a>
 				</nav>
 			{% endblock navigation %}
 			
