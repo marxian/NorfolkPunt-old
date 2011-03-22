@@ -1,5 +1,7 @@
 from models import Boat, Picture, BoatDepiction, PersonDepiction
 from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
+
 
 
 
@@ -13,8 +15,10 @@ def boats(request):
         design_types[str(boat.design)] = ''
     designs = sorted(design_types.keys())
     
-    return render_to_response('localboats/boats.html', {'boats':boats,
-                                                              'designs':designs})
+    return render_to_response('localboats/boats.html', 
+                              {'boats':boats,
+                               'designs':designs},
+                               context_instance=RequestContext(request))
 def boat(request, slug):
     boat = get_object_or_404(Boat, slug=slug)
     
@@ -25,11 +29,12 @@ def boat(request, slug):
     return render_to_response('localboats/boat.html', {'boat': boat, 
                                                        'has_pics':has_pics,
                                                        'main_pic':main_pic,
-                                                       'gallery':gallery})
+                                                       'gallery':gallery},
+                                                       context_instance=RequestContext(request))
 
 def pictures(request):
     pictures = Picture.objects.all()
-    return render_to_response('localboats/pictures.html', {'pictures':pictures})
+    return render_to_response('localboats/pictures.html', {'pictures':pictures},context_instance=RequestContext(request))
 
 def picture(request, slug):
     picture = get_object_or_404(Picture, slug=slug)
@@ -40,6 +45,6 @@ def picture(request, slug):
     depictions = [x for x in boats] + [x for x in people]
     return render_to_response('localboats/picture.html', 
                               {'picture': picture,
-                               'depictions':depictions})
+                               'depictions':depictions},context_instance=RequestContext(request))
     
     

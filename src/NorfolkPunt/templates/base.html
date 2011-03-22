@@ -15,7 +15,20 @@
 	
 	<div id="page-wrap">
 		<div id="header" class="black80 shadow">
+			{% block navigation %}
+			    {% load current_nav %}
+				{% url boats_index as boats %}
+				{% url pictures_index as pictures %}
+				<nav id="main">
+					<a href="">home</a>
+					<a href="{{boats}}" {% current_nav boats %}>boats</a>
+					<a href="{{pictures}}" {% current_nav pictures %}>pictures</a>
+				</nav>
+			{% endblock navigation %}
+			
 			<h1><a href="/"><strong>Norfolk Punt</strong><br/><em>Owners Association</em></a></h1>
+			
+			<div style="clear:both;"></div>
 		</div>
 		<div id="content">
 			{% block content %}{% endblock content %}

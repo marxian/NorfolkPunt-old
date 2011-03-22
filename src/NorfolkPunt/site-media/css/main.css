@@ -47,6 +47,17 @@ img.bg {
 	box-shadow: 0 0 15px black; 
 }
 
+nav#main {
+	float:right;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+
+nav#main a.current {
+	color: yellow;
+	font-style: bold;
+}
+
 section {
 	padding: 10px;
 	-moz-box-shadow: 0 0 15px black; 
