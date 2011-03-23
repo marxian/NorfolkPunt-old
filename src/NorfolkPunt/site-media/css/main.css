@@ -607,5 +607,20 @@ section#ownership {
 
 /* RULES */
 
+/* HISTORY */
 
+section#history h3 {
+	clear:both;
+}
 
+section#history img {
+	padding: 1em;
+}
+
+section#history img.right {
+	float:right;
+}
+
+section#history img.left {
+	float:left;
+}
