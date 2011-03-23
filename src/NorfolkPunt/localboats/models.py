@@ -37,9 +37,20 @@ def slugify_uniquely(value, model, slugfield="slug"):
                 # we hit a conflicting slug, so bump the suffix & try again
                 suffix += 1
 
+class Place(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    address = models.TextField(blank=True)
+    postcode = models.CharField(max_length=10, blank=True)
+    latitude = models.FloatField(blank=True, null=True)
+    longitude = models.FloatField(blank=True, null=True)
+    website = models.URLField(verify_exists=False, blank=True)
+    
+    def __unicode__(self):
+        return self.name
 
 class Agent(models.Model):
-    name = models.CharField(max_length=100, primary_key=True)
+    name = models.CharField(max_length=100)
     class Meta:
         abstract = True
         ordering = ['name']  
@@ -90,11 +101,8 @@ class Boat(models.Model):
     design = models.ForeignKey(Design, blank=True, related_name='examples')
     previous_names = models.CharField(max_length=100, blank=True)
     
-    
-    
     slug = models.SlugField(editable=False)
 
-    
     class Meta:
         ordering = ['-sail_number']
         unique_together = (("name", "sail_number"),)

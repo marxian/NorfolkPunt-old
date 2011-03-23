@@ -1,0 +1,124 @@
+[
+  {
+    "pk": 1, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.buckenhamsailingclub.co.uk/", 
+      "name": "Buckenham Sailing Club", 
+      "longitude": null, 
+      "postcode": "", 
+      "address": "", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Rupert Redington"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Unknown"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Colin McDougall"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.designer", 
+    "fields": {
+      "name": "Dick Wyche"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": 1, 
+      "name": "Hard Chine"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Fibreglass"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1978, 
+      "name": "Grebe", 
+      "handicap": 908, 
+      "builder": 1, 
+      "previous_names": "", 
+      "construction": 1, 
+      "design": 1, 
+      "sail_number": 66, 
+      "slug": "grebe"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 1, 
+      "owned_from": 2010, 
+      "owned_to": null, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2011-03-23 20:04:52", 
+      "date_taken": "2011-03-23 20:04:52", 
+      "title": "Grebe on the Picnic Race", 
+      "image": "photologue/photos/grebe1.JPG", 
+      "created": "2010-05-22", 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "A lovely day racing from Hickling to Potter and back", 
+      "slug": "grebe-on-the-picnic-race"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 1, 
+      "image": 1, 
+      "height": 21, 
+      "width": 38, 
+      "top": 58, 
+      "left": 28
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 1, 
+      "image": 1, 
+      "height": 14, 
+      "width": 10, 
+      "top": 44, 
+      "left": 51
+    }
+  }
+]

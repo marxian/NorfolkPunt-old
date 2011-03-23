@@ -1,0 +1,43 @@
+[
+  {
+    "pk": 1, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Navigation Race"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2010-10-16 12:00:00", 
+      "postcode": "", 
+      "location": 1, 
+      "type": 1, 
+      "description": "Buckenhan to Breydon and Back"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceresult", 
+    "fields": {
+      "report": "Four punts set out and four returned. ", 
+      "full_results": "", 
+      "event": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 1, 
+      "crew": 2, 
+      "points": null, 
+      "helm": 1, 
+      "position": 4, 
+      "boat": 1
+    }
+  }
+]

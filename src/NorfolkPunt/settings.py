@@ -110,6 +110,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.flatpages',
     'localboats',
+    'localboats.events',
     'puntsite',
     'photologue',
     'piston',
@@ -119,4 +120,4 @@ INSTALLED_APPS = (
     'django.contrib.admindocs'
 )
 
-PHOTOLOGUE_DIR = 'pictures'
+

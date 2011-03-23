@@ -50,7 +50,7 @@ class TagLookupHandler(AnonymousBaseHandler):
             for boat in boats:
                 data.append({'label':boat.name, 'id':boat.id, 'category':'Boats', 'type':'boats'})
             for person in people:
-                data.append({'label':person.name, 'id':person.name, 'category':'People', 'type':'people'})
+                data.append({'label':person.name, 'id':person.id, 'category':'People', 'type':'people'})
             
         return data
         

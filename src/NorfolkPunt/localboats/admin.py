@@ -45,6 +45,7 @@ class PictureAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Boat, BoatAdmin)
+admin.site.register(Place)
 admin.site.register(Person)
 admin.site.register(Design)
 admin.site.register(Designer)
