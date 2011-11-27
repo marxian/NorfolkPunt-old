@@ -10,3 +10,8 @@ def history(request):
     return render_to_response('puntsite/history.html', 
                               {},
                               context_instance=RequestContext(request))
+    
+def home(request):
+    return render_to_response('puntsite/home.html',
+                              {},
+                              context_instance=RequestContext(request))

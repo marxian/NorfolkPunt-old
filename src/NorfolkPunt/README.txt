@@ -7,4 +7,5 @@ Dependencies:
 	django
 	localboats
 	django-imagekit
-	
+	django-admin-tools
+    south

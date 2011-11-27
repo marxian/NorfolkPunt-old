@@ -6,6 +6,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    (r'^admin_tools/', include('admin_tools.urls')),
     #Serve site_media while in development             
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
@@ -22,7 +23,7 @@ urlpatterns = patterns('',
     # Use localboats to provide boat, picture, boatlisting and gallery views
     (r'^', include('localboats.urls')),
     
-    # Use puntsite to provide semi statis views like home, rules, history
+    # Use puntsite to provide semi static views like home, rules, history
     (r'^', include('puntsite.urls')),
     
     # Use the piston based api app to provide the NorfolkPunt API
