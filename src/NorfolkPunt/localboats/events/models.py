@@ -22,10 +22,20 @@ class Event(models.Model):
     start = models.DateTimeField()
     end = models.DateTimeField(blank=True, null=True)
     location = models.ForeignKey(Place, related_name="hosts")
-    postcode = models.CharField(max_length=10, blank=True)
+    
+    slug = models.SlugField(editable=False)
     
     def __unicode__(self):
         return self.name + ' (%s)' % (self.start.strftime('%Y'))
+        
+    @models.permalink
+    def get_absolute_url(self):
+        return ('event_view', [self.slug])
+        
+    def save(self, *args, **kwargs):
+        
+        self.slug = slugify(self.name)
+        return super(Event, self).save(*args, **kwargs)
     
 class RaceResult(models.Model):
     event = models.ForeignKey(Event, related_name='results')

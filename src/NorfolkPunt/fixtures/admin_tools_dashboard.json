@@ -1,0 +1,20 @@
+[
+  {
+    "pk": 1, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+      "dashboard_id": "dashboard", 
+      "data": "{\"positions\":{},\"columns\":{},\"disabled\":{\"module_5\":true},\"collapsed\":{\"module_6\":true}}", 
+      "user": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+      "dashboard_id": "localboats-dashboard", 
+      "data": "{}", 
+      "user": 1
+    }
+  }
+]

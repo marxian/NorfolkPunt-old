@@ -23,6 +23,9 @@ urlpatterns = patterns('',
     # Use the piston based api app to provide the NorfolkPunt API
     (r'^api/', include('api.urls')),
     
+    # Use the use events urls from the localboats.events submodule
+    (r'^events/', include('localboats.events.urls')),
+    
     # Use localboats to provide boat, picture, boatlisting and gallery views
     (r'^', include('localboats.urls')),
     

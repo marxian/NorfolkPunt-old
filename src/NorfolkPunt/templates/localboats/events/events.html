@@ -1,0 +1,81 @@
+{% extends "localboats/base.html" %}
+
+{% block title %}{{ block.super }} : Events{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" type="text/css" href="/site_media/css/isotope.css">
+{% endblock styles %}
+
+{% block content %}
+	<nav id="list-options" class="white80 shadow">
+      <h3>Filter:</h3>
+      <ul id="filter" class="option-set">
+        <li><a href="#show-all" data-filter="*" class="selected">All</a></li>
+		{% for event_type in event_types %}
+			<li><a href="#{{ event_type|slugify }}" data-filter=".{{ event_type|slugify }}">{{event_type}}</a></li>
+		{% endfor %}
+      </ul>
+  	</nav>
+
+	<ul id="super-list" class="fitRows clearfix">
+	{% for event in events %}
+	    <li id="{{ event.slug }}" 
+			class="event {{ event.type|slugify }}"
+			data-start="{{ event.start }}" 
+			>
+	    	<a href="{{ event.get_absolute_url }}">{{ event.name }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock content %}
+
+{% block scripts %}
+	<script type="text/javascript" src="/site_media/js/jquery.isotope.min.js"></script>
+	<script>
+		$list = $('#super-list');
+  
+		$('#filter a').live('click',function(){
+		  var filterName = $(this).attr('data-filter');
+		  $list.isotope({ filter : filterName });
+		  return false;
+		});
+		
+		
+		
+		var currentLayout = 'straightDown';
+		
+		
+		  
+		// switches selected class on buttons
+		$('#list-options').find('.option-set a').live('click', function(){
+			var $this = $(this);
+			
+			// don't proceed if already selected
+			if ( !$this.hasClass('selected') ) {
+			  $this.parents('.option-set').find('.selected').removeClass('selected');
+			  $this.addClass('selected');
+			}
+		});
+		
+		$(function(){
+		  
+		  $list.isotope({
+		    layoutMode : 'straightDown',
+		    masonry : {
+		      columnWidth: 220
+		    },
+		    getSortData : {
+			  name : function( $elem ) {
+				return $($elem).find('a:first').text();
+			  }
+		    }
+		  });
+		  
+		});
+
+	</script>
+{% endblock scripts %}
+
+
+
+

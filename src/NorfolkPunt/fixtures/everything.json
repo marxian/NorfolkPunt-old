@@ -81,6 +81,24 @@
     }
   }, 
   {
+    "pk": 10, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 22:54:09", 
+      "app_name": "events", 
+      "migration": "0002_auto__add_field_event_slug"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 22:57:29", 
+      "app_name": "events", 
+      "migration": "0003_auto__del_field_event_postcode"
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "menu.bookmark", 
     "fields": {
@@ -558,7 +576,7 @@
     "pk": 1, 
     "model": "sites.site", 
     "fields": {
-      "domain": "localhost:8000", 
+      "domain": "localhost:8080", 
       "name": "Norfolk Punt Owners Association"
     }
   }, 
@@ -1279,9 +1297,9 @@
       "end": null, 
       "name": "Triple B", 
       "start": "2010-10-16 12:00:00", 
-      "postcode": "", 
       "location": 1, 
       "type": 1, 
+      "slug": "triple-b", 
       "description": "Buckenhan to Breydon and Back"
     }
   }, 
@@ -1292,9 +1310,9 @@
       "end": "2011-08-21 16:00:00", 
       "name": "Championships 2011", 
       "start": "2011-08-20 11:00:00", 
-      "postcode": "", 
       "location": 2, 
       "type": 2, 
+      "slug": "championships-2011", 
       "description": "Briefing Sat 11.30 with tow out 11.00.\r\n\r\nRaces Sat 12.00, 14.00 & 16.00, Sun 10.30 & 12.00, best 4 to count.  Many trophies or prizes. \r\n\r\nEntry fee \u00a325 before Wed 17 August, \u00a330 after, before 11 am Saturday. \r\n\r\nThe legendary NPC tea and home made cake included in the entry fee!  As are drinks and nibbles at Marsh House on the Saturday evening for competitors and crews.\r\n\r\nMore info and entry forms available from rachelclayton@mypostoffice.co.uk"
     }
   }, 
@@ -1492,6 +1510,32 @@
       "upscale": false, 
       "pre_cache": false, 
       "quality": 80
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 22:57:01", 
+      "object_repr": "Triple B (2010)", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 22:56:37", 
+      "object_repr": "Championships 2011 (2011)", 
+      "object_id": "2", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
     }
   }, 
   {
@@ -3431,7 +3475,7 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2012-01-08 19:06:15", 
+      "last_login": "2011-03-02 21:06:36", 
       "groups": [], 
       "user_permissions": [], 
       "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 

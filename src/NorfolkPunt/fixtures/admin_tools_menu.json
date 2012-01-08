@@ -1,5 +1,5 @@
 [
-{
+  {
     "pk": 1, 
     "model": "menu.bookmark", 
     "fields": {
@@ -41,7 +41,7 @@
     "fields": {
       "url": "/admin/localboats/boat/", 
       "user": 1, 
-      "title": "Boats"
+      "title": "Select boat to change"
     }
   }, 
   {
@@ -50,16 +50,7 @@
     "fields": {
       "url": "/admin/localboats/picture/", 
       "user": 1, 
-      "title": "Pictures"
+      "title": "Pictuers"
     }
-  }, 
-  {
-    "pk": 1, 
-    "model": "dashboard.dashboardpreferences", 
-    "fields": {
-      "dashboard_id": "dashboard", 
-      "data": "{\"positions\":{},\"columns\":{},\"disabled\":{\"module_5\":true},\"collapsed\":{\"module_6\":true}}", 
-      "user": 1
-    }
-  },
+  }
 ]
