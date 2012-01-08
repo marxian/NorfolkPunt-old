@@ -17,10 +17,10 @@
 				<p class="caption">{{ picture.caption }}</p>
 			{% endif %}
 			
-				<ul id="depictions">
+				<ul id="depictions" style="width:{{ picture.get_display_size.0 }}px;">
 					{% if depictions %}
 						{% for dep in depictions %}
-						  <li class="depiction {{dep.type}}" 
+						  <li class="depiction {{dep.type}} {{dep.target.design|slugify}}" 
 							  data-depiction='{"top":{{dep.top}},"left":{{dep.left}},"width":{{dep.width}},"height":{{dep.height}},"id":{{forloop.counter}},"note":"{{dep.target.name}}", "type":"{{dep.type}}"}'>
 							  <a href="{{dep.target.get_absolute_url}}">{{dep.target.name}}</a>
 						 </li>
@@ -28,6 +28,13 @@
 					{% endif %}
 					<li><a href="javascript:void(0);" id="add-depiction" title="add"><span class="hint" style="display:none;">click the image to position a new tag</span></a></li>
 				</ul>
+				
+				<div class="meta">
+					Picture by 
+					<cite>{{ picture.attribution.name }}</cite>
+					{% load licensing %}
+					{{ picture.license|license_logo }}
+				</div>
 			
 		</section>
 	</div>

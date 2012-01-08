@@ -1,0 +1,174 @@
+[
+  {
+    "pk": 2, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Championship"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Navigation Race"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2010-10-16 12:00:00", 
+      "postcode": "", 
+      "location": 1, 
+      "type": 1, 
+      "description": "Buckenhan to Breydon and Back"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2011-08-21 16:00:00", 
+      "name": "Championships 2011", 
+      "start": "2011-08-20 11:00:00", 
+      "postcode": "", 
+      "location": 2, 
+      "type": 2, 
+      "description": "Briefing Sat 11.30 with tow out 11.00.\r\n\r\nRaces Sat 12.00, 14.00 & 16.00, Sun 10.30 & 12.00, best 4 to count.  Many trophies or prizes. \r\n\r\nEntry fee \u00a325 before Wed 17 August, \u00a330 after, before 11 am Saturday. \r\n\r\nThe legendary NPC tea and home made cake included in the entry fee!  As are drinks and nibbles at Marsh House on the Saturday evening for competitors and crews.\r\n\r\nMore info and entry forms available from rachelclayton@mypostoffice.co.uk"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceresult", 
+    "fields": {
+      "report": "Four punts set out and four returned. ", 
+      "full_results": "", 
+      "event": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.raceresult", 
+    "fields": {
+      "report": "Sunshine and a light NW breeze greeted the 19 competitors as they assembled at the Norfolk Punt Club on Barton Broad for their Championships regatta. Quite a change from the blustery weekends of late. As usual there was a wide variety of punts taking place, ranging from Bill Glover\u2019s Prawn, built in 1918, to Richard Whitefoot\u2019s Comet (2009), the newest boat in the fleet.\r\n\r\n \r\n\r\nVeteran punt sailor Peter Bainbridge was race officer and ran an admirably tight ship for the weekend.  He set a course for the first race giving a downwind leg for the full length of the Broad which allowed Andrew Friend and Ben Girling to show their sail handling skills with their large pink asymmetric spinnaker and they finished first on the water only to fall to second place on handicap after James and Paul Jarvey in Harnser. The start of the second race was tight with two boats over the line who failed to turn back. The pattern of the race was similar to the first but this time Blackbird was first on handicap as well as on the water. Peregine (Simon and Rachel Clayton) and Richard Whitefoot\u2019s Comet changed places too with each having a 3rd and 4th. By this time the wind had backed and a new course was set by race office Peter Bainbridge. Once again Blackbird led the way home with Harnser second. William Daniels and Rob Marriott in Swallow II had their best finish so far with a 4th. After three races Harnser and Blackbird were within one point of each other with all to sail for the following day.\r\n\r\n \r\n\r\nIn the lighter NW winds on Sunday Blackbird soon established a useful lead followed by Peregrine and Harnser. However, the wind was fluky in direction and strength, and towards the end of the final beat Blackbird fell into a light wind area allowing Peregrine and Harnser to close up and just before the finish Peregrine sped past her, winning by 1 second. Slightly further back Emperor Goose (John Parker and James Savage) and Snow Goose (Jane Pye and Ian Bray) had sailed a good race to finish 4th and 5th. Blackbird and Harnser were now tied for first overall with race 5 being the decider. The wind was dying away but there was enough to complete 2 rounds of the course. The Jarvey brothers took control of the race from the first buoy, winning on the water. John Parker and James Savage in Snow Goose found the lighter wind to their liking finishing second, whilst the Morrison punts Peregrine and Blackbird fell back to 8th and 9th.  Rushlight (Max and Felix Dixey) with her teenage crew sailed well to finish 5th.\r\n\r\n \r\n\r\nAfter five races Harnser had won the Championships. All agreed that this had been another great regatta with more punts than in previous years, good weather and not too many capsizes.", 
+      "full_results": "", 
+      "event": 2
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 6, 
+      "raceresult": 2, 
+      "name": "Progress Trophy", 
+      "boat": 3, 
+      "crew": 7
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 10, 
+      "raceresult": 2, 
+      "name": "First Lady Helm", 
+      "boat": 5, 
+      "crew": 11
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 12, 
+      "raceresult": 2, 
+      "name": "Cuckoo Trophy", 
+      "boat": 6, 
+      "crew": 13
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 14, 
+      "raceresult": 2, 
+      "name": "Broadshaven Trophy", 
+      "boat": 7, 
+      "crew": 15
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 8, 
+      "raceresult": 2, 
+      "name": "First Lady Crew", 
+      "boat": 4, 
+      "crew": 9
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 3, 
+      "raceresult": 2, 
+      "name": "Hardchine Trophy", 
+      "boat": 2, 
+      "crew": 5
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 1, 
+      "crew": 2, 
+      "points": null, 
+      "helm": 1, 
+      "position": 4, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 5, 
+      "points": null, 
+      "helm": 3, 
+      "position": 1, 
+      "boat": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 7, 
+      "points": null, 
+      "helm": 6, 
+      "position": 2, 
+      "boat": 3
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 9, 
+      "points": null, 
+      "helm": 8, 
+      "position": 3, 
+      "boat": 4
+    }
+  }
+]

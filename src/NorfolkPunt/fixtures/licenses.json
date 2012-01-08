@@ -1,0 +1,27 @@
+[
+  {
+    "pk": 1, 
+    "model": "licenses.organization", 
+    "fields": {
+      "abbreviation": "CC", 
+      "website": "http://creativecommons.org/", 
+      "description": "", 
+      "name": "Creative Commons", 
+      "slug": "creative-commons"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "licenses.license", 
+    "fields": {
+      "name": "Creative Commons Attribution 2.0", 
+      "url": "http://creativecommons.org/licenses/by/2.0/", 
+      "is_active": true, 
+      "abbreviation": "CC BY 2.0", 
+      "logo": "https://i.creativecommons.org/l/by/2.0/80x15.png", 
+      "organization": 1, 
+      "slug": "creative-commons-attribution-20", 
+      "description": ""
+    }
+  }
+]

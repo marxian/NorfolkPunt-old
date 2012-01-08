@@ -117,6 +117,8 @@ INSTALLED_APPS = (
     'licenses',
     'localboats',
     'localboats.events',
+    'localboats.news',
+    'localboats.sale',
     'puntsite',
     'photologue',
     'piston',

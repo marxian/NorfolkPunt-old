@@ -404,12 +404,20 @@ body {
 	
 }
 
-.hard-chine {
+.morrison {
+  background-color: #ff00ff
+}
+
+.hardchine {
 	background-color: #ff0000;
 }
 
 .traditional {
 	background-color: #cc0000;
+}
+
+.people {
+  background-color: #000000;
 }
 
 /* list options */
@@ -487,6 +495,10 @@ section#picture {
 	display: inline-block;
 }
 
+section#picture ul#depictions {
+  margin: 0px;
+}
+
 section#picture ul#depictions li.depiction {
 	display: block;
 	float: left;
@@ -496,15 +508,14 @@ section#picture ul#depictions li.depiction {
 	-webkit-border-radius:3px;
 	border-radius:3px;
 }
-section#picture ul#depictions li.boats {
-	background: #FF0000;
-}
-section#picture ul#depictions li.people {
-	background: #FF0000;
-}
+
 section#picture ul#depictions a {
 	text-decoration: none;
 	color: #FFFFFF;
+}
+
+ul#depictions {
+  list-style: none;
 }
 
 #add-depiction {
@@ -539,6 +550,27 @@ section#picture ul#depictions a {
     -webkit-border-radius:3px;
     border-radius:3px;
 	color: #FFFFFF;
+}
+
+div.meta {
+  clear: both;
+  text-align: right;
+}
+
+/* Gallery */
+
+section#sitegallery {
+  display: inline-block;
+  max-width: 70%;
+}
+
+#sitegallery ul#pictures {
+  list-style: none;
+  margin: 0px;
+}
+
+#pictures li.picture {
+  float: left;
 }
 
 /* BOAT PAGE */

@@ -1,0 +1,65 @@
+[
+{
+    "pk": 1, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/sale/sale/", 
+      "user": 1, 
+      "title": "For Sale"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/news/news/", 
+      "user": 1, 
+      "title": "News"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/events/event/", 
+      "user": 1, 
+      "title": "Events"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/events/raceresult/", 
+      "user": 1, 
+      "title": "Results"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/localboats/boat/", 
+      "user": 1, 
+      "title": "Boats"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/localboats/picture/", 
+      "user": 1, 
+      "title": "Pictures"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+      "dashboard_id": "dashboard", 
+      "data": "{\"positions\":{},\"columns\":{},\"disabled\":{\"module_5\":true},\"collapsed\":{\"module_6\":true}}", 
+      "user": 1
+    }
+  },
+]

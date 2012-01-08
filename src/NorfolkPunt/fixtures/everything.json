@@ -1,0 +1,3442 @@
+[
+  {
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:49", 
+      "app_name": "menu", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:50", 
+      "app_name": "dashboard", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:51", 
+      "app_name": "dashboard", 
+      "migration": "0002_auto__add_field_dashboardpreferences_dashboard_id"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:56", 
+      "app_name": "localboats", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:57", 
+      "app_name": "localboats", 
+      "migration": "0002_auto__add_field_picture_licence__add_field_picture_attribution"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:01:58", 
+      "app_name": "localboats", 
+      "migration": "0003_auto__del_field_picture_licence__add_field_picture_license"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:02:09", 
+      "app_name": "events", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:02:13", 
+      "app_name": "news", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-01-08 16:02:14", 
+      "app_name": "sale", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/sale/sale/", 
+      "user": 1, 
+      "title": "For Sale"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/news/news/", 
+      "user": 1, 
+      "title": "News"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/events/event/", 
+      "user": 1, 
+      "title": "Events"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/events/raceresult/", 
+      "user": 1, 
+      "title": "Results"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/localboats/boat/", 
+      "user": 1, 
+      "title": "Select boat to change"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "menu.bookmark", 
+    "fields": {
+      "url": "/admin/localboats/picture/", 
+      "user": 1, 
+      "title": "Pictuers"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+      "dashboard_id": "dashboard", 
+      "data": "{\"positions\":{},\"columns\":{},\"disabled\":{\"module_5\":true},\"collapsed\":{\"module_6\":true}}", 
+      "user": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+      "dashboard_id": "localboats-dashboard", 
+      "data": "{}", 
+      "user": 1
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "construction", 
+      "name": "Construction Type", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "boat", 
+      "name": "boat", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "boatdepiction", 
+      "name": "boat depiction", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "boatbuilder", 
+      "name": "boatbuilder", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "bookmark", 
+      "name": "bookmark", 
+      "app_label": "menu"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "consumer", 
+      "name": "consumer", 
+      "app_label": "piston"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "contenttype", 
+      "name": "content type", 
+      "app_label": "contenttypes"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "dashboardpreferences", 
+      "name": "dashboard preferences", 
+      "app_label": "dashboard"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "design", 
+      "name": "design", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "designer", 
+      "name": "designer", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "event", 
+      "name": "event", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "eventtype", 
+      "name": "event type", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "flatpage", 
+      "name": "flat page", 
+      "app_label": "flatpages"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "gallery", 
+      "name": "gallery", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "galleryupload", 
+      "name": "gallery upload", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "group", 
+      "name": "group", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "license", 
+      "name": "license", 
+      "app_label": "licenses"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "logentry", 
+      "name": "log entry", 
+      "app_label": "admin"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "message", 
+      "name": "message", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "migrationhistory", 
+      "name": "migration history", 
+      "app_label": "south"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "news", 
+      "name": "news", 
+      "app_label": "news"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "nonce", 
+      "name": "nonce", 
+      "app_label": "piston"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "note", 
+      "name": "note", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "organization", 
+      "name": "organization", 
+      "app_label": "licenses"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "ownership", 
+      "name": "ownership", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "permission", 
+      "name": "permission", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "person", 
+      "name": "person", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "persondepiction", 
+      "name": "person depiction", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "photo", 
+      "name": "photo", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "photoeffect", 
+      "name": "photo effect", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "photosize", 
+      "name": "photo size", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "picture", 
+      "name": "picture", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "place", 
+      "name": "place", 
+      "app_label": "localboats"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "raceposition", 
+      "name": "race position", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "raceresult", 
+      "name": "race result", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "racetrophy", 
+      "name": "race trophy", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "sale", 
+      "name": "sale", 
+      "app_label": "sale"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "session", 
+      "name": "session", 
+      "app_label": "sessions"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "site", 
+      "name": "site", 
+      "app_label": "sites"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "token", 
+      "name": "token", 
+      "app_label": "piston"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "user", 
+      "name": "user", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "watermark", 
+      "name": "watermark", 
+      "app_label": "photologue"
+    }
+  }, 
+  {
+    "pk": "f5c7a445772ec3765ffcfa50c0404203", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2011-04-17 21:11:11", 
+      "session_data": "gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k\ncy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjU1ODIzZmJmNThlOTE4OGY0NTg1\nNjczMjM1ZmZlYjNh\n"
+    }
+  }, 
+  {
+    "pk": "5b8d89af32d6f34cdb0846173b9fa32a", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-01-22 16:04:18", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": "9fc54d59659d8815918c56a250a9b01f", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-01-22 19:06:15", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+      "domain": "localhost:8000", 
+      "name": "Norfolk Punt Owners Association"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "licenses.organization", 
+    "fields": {
+      "abbreviation": "CC", 
+      "website": "http://creativecommons.org/", 
+      "description": "", 
+      "name": "Creative Commons", 
+      "slug": "creative-commons"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "licenses.license", 
+    "fields": {
+      "name": "Creative Commons Attribution 2.0", 
+      "url": "http://creativecommons.org/licenses/by/2.0/", 
+      "is_active": true, 
+      "abbreviation": "CC BY 2.0", 
+      "logo": "https://i.creativecommons.org/l/by/2.0/80x15.png", 
+      "organization": 1, 
+      "slug": "creative-commons-attribution-20", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.buckenhamsailingclub.co.uk/", 
+      "name": "Buckenham Sailing Club", 
+      "longitude": null, 
+      "postcode": "", 
+      "address": "", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.puntclub.co.uk/", 
+      "name": "Norfolk Punt Club", 
+      "longitude": 1.4963078498840332, 
+      "postcode": "", 
+      "address": "", 
+      "latitude": 52.742137792596367, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Andrew Friend"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Ben Girling"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Felix Dixey"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Ian Bray"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "James Jarvey"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Jane Pye"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Max Dixey"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Paul Jarvey"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Rachel Clayton"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Rob Marriott"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Robin Myerscough"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Rupert Redington"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Simon Clayton"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "T.A. Clarence-Smith"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Unknown"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "William Daniels"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Colin McDougall"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Eastwood and Whelpton of Upton"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Herbert Woods of Potter Heigham"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Jeff Green"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Richard Parker"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "S. Read"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.designer", 
+    "fields": {
+      "name": "Dick Wyche"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.designer", 
+    "fields": {
+      "name": "Herbert Woods"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.designer", 
+    "fields": {
+      "name": "Phil Morrison"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.designer", 
+    "fields": {
+      "name": "Wyche and Coppock"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": 2, 
+      "name": "Hardchine"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": 3, 
+      "name": "Morrison"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.design", 
+    "fields": {
+      "designer": 4, 
+      "name": "Traditional"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Fibreglass"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Plywood"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Cold-moulded Plywood"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Carbon Foam Sandwich (Wooden Decks)"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.construction", 
+    "fields": {
+      "name": "Wood (Carvel)"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 2003, 
+      "name": "Snow Goose", 
+      "handicap": 908, 
+      "builder": 5, 
+      "previous_names": "", 
+      "construction": 4, 
+      "design": 2, 
+      "sail_number": 96, 
+      "slug": "snow-goose"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1993, 
+      "name": "Peregrine", 
+      "handicap": 875, 
+      "builder": 4, 
+      "previous_names": "", 
+      "construction": 3, 
+      "design": 3, 
+      "sail_number": 86, 
+      "slug": "peregrine"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1989, 
+      "name": "Blackbird", 
+      "handicap": 875, 
+      "builder": 3, 
+      "previous_names": "", 
+      "construction": 3, 
+      "design": 3, 
+      "sail_number": 74, 
+      "slug": "blackbird"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1978, 
+      "name": "Grebe", 
+      "handicap": 908, 
+      "builder": 1, 
+      "previous_names": "", 
+      "construction": 1, 
+      "design": 2, 
+      "sail_number": 66, 
+      "slug": "grebe"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1961, 
+      "name": "Harnser", 
+      "handicap": 908, 
+      "builder": 2, 
+      "previous_names": "", 
+      "construction": 2, 
+      "design": 2, 
+      "sail_number": 51, 
+      "slug": "harnser"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1936, 
+      "name": "Swallow II", 
+      "handicap": 1027, 
+      "builder": 6, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 35, 
+      "slug": "swallow-ii"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1930, 
+      "name": "Rushlight", 
+      "handicap": 1064, 
+      "builder": 6, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 27, 
+      "slug": "rushlight"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.note", 
+    "fields": {
+      "text": "Re-decked 1998", 
+      "refers_to": 4
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.note", 
+    "fields": {
+      "text": "Decked in wood by James Jarvey", 
+      "refers_to": 5
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 1, 
+      "owned_from": 2010, 
+      "owned_to": null, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 3, 
+      "owned_from": 2003, 
+      "owned_to": null, 
+      "boat": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 4, 
+      "owned_from": 1974, 
+      "owned_to": 1991, 
+      "boat": 2
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2012-01-08 18:21:01", 
+      "attribution": 16, 
+      "license": 1, 
+      "date_taken": "2012-01-08 18:21:02", 
+      "title": "Blackbird", 
+      "image": "photologue/photos/6067077981_cdb415fef4_o.jpg", 
+      "created": "2011-08-20", 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "", 
+      "slug": "blackbird"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2012-01-08 18:30:56", 
+      "attribution": 16, 
+      "license": 1, 
+      "date_taken": "2012-01-08 18:30:56", 
+      "title": "Harnser", 
+      "image": "photologue/photos/6067500412_9d3710a001_b.jpg", 
+      "created": "2011-08-20", 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "", 
+      "slug": "harnser"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2012-01-08 19:35:20", 
+      "attribution": 16, 
+      "license": 1, 
+      "date_taken": "2012-01-08 19:35:20", 
+      "title": "Champs 2011", 
+      "image": "photologue/photos/6067677296_09c1b51962_b.jpg", 
+      "created": "2011-08-20", 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "Shortly after the start of race 2. ", 
+      "slug": "champs-2011"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 3, 
+      "image": 1, 
+      "height": 92, 
+      "width": 92, 
+      "top": 0, 
+      "left": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 2, 
+      "image": 2, 
+      "height": 85, 
+      "width": 42, 
+      "top": 4, 
+      "left": 24
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 4, 
+      "image": 3, 
+      "height": 93, 
+      "width": 33, 
+      "top": 5, 
+      "left": 42
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 2, 
+      "image": 3, 
+      "height": 36, 
+      "width": 12, 
+      "top": 2, 
+      "left": 27
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 7, 
+      "image": 3, 
+      "height": 91, 
+      "width": 28, 
+      "top": 5, 
+      "left": 11
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 3, 
+      "image": 3, 
+      "height": 15, 
+      "width": 16, 
+      "top": 72, 
+      "left": 9
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 1, 
+      "image": 3, 
+      "height": 15, 
+      "width": 10, 
+      "top": 74, 
+      "left": 0
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 7, 
+      "image": 1, 
+      "height": 7, 
+      "width": 10, 
+      "top": 69, 
+      "left": 44
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 6, 
+      "image": 1, 
+      "height": 7, 
+      "width": 10, 
+      "top": 71, 
+      "left": 34
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 9, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 78, 
+      "left": 64
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 8, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 80, 
+      "left": 53
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 5, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 75, 
+      "left": 43
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 3, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 77, 
+      "left": 37
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 6, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 73, 
+      "left": 15
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 14, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 77, 
+      "left": 21
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 15, 
+      "image": 3, 
+      "height": 14, 
+      "width": 10, 
+      "top": 74, 
+      "left": 30
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Championship"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Navigation Race"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2010-10-16 12:00:00", 
+      "postcode": "", 
+      "location": 1, 
+      "type": 1, 
+      "description": "Buckenhan to Breydon and Back"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2011-08-21 16:00:00", 
+      "name": "Championships 2011", 
+      "start": "2011-08-20 11:00:00", 
+      "postcode": "", 
+      "location": 2, 
+      "type": 2, 
+      "description": "Briefing Sat 11.30 with tow out 11.00.\r\n\r\nRaces Sat 12.00, 14.00 & 16.00, Sun 10.30 & 12.00, best 4 to count.  Many trophies or prizes. \r\n\r\nEntry fee \u00a325 before Wed 17 August, \u00a330 after, before 11 am Saturday. \r\n\r\nThe legendary NPC tea and home made cake included in the entry fee!  As are drinks and nibbles at Marsh House on the Saturday evening for competitors and crews.\r\n\r\nMore info and entry forms available from rachelclayton@mypostoffice.co.uk"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceresult", 
+    "fields": {
+      "report": "Four punts set out and four returned. ", 
+      "full_results": "", 
+      "event": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.raceresult", 
+    "fields": {
+      "report": "Sunshine and a light NW breeze greeted the 19 competitors as they assembled at the Norfolk Punt Club on Barton Broad for their Championships regatta. Quite a change from the blustery weekends of late. As usual there was a wide variety of punts taking place, ranging from Bill Glover\u2019s Prawn, built in 1918, to Richard Whitefoot\u2019s Comet (2009), the newest boat in the fleet.\r\n\r\n \r\n\r\nVeteran punt sailor Peter Bainbridge was race officer and ran an admirably tight ship for the weekend.  He set a course for the first race giving a downwind leg for the full length of the Broad which allowed Andrew Friend and Ben Girling to show their sail handling skills with their large pink asymmetric spinnaker and they finished first on the water only to fall to second place on handicap after James and Paul Jarvey in Harnser. The start of the second race was tight with two boats over the line who failed to turn back. The pattern of the race was similar to the first but this time Blackbird was first on handicap as well as on the water. Peregine (Simon and Rachel Clayton) and Richard Whitefoot\u2019s Comet changed places too with each having a 3rd and 4th. By this time the wind had backed and a new course was set by race office Peter Bainbridge. Once again Blackbird led the way home with Harnser second. William Daniels and Rob Marriott in Swallow II had their best finish so far with a 4th. After three races Harnser and Blackbird were within one point of each other with all to sail for the following day.\r\n\r\n \r\n\r\nIn the lighter NW winds on Sunday Blackbird soon established a useful lead followed by Peregrine and Harnser. However, the wind was fluky in direction and strength, and towards the end of the final beat Blackbird fell into a light wind area allowing Peregrine and Harnser to close up and just before the finish Peregrine sped past her, winning by 1 second. Slightly further back Emperor Goose (John Parker and James Savage) and Snow Goose (Jane Pye and Ian Bray) had sailed a good race to finish 4th and 5th. Blackbird and Harnser were now tied for first overall with race 5 being the decider. The wind was dying away but there was enough to complete 2 rounds of the course. The Jarvey brothers took control of the race from the first buoy, winning on the water. John Parker and James Savage in Snow Goose found the lighter wind to their liking finishing second, whilst the Morrison punts Peregrine and Blackbird fell back to 8th and 9th.  Rushlight (Max and Felix Dixey) with her teenage crew sailed well to finish 5th.\r\n\r\n \r\n\r\nAfter five races Harnser had won the Championships. All agreed that this had been another great regatta with more punts than in previous years, good weather and not too many capsizes.", 
+      "full_results": "", 
+      "event": 2
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 6, 
+      "raceresult": 2, 
+      "name": "Progress Trophy", 
+      "boat": 3, 
+      "crew": 7
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 10, 
+      "raceresult": 2, 
+      "name": "First Lady Helm", 
+      "boat": 5, 
+      "crew": 11
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 12, 
+      "raceresult": 2, 
+      "name": "Cuckoo Trophy", 
+      "boat": 6, 
+      "crew": 13
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 14, 
+      "raceresult": 2, 
+      "name": "Broadshaven Trophy", 
+      "boat": 7, 
+      "crew": 15
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 8, 
+      "raceresult": 2, 
+      "name": "First Lady Crew", 
+      "boat": 4, 
+      "crew": 9
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 3, 
+      "raceresult": 2, 
+      "name": "Hardchine Trophy", 
+      "boat": 2, 
+      "crew": 5
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 1, 
+      "crew": 2, 
+      "points": null, 
+      "helm": 1, 
+      "position": 4, 
+      "boat": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 5, 
+      "points": null, 
+      "helm": 3, 
+      "position": 1, 
+      "boat": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 7, 
+      "points": null, 
+      "helm": 6, 
+      "position": 2, 
+      "boat": 3
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.raceposition", 
+    "fields": {
+      "raceresult": 2, 
+      "crew": 9, 
+      "points": null, 
+      "helm": 8, 
+      "position": 3, 
+      "boat": 4
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "admin_thumbnail", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": true, 
+      "height": 100, 
+      "width": 100, 
+      "upscale": true, 
+      "pre_cache": true, 
+      "quality": 70
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "thumbnail", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": true, 
+      "height": 100, 
+      "width": 100, 
+      "upscale": true, 
+      "pre_cache": true, 
+      "quality": 70
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "feature", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": false, 
+      "height": 0, 
+      "width": 250, 
+      "upscale": false, 
+      "pre_cache": false, 
+      "quality": 70
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "display", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": false, 
+      "height": 0, 
+      "width": 500, 
+      "upscale": false, 
+      "pre_cache": false, 
+      "quality": 80
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 19:47:55", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "Changed caption.", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 19:37:33", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "Changed target for boat depiction \"BoatDepiction object\".", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 19:35:21", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 19:06:50", 
+      "object_repr": "Creative Commons Attribution 2.0", 
+      "object_id": "1", 
+      "change_message": "Changed logo.", 
+      "user": 1, 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 18:31:27", 
+      "object_repr": "localhost:8000", 
+      "object_id": "1", 
+      "change_message": "Changed domain.", 
+      "user": 1, 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 18:30:57", 
+      "object_repr": "Harnser", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 18:21:09", 
+      "object_repr": "Blackbird", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 18:20:58", 
+      "object_repr": "Robin Myerscough", 
+      "object_id": "16", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 3, 
+      "action_time": "2012-01-08 17:16:19", 
+      "object_repr": "Hard Chinebbb", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:14:42", 
+      "object_repr": "Grebe", 
+      "object_id": "1", 
+      "change_message": "Changed design.", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:14:17", 
+      "object_repr": "Hardchine", 
+      "object_id": "2", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:14:06", 
+      "object_repr": "Hard Chinebbb", 
+      "object_id": "1", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:11:18", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Hardchine Trophy - Harnser (James Jarvey, Paul Jarvey)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:10:45", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Broadshaven Trophy - Swallow II (William Daniels, Rob Marriott)\". Added race trophy \"First Lady Crew - Peregrine (Simon Clayton, Rachel Clayton)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:10:10", 
+      "object_repr": "Swallow II", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:08:58", 
+      "object_repr": "Rob Marriott", 
+      "object_id": "15", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:08:46", 
+      "object_repr": "William Daniels", 
+      "object_id": "14", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 17:07:51", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"First Lady Helm - Snow Goose (Jane Pye, Ian Bray)\". Added race trophy \"Cuckoo Trophy - Rushlight (Max Dixey, Felix Dixey)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:07:45", 
+      "object_repr": "Rushlight", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:07:29", 
+      "object_repr": "Wood (Carvel)", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:07:06", 
+      "object_repr": "Herbert Woods of Potter Heigham", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:06:54", 
+      "object_repr": "Traditional", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:06:49", 
+      "object_repr": "Herbert Woods", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:03:31", 
+      "object_repr": "Felix Dixey", 
+      "object_id": "13", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:03:19", 
+      "object_repr": "Max Dixey", 
+      "object_id": "12", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:02:26", 
+      "object_repr": "Snow Goose", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:01:38", 
+      "object_repr": "Carbon Foam Sandwich (Wooden Decks)", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 17:00:57", 
+      "object_repr": "Jeff Green", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:59:20", 
+      "object_repr": "Ian Bray", 
+      "object_id": "11", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:58:27", 
+      "object_repr": "Jane Pye", 
+      "object_id": "10", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:57:34", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Progress Trophy - Blackbird (Andrew Friend, Ben Girling)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:56:40", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"3rd - Peregrine\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:56:22", 
+      "object_repr": "Peregrine", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:55:44", 
+      "object_repr": "Richard Parker", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:54:40", 
+      "object_repr": "Rachel Clayton", 
+      "object_id": "9", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:54:20", 
+      "object_repr": "Simon Clayton", 
+      "object_id": "8", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:53:39", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"2nd - Blackbird\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:53:26", 
+      "object_repr": "Blackbird", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:53:12", 
+      "object_repr": "Cold-moulded Plywood", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:52:57", 
+      "object_repr": "S. Read", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:52:43", 
+      "object_repr": "Morrison", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:52:21", 
+      "object_repr": "Phil Morrison", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:50:20", 
+      "object_repr": "Ben Girling", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:50:11", 
+      "object_repr": "Andrew Friend", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:49:36", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"1st - Harnser\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:49:18", 
+      "object_repr": "Paul Jarvey", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:48:43", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:48:16", 
+      "object_repr": "Harnser", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:47:54", 
+      "object_repr": "T.A. Clarence-Smith", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:46:50", 
+      "object_repr": "James Jarvey", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:46:22", 
+      "object_repr": "Plywood", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:46:08", 
+      "object_repr": "Eastwood and Whelpton of Upton", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:45:53", 
+      "object_repr": "Hard Chine", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:45:51", 
+      "object_repr": "Wyche and Coppock", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:43:36", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08 16:42:37", 
+      "object_repr": "Championship", 
+      "object_id": "2", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:42:11", 
+      "object_repr": "Championships 2011 (2011)", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:39:37", 
+      "object_repr": "Norfolk Punt Club", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:36:53", 
+      "object_repr": "Chanmpionship", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:33:11", 
+      "object_repr": "Creative Commons Attribution 2.0", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08 16:30:33", 
+      "object_repr": "Creative Commons", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_logentry", 
+      "name": "Can add log entry", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_logentry", 
+      "name": "Can change log entry", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_logentry", 
+      "name": "Can delete log entry", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_group", 
+      "name": "Can add group", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_group", 
+      "name": "Can change group", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_group", 
+      "name": "Can delete group", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_message", 
+      "name": "Can add message", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_message", 
+      "name": "Can change message", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_message", 
+      "name": "Can delete message", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_permission", 
+      "name": "Can add permission", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_permission", 
+      "name": "Can change permission", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_permission", 
+      "name": "Can delete permission", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_user", 
+      "name": "Can add user", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_user", 
+      "name": "Can change user", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_user", 
+      "name": "Can delete user", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_contenttype", 
+      "name": "Can add content type", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_contenttype", 
+      "name": "Can change content type", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_contenttype", 
+      "name": "Can delete content type", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_dashboardpreferences", 
+      "name": "Can add dashboard preferences", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_dashboardpreferences", 
+      "name": "Can change dashboard preferences", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_dashboardpreferences", 
+      "name": "Can delete dashboard preferences", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_event", 
+      "name": "Can add event", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_event", 
+      "name": "Can change event", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_event", 
+      "name": "Can delete event", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_eventtype", 
+      "name": "Can add event type", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_eventtype", 
+      "name": "Can change event type", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_eventtype", 
+      "name": "Can delete event type", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_raceposition", 
+      "name": "Can add race position", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 119, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_raceposition", 
+      "name": "Can change race position", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_raceposition", 
+      "name": "Can delete race position", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_raceresult", 
+      "name": "Can add race result", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_raceresult", 
+      "name": "Can change race result", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_raceresult", 
+      "name": "Can delete race result", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_racetrophy", 
+      "name": "Can add race trophy", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_racetrophy", 
+      "name": "Can change race trophy", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_racetrophy", 
+      "name": "Can delete race trophy", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_flatpage", 
+      "name": "Can add flat page", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_flatpage", 
+      "name": "Can change flat page", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_flatpage", 
+      "name": "Can delete flat page", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_license", 
+      "name": "Can add license", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_license", 
+      "name": "Can change license", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_license", 
+      "name": "Can delete license", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_organization", 
+      "name": "Can add organization", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_organization", 
+      "name": "Can change organization", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_organization", 
+      "name": "Can delete organization", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_boat", 
+      "name": "Can add boat", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_boat", 
+      "name": "Can change boat", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_boat", 
+      "name": "Can delete boat", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_boatbuilder", 
+      "name": "Can add boatbuilder", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_boatbuilder", 
+      "name": "Can change boatbuilder", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_boatbuilder", 
+      "name": "Can delete boatbuilder", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_boatdepiction", 
+      "name": "Can add boat depiction", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 101, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_boatdepiction", 
+      "name": "Can change boat depiction", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 102, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_boatdepiction", 
+      "name": "Can delete boat depiction", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_construction", 
+      "name": "Can add Construction Type", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_construction", 
+      "name": "Can change Construction Type", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_construction", 
+      "name": "Can delete Construction Type", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_design", 
+      "name": "Can add design", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_design", 
+      "name": "Can change design", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_design", 
+      "name": "Can delete design", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_designer", 
+      "name": "Can add designer", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_designer", 
+      "name": "Can change designer", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_designer", 
+      "name": "Can delete designer", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_note", 
+      "name": "Can add note", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_note", 
+      "name": "Can change note", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_note", 
+      "name": "Can delete note", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_ownership", 
+      "name": "Can add ownership", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_ownership", 
+      "name": "Can change ownership", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_ownership", 
+      "name": "Can delete ownership", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_person", 
+      "name": "Can add person", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_person", 
+      "name": "Can change person", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_person", 
+      "name": "Can delete person", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_persondepiction", 
+      "name": "Can add person depiction", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_persondepiction", 
+      "name": "Can change person depiction", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_persondepiction", 
+      "name": "Can delete person depiction", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_picture", 
+      "name": "Can add picture", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_picture", 
+      "name": "Can change picture", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_picture", 
+      "name": "Can delete picture", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_place", 
+      "name": "Can add place", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_place", 
+      "name": "Can change place", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_place", 
+      "name": "Can delete place", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_bookmark", 
+      "name": "Can add bookmark", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_bookmark", 
+      "name": "Can change bookmark", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_bookmark", 
+      "name": "Can delete bookmark", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_news", 
+      "name": "Can add news", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_news", 
+      "name": "Can change news", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_news", 
+      "name": "Can delete news", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_gallery", 
+      "name": "Can add gallery", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_gallery", 
+      "name": "Can change gallery", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_gallery", 
+      "name": "Can delete gallery", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_galleryupload", 
+      "name": "Can add gallery upload", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_galleryupload", 
+      "name": "Can change gallery upload", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_galleryupload", 
+      "name": "Can delete gallery upload", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_photo", 
+      "name": "Can add photo", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_photo", 
+      "name": "Can change photo", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_photo", 
+      "name": "Can delete photo", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_photoeffect", 
+      "name": "Can add photo effect", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_photoeffect", 
+      "name": "Can change photo effect", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_photoeffect", 
+      "name": "Can delete photo effect", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_photosize", 
+      "name": "Can add photo size", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_photosize", 
+      "name": "Can change photo size", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_photosize", 
+      "name": "Can delete photo size", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_watermark", 
+      "name": "Can add watermark", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_watermark", 
+      "name": "Can change watermark", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_watermark", 
+      "name": "Can delete watermark", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_consumer", 
+      "name": "Can add consumer", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_consumer", 
+      "name": "Can change consumer", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_consumer", 
+      "name": "Can delete consumer", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_nonce", 
+      "name": "Can add nonce", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_nonce", 
+      "name": "Can change nonce", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_nonce", 
+      "name": "Can delete nonce", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_token", 
+      "name": "Can add token", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_token", 
+      "name": "Can change token", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_token", 
+      "name": "Can delete token", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_sale", 
+      "name": "Can add sale", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_sale", 
+      "name": "Can change sale", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_sale", 
+      "name": "Can delete sale", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_session", 
+      "name": "Can add session", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_session", 
+      "name": "Can change session", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_session", 
+      "name": "Can delete session", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_site", 
+      "name": "Can add site", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_site", 
+      "name": "Can change site", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_site", 
+      "name": "Can delete site", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_migrationhistory", 
+      "name": "Can add migration history", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_migrationhistory", 
+      "name": "Can change migration history", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_migrationhistory", 
+      "name": "Can delete migration history", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "rupert", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2012-01-08 19:06:15", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 
+      "email": "rupert@neontribe.co.uk", 
+      "date_joined": "2011-03-02 21:06:36"
+    }
+  }
+]
