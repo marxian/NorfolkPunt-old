@@ -6,8 +6,13 @@ class RacePositionInline(admin.StackedInline):
     model = RacePosition
     extra = 0
     
+class RaceTrophyInline(admin.StackedInline):
+    model = RaceTrophy
+    extra = 0
+    
 class RaceResultAdmin(admin.ModelAdmin):
-    inlines = [RacePositionInline]
+    inlines = [RacePositionInline, RaceTrophyInline]
+    
 
 
 class EventAdmin(admin.ModelAdmin):

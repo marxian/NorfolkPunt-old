@@ -80,45 +80,5 @@
       "owned_to": null, 
       "boat": 1
     }
-  }, 
-  {
-    "pk": 1, 
-    "model": "localboats.picture", 
-    "fields": {
-      "view_count": 0, 
-      "added": "2011-03-23 20:04:52", 
-      "date_taken": "2011-03-23 20:04:52", 
-      "title": "Grebe on the Picnic Race", 
-      "image": "photologue/photos/grebe1.JPG", 
-      "created": "2010-05-22", 
-      "crop_from": "center", 
-      "effect": null, 
-      "caption": "A lovely day racing from Hickling to Potter and back", 
-      "slug": "grebe-on-the-picnic-race"
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "localboats.boatdepiction", 
-    "fields": {
-      "target": 1, 
-      "image": 1, 
-      "height": 21, 
-      "width": 38, 
-      "top": 58, 
-      "left": 28
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "localboats.persondepiction", 
-    "fields": {
-      "target": 1, 
-      "image": 1, 
-      "height": 14, 
-      "width": 10, 
-      "top": 44, 
-      "left": 51
-    }
   }
 ]

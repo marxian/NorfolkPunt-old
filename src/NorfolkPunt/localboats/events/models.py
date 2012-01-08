@@ -34,9 +34,22 @@ class RaceResult(models.Model):
     
     def __unicode__(self):
         return str(self.event) + ' Results'
+        
+class RaceTrophy(models.Model):
+    name = models.CharField(max_length=100)
+    boat = models.ForeignKey(Boat, related_name="race_trophies")
+    helm = models.ForeignKey(Person, related_name="helming_trophies")
+    crew = models.ForeignKey(Person, related_name="crewing_tropies")
+    
+    raceresult = models.ForeignKey(RaceResult, related_name="trophies")
+    
+    def __unicode__(self):
+        return '%s - %s (%s, %s)' % (self.name, self.boat.name, self.helm.name, self.crew.name)
+    
 
 class RacePosition(models.Model):
     position = models.IntegerField()
+    
     boat = models.ForeignKey(Boat, related_name="race_positions")
     helm = models.ForeignKey(Person, related_name="helming_positions")
     crew = models.ForeignKey(Person, related_name="crewing_positions")

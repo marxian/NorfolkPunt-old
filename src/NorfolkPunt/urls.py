@@ -20,12 +20,14 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
     
+    # Use the piston based api app to provide the NorfolkPunt API
+    (r'^api/', include('api.urls')),
+    
     # Use localboats to provide boat, picture, boatlisting and gallery views
     (r'^', include('localboats.urls')),
     
     # Use puntsite to provide semi static views like home, rules, history
     (r'^', include('puntsite.urls')),
     
-    # Use the piston based api app to provide the NorfolkPunt API
-    (r'^api/', include('api.urls')),
+    
 )

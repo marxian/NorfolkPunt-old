@@ -2,6 +2,8 @@ from django.db import models
 from django.template.defaultfilters import slugify, truncatewords
 from datetime import datetime
 from photologue.models import ImageModel
+from licenses.models import License
+
 
 YEAR_CHOICES = [(x,x) for x in list(reversed(range(1890, 2020)))]
 
@@ -161,7 +163,10 @@ class Picture(ImageModel):
     added = models.DateTimeField('date added', default=datetime.now, editable=False)
     created = models.DateField(blank=True)    
     boats = models.ManyToManyField(Boat, blank=True, through='BoatDepiction', related_name='pictures') 
-    people = models.ManyToManyField(Person, blank=True, through='PersonDepiction', related_name='pictures') 
+    people = models.ManyToManyField(Person, blank=True, through='PersonDepiction', related_name='pictures')
+    
+    license = models.ForeignKey(License, blank=True, related_name="media")
+    attribution = models.ForeignKey(Person, blank=True, related_name="photographs")
     
     @property
     def depiction_count(self):

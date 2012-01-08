@@ -5,3 +5,4 @@ django-admin-tools==0.4.1
 django-photologue==2.3
 django-piston==0.2.3
 wsgiref==0.1.2
+docutils
