@@ -1,57 +1,58 @@
 {% extends "localboats/base.html" %}
+{% load humanize %}
 
-{% block title %} {{ block.super }} : No. {{ boat.sail_number }}, {{ boat.name }}{% endblock %}
+{% block title %} {{ block.super }} : {{ event.name }}{% endblock %}
 
 {% block content %}
     <section id="details">
-    	<h1>{{ boat.name }}</h1>
-	    <dl class="boat-details">
-	    	<dt>Sail Number</dt>
-			<dd>{{boat.sail_number}}</dd>
-			{% if boat.previous_names %}
-				<dt>Previous Names</dt>
-				<dd>{{boat.previous_names}}</dd>
-			{% endif %}
-			<dt>Year Built</dt>
-			<dd>{{boat.year_built}}</dd>
-			<dt>Design</dt>
-			<dd>{{boat.design.name}} by {{boat.design.designer.name}}</dd>
-			<dt>L.O.A</dt>
-			<dd>{{boat.loa}} feet</dd>
-			<dt>Builder</dt>
-			<dd>{{boat.builder.name}}</dd>
-			<dt>Construction</dt>
-			<dd>{{boat.construction.name}}</dd>
-			<dt>Handicap</dt>
-			<dd>{{boat.handicap}}</dd>
+    	<h1>{{ event.name }}</h1>
+		
+		{% if event.results %}
+			{% for result in event.results.all %}
+				<div class="result">
+					{% if result.positions %}
+						<dl class="details positions">						
+							{% for position in result.positions.all %}
+								<dt>{{ position.position|ordinal }}</dt>
+								<dd><a href="{{position.boat.get_absolute_url}}">{{position.boat.name}}</a> ({{position.helm.name}} and {{position.crew.name}})</dd>
+							{% endfor %}
+						</dl>
+					{% endif %}
+					{% if result.trophies %}
+						<dl class="details trophies">
+							{% for trophy in result.trophies.all %}
+								<dt>{{trophy.name}}</dt>
+								<dd><a href="{{trophy.boat.get_absolute_url}}">{{trophy.boat.name}}</a> ({{trophy.helm.name}} and {{trophy.crew.name}})</dd>
+							{% endfor %}
+						</dl>
+					{% endif %}
+					
+					<p class="report">
+						{{ result.report|linebreaks }}
+					</p>
+					
+					<hr/>
+				</div>
+			{% endfor %}
+		{% endif %}
+		
+	    <dl class="details">
+	    	<dt>From</dt>
+			<dd>{{event.start}}</dd>
+			<dt>To</dt>
+			<dd>{{event.end}}</dd>
+			<dt>At</dt>
+			<dd>{{event.location.name}}</dd>
+			<dt>Type</dt>
+			<dd>{{event.type}}</dd>
 	    </dl>
-		{% if has_pics %}
-			<a id="main_pic" href="{{main_pic.get_absolute_url}}"><img src="{{main_pic.get_feature_url}}" alt="{{main_pic.title}}"/></a>
-		{% endif %}
 		
-		{% if boat.notes.count %}
-			{% for note in boat.notes.all %}
-				<p class="note">{{note.text}}</p>
-			{% endfor %}
-		{% endif %}
-    
+		<p class="description">
+			{{ event.description|linebreaks }}
+		</p>
+		
+		
 	
-		<section id="ownership">
-			<h2>Ownership History</h2>
-			<ul>
-				{% for owner in boat.ownership.all %}
-					<li>{{owner}}</li>
-				{% endfor %}
-			</ul>	
-		</section>
-		
-		{% if gallery %}
-		<section id="gallery">
-			{% for picture in gallery %}
-				<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
-			{% endfor %}
-		</section>
-		{% endif %}
 		
 		<div style="clear:both;"></div>
 	</section>

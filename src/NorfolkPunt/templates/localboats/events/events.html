@@ -1,4 +1,5 @@
 {% extends "localboats/base.html" %}
+{% load humanize %}
 
 {% block title %}{{ block.super }} : Events{% endblock title %}
 
@@ -23,7 +24,11 @@
 			class="event {{ event.type|slugify }}"
 			data-start="{{ event.start }}" 
 			>
-	    	<a href="{{ event.get_absolute_url }}">{{ event.name }}</a>
+			<span class="type {{event.type|slugify}}">{{event.type}}</span>
+	    	<h2><a href="{{ event.get_absolute_url }}">
+			  {{ event.name }}
+			</a></h2>
+			<em>({{event.start}} to {{event.end}})</em>
 		</li>
 	{% endfor %}
 	</ul>

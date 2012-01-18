@@ -475,7 +475,7 @@ body {
   color: white;
 }
 
-/* fancy borders for those who can */
+/* fancy borders for those who can 
 #list-options .option-set li:first-child a {
   border-radius: 7px 0 0 7px;
   border-left: none;
@@ -484,7 +484,7 @@ body {
 #list-options .option-set li:last-child a {
   border-radius: 0 7px 7px 0;
 }
-
+*/
 /* pictures */
 
 #picturewrap {
@@ -504,9 +504,9 @@ section#picture ul#depictions li.depiction {
 	float: left;
 	margin: 2px 2px 2px 2px;
 	padding: 2px 2px 2px 2px;
-	-moz-border-radius: 3px;
+	/*-moz-border-radius: 3px;
 	-webkit-border-radius:3px;
-	border-radius:3px;
+	border-radius:3px;*/
 }
 
 section#picture ul#depictions a {
@@ -585,7 +585,9 @@ a.main-pic {
 	float:left;
 }
 
-dl.boat-details
+
+/* Details Displays */
+dl.details
 {
 	float: right;
 	width: 520px;
@@ -594,7 +596,7 @@ dl.boat-details
 	border-bottom: 1px solid #999;
 }
 
-.boat-details dt
+.details dt
 {
 	clear: left;
 	float: left;
@@ -605,13 +607,17 @@ dl.boat-details
 	font-weight: bold;
 }
 
-.boat-details dd
+.details dd
 {
 	float: left;
 	width: 300px;
 	margin: 0;
 	padding: 5px;
 	border-top: 1px solid #999;
+}
+
+.details a {
+  
 }
 
 p.note {
@@ -646,4 +652,46 @@ section#history img.right {
 
 section#history img.left {
 	float:left;
+}
+
+/*Event Page */
+#results {
+  margin: auto;
+  width: 95%;
+}
+
+
+
+#results hr {
+  width:80%;
+}
+
+li.event {
+  background-color: black;
+  color: white;
+  width:90%;
+  padding: 5px;
+}
+
+li.event h2 {
+  font-family:'VollkornBold', serif;
+  font-weight: bold;
+}
+
+li.event a {
+  text-decoration: none;
+  color: white;
+}
+
+li.event span.type {
+  float:right;
+  margin: 5px;
+}
+
+li.event span.championship {
+  background-color: red;
+}
+
+li.event span.navigation-race {
+  background-color: blue;
 }

@@ -13,10 +13,11 @@ def events(request):
     
 def event(request, slug):
     event = get_object_or_404(Event, slug=slug)
+    results = event.results.all()
     
-    
-    return render_to_response('localboats/event/event.html', 
-                              {'event':event},
+    return render_to_response('localboats/events/event.html', 
+                              {'event':event,
+                               'results':results},
                                context_instance=RequestContext(request))
     
 

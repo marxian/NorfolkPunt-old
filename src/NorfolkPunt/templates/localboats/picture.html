@@ -12,7 +12,9 @@
 			<h2>{{picture.title}}</h2>
 			<img class="depictions" src="{{ picture.get_display_url}}" 
 				alt="{{picture.title}}" longdesc="{{picure.caption}}"
-				data-picture_id="{{picture.id}}"/>
+				data-picture_id="{{picture.id}}"
+				width="{{ picture.get_display_size.0 }}px"
+				height="{{ picture.get_display_size.1 }}px"/>
 			{% if picture.caption %}
 				<p class="caption">{{ picture.caption }}</p>
 			{% endif %}

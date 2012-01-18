@@ -17,12 +17,14 @@
 			{% block navigation %}
 			    {% load current_nav %}
 				{% url history as history %}
+				{% url events_index as events %}
 				{% url boats_index as boats %}
 				{% url pictures_index as pictures %}
 				{% url rules as rules %}
 				<nav id="main">
 					<a href="/">home</a>
 					<a href="{{history}}" {% current_nav history %}>history</a>
+					<a href="{{events}}" {% current_nav events %}>events</a>
 					<a href="{{boats}}" {% current_nav boats %}>boats</a>
 					<a href="{{pictures}}" {% current_nav pictures %}>pictures</a>
 					<a href="{{rules}}" {% current_nav rules %}>rules</a>

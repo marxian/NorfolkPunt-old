@@ -114,6 +114,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.flatpages',
+    'django.contrib.humanize',
     'licenses',
     'localboats',
     'localboats.events',
