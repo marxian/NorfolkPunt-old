@@ -1,4 +1,5 @@
 {% extends "localboats/base.html" %}
+{% load humanize %}
 
 {% block title %} {{ block.super }} : No. {{ boat.sail_number }}, {{ boat.name }}{% endblock %}
 
@@ -35,6 +36,17 @@
 			{% endfor %}
 		{% endif %}
     
+
+		<!--<section id="honours">
+			<h2>Honours</h2>
+			{% if boat.race_postions.count %}
+			<ul class="positions">
+				{% for position in boat.race_positions.all %}
+					<li>{{ position.position|ordinal }} {{ position.}}</li>	
+				{% endfor %}
+			</ul>
+			{% endif %}
+		</section>-->
 	
 		<section id="ownership">
 			<h2>Ownership History</h2>

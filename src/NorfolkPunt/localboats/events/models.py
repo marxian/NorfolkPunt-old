@@ -32,6 +32,9 @@ class Event(models.Model):
     def get_absolute_url(self):
         return ('event_view', [self.slug])
         
+    class Meta:
+        ordering = ['-start']
+        
     def save(self, *args, **kwargs):
         
         self.slug = slugify(self.name)

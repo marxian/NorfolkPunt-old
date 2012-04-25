@@ -160,12 +160,4 @@ body {
   color: white;
 }
 
-/* fancy borders for those who can */
-#list-options .option-set li:first-child a {
-  border-radius: 7px 0 0 7px;
-  border-left: none;
-}
 
-#list-options .option-set li:last-child a {
-  border-radius: 0 7px 7px 0;
-}
