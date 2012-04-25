@@ -3,7 +3,7 @@
     "pk": 1, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:49", 
+      "applied": "2012-01-08T16:01:49.494", 
       "app_name": "menu", 
       "migration": "0001_initial"
     }
@@ -12,7 +12,7 @@
     "pk": 2, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:50", 
+      "applied": "2012-01-08T16:01:50.796", 
       "app_name": "dashboard", 
       "migration": "0001_initial"
     }
@@ -21,7 +21,7 @@
     "pk": 3, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:51", 
+      "applied": "2012-01-08T16:01:51.413", 
       "app_name": "dashboard", 
       "migration": "0002_auto__add_field_dashboardpreferences_dashboard_id"
     }
@@ -30,7 +30,7 @@
     "pk": 4, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:56", 
+      "applied": "2012-01-08T16:01:56.326", 
       "app_name": "localboats", 
       "migration": "0001_initial"
     }
@@ -39,7 +39,7 @@
     "pk": 5, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:57", 
+      "applied": "2012-01-08T16:01:57.639", 
       "app_name": "localboats", 
       "migration": "0002_auto__add_field_picture_licence__add_field_picture_attribution"
     }
@@ -48,7 +48,7 @@
     "pk": 6, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:01:58", 
+      "applied": "2012-01-08T16:01:58.953", 
       "app_name": "localboats", 
       "migration": "0003_auto__del_field_picture_licence__add_field_picture_license"
     }
@@ -57,7 +57,7 @@
     "pk": 7, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:02:09", 
+      "applied": "2012-01-08T16:02:09.215", 
       "app_name": "events", 
       "migration": "0001_initial"
     }
@@ -66,7 +66,7 @@
     "pk": 8, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:02:13", 
+      "applied": "2012-01-08T16:02:13.032", 
       "app_name": "news", 
       "migration": "0001_initial"
     }
@@ -75,7 +75,7 @@
     "pk": 9, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 16:02:14", 
+      "applied": "2012-01-08T16:02:14.368", 
       "app_name": "sale", 
       "migration": "0001_initial"
     }
@@ -84,7 +84,7 @@
     "pk": 10, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 22:54:09", 
+      "applied": "2012-01-08T22:54:09.463", 
       "app_name": "events", 
       "migration": "0002_auto__add_field_event_slug"
     }
@@ -93,81 +93,9 @@
     "pk": 11, 
     "model": "south.migrationhistory", 
     "fields": {
-      "applied": "2012-01-08 22:57:29", 
+      "applied": "2012-01-08T22:57:29.251", 
       "app_name": "events", 
       "migration": "0003_auto__del_field_event_postcode"
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/sale/sale/", 
-      "user": 1, 
-      "title": "For Sale"
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/news/news/", 
-      "user": 1, 
-      "title": "News"
-    }
-  }, 
-  {
-    "pk": 3, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/events/event/", 
-      "user": 1, 
-      "title": "Events"
-    }
-  }, 
-  {
-    "pk": 4, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/events/raceresult/", 
-      "user": 1, 
-      "title": "Results"
-    }
-  }, 
-  {
-    "pk": 5, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/localboats/boat/", 
-      "user": 1, 
-      "title": "Select boat to change"
-    }
-  }, 
-  {
-    "pk": 6, 
-    "model": "menu.bookmark", 
-    "fields": {
-      "url": "/admin/localboats/picture/", 
-      "user": 1, 
-      "title": "Pictuers"
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "dashboard.dashboardpreferences", 
-    "fields": {
-      "dashboard_id": "dashboard", 
-      "data": "{\"positions\":{},\"columns\":{},\"disabled\":{\"module_5\":true},\"collapsed\":{\"module_6\":true}}", 
-      "user": 1
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "dashboard.dashboardpreferences", 
-    "fields": {
-      "dashboard_id": "localboats-dashboard", 
-      "data": "{}", 
-      "user": 1
     }
   }, 
   {
@@ -552,7 +480,7 @@
     "pk": "f5c7a445772ec3765ffcfa50c0404203", 
     "model": "sessions.session", 
     "fields": {
-      "expire_date": "2011-04-17 21:11:11", 
+      "expire_date": "2011-04-17T21:11:11", 
       "session_data": "gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k\ncy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjU1ODIzZmJmNThlOTE4OGY0NTg1\nNjczMjM1ZmZlYjNh\n"
     }
   }, 
@@ -560,7 +488,7 @@
     "pk": "5b8d89af32d6f34cdb0846173b9fa32a", 
     "model": "sessions.session", 
     "fields": {
-      "expire_date": "2012-01-22 16:04:18", 
+      "expire_date": "2012-01-22T16:04:18.500", 
       "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
     }
   }, 
@@ -568,7 +496,31 @@
     "pk": "9fc54d59659d8815918c56a250a9b01f", 
     "model": "sessions.session", 
     "fields": {
-      "expire_date": "2012-01-22 19:06:15", 
+      "expire_date": "2012-01-22T19:06:15.839", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": "5083ba07cd66dbcf4c030b5919f3680b", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-01-31T21:22:23.805", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": "925f049efba67075d672a8eab9ab96b1", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-02-03T20:37:02.620", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": "a036d2a9dbb9b05a06988a6a18298c54", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-05-09T19:44:48.774", 
       "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
     }
   }, 
@@ -627,7 +579,20 @@
       "longitude": 1.4963078498840332, 
       "postcode": "", 
       "address": "", 
-      "latitude": 52.742137792596367, 
+      "latitude": 52.74213779259637, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.victoryhall.info/", 
+      "name": "New Victory Hall, Neatishead", 
+      "longitude": null, 
+      "postcode": "NR12 8AD", 
+      "address": "", 
+      "latitude": null, 
       "description": ""
     }
   }, 
@@ -1035,10 +1000,10 @@
     "model": "localboats.picture", 
     "fields": {
       "view_count": 0, 
-      "added": "2012-01-08 18:21:01", 
+      "added": "2012-01-08T18:21:01.033", 
       "attribution": 16, 
       "license": 1, 
-      "date_taken": "2012-01-08 18:21:02", 
+      "date_taken": "2012-01-08T18:21:02.442", 
       "title": "Blackbird", 
       "image": "photologue/photos/6067077981_cdb415fef4_o.jpg", 
       "created": "2011-08-20", 
@@ -1053,10 +1018,10 @@
     "model": "localboats.picture", 
     "fields": {
       "view_count": 0, 
-      "added": "2012-01-08 18:30:56", 
+      "added": "2012-01-08T18:30:56.568", 
       "attribution": 16, 
       "license": 1, 
-      "date_taken": "2012-01-08 18:30:56", 
+      "date_taken": "2012-01-08T18:30:56.776", 
       "title": "Harnser", 
       "image": "photologue/photos/6067500412_9d3710a001_b.jpg", 
       "created": "2011-08-20", 
@@ -1071,10 +1036,10 @@
     "model": "localboats.picture", 
     "fields": {
       "view_count": 0, 
-      "added": "2012-01-08 19:35:20", 
+      "added": "2012-01-08T19:35:20.489", 
       "attribution": 16, 
       "license": 1, 
-      "date_taken": "2012-01-08 19:35:20", 
+      "date_taken": "2012-01-08T19:35:20.782", 
       "title": "Champs 2011", 
       "image": "photologue/photos/6067677296_09c1b51962_b.jpg", 
       "created": "2011-08-20", 
@@ -1082,6 +1047,42 @@
       "effect": null, 
       "caption": "Shortly after the start of race 2. ", 
       "slug": "champs-2011"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2012-01-18T08:25:00.479", 
+      "attribution": 16, 
+      "license": 1, 
+      "date_taken": "2012-01-18T08:25:00.821", 
+      "title": "Peregrine", 
+      "image": "photologue/photos/peregrine.jpg", 
+      "created": "2011-08-01", 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "", 
+      "slug": "peregrine"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.picture", 
+    "fields": {
+      "view_count": 0, 
+      "added": "2012-04-25T20:19:24.649", 
+      "attribution": 16, 
+      "license": 1, 
+      "date_taken": "2012-04-25T20:19:24.834", 
+      "title": "Never Look Back", 
+      "image": "photologue/photos/snowgoose.jpg", 
+      "created": null, 
+      "crop_from": "center", 
+      "effect": null, 
+      "caption": "", 
+      "slug": "never-look-back"
     }
   }, 
   {
@@ -1166,6 +1167,30 @@
       "width": 10, 
       "top": 74, 
       "left": 0
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 4, 
+      "image": 4, 
+      "height": 86, 
+      "width": 72, 
+      "top": 0, 
+      "left": 23
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.boatdepiction", 
+    "fields": {
+      "target": 5, 
+      "image": 5, 
+      "height": 64, 
+      "width": 28, 
+      "top": 30, 
+      "left": 53
     }
   }, 
   {
@@ -1277,10 +1302,65 @@
     }
   }, 
   {
+    "pk": 10, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 9, 
+      "image": 4, 
+      "height": 15, 
+      "width": 10, 
+      "top": 41, 
+      "left": 25
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 8, 
+      "image": 4, 
+      "height": 15, 
+      "width": 10, 
+      "top": 41, 
+      "left": 30
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 10, 
+      "image": 5, 
+      "height": 15, 
+      "width": 10, 
+      "top": 53, 
+      "left": 38
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "localboats.persondepiction", 
+    "fields": {
+      "target": 11, 
+      "image": 5, 
+      "height": 15, 
+      "width": 10, 
+      "top": 45, 
+      "left": 11
+    }
+  }, 
+  {
     "pk": 2, 
     "model": "events.eventtype", 
     "fields": {
       "name": "Championship"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Meeting"
     }
   }, 
   {
@@ -1291,29 +1371,42 @@
     }
   }, 
   {
-    "pk": 1, 
+    "pk": 3, 
     "model": "events.event", 
     "fields": {
       "end": null, 
-      "name": "Triple B", 
-      "start": "2010-10-16 12:00:00", 
-      "location": 1, 
-      "type": 1, 
-      "slug": "triple-b", 
-      "description": "Buckenhan to Breydon and Back"
+      "name": "Annual General Meeting", 
+      "start": "2012-01-20T19:30:00", 
+      "location": 3, 
+      "type": 3, 
+      "slug": "annual-general-meeting", 
+      "description": "Beers afterwards at the White Horse"
     }
   }, 
   {
     "pk": 2, 
     "model": "events.event", 
     "fields": {
-      "end": "2011-08-21 16:00:00", 
+      "end": "2011-08-21T16:00:00", 
       "name": "Championships 2011", 
-      "start": "2011-08-20 11:00:00", 
+      "start": "2011-08-20T11:00:00", 
       "location": 2, 
       "type": 2, 
       "slug": "championships-2011", 
       "description": "Briefing Sat 11.30 with tow out 11.00.\r\n\r\nRaces Sat 12.00, 14.00 & 16.00, Sun 10.30 & 12.00, best 4 to count.  Many trophies or prizes. \r\n\r\nEntry fee \u00a325 before Wed 17 August, \u00a330 after, before 11 am Saturday. \r\n\r\nThe legendary NPC tea and home made cake included in the entry fee!  As are drinks and nibbles at Marsh House on the Saturday evening for competitors and crews.\r\n\r\nMore info and entry forms available from rachelclayton@mypostoffice.co.uk"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2010-10-16T12:00:00", 
+      "location": 1, 
+      "type": 1, 
+      "slug": "triple-b", 
+      "description": "Buckenhan to Breydon and Back"
     }
   }, 
   {
@@ -1510,825 +1603,6 @@
       "upscale": false, 
       "pre_cache": false, 
       "quality": 80
-    }
-  }, 
-  {
-    "pk": 63, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 22:57:01", 
-      "object_repr": "Triple B (2010)", 
-      "object_id": "1", 
-      "change_message": "No fields changed.", 
-      "user": 1, 
-      "content_type": 37
-    }
-  }, 
-  {
-    "pk": 62, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 22:56:37", 
-      "object_repr": "Championships 2011 (2011)", 
-      "object_id": "2", 
-      "change_message": "No fields changed.", 
-      "user": 1, 
-      "content_type": 37
-    }
-  }, 
-  {
-    "pk": 61, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 19:47:55", 
-      "object_repr": "Champs 2011", 
-      "object_id": "3", 
-      "change_message": "Changed caption.", 
-      "user": 1, 
-      "content_type": 33
-    }
-  }, 
-  {
-    "pk": 60, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 19:37:33", 
-      "object_repr": "Champs 2011", 
-      "object_id": "3", 
-      "change_message": "Changed target for boat depiction \"BoatDepiction object\".", 
-      "user": 1, 
-      "content_type": 33
-    }
-  }, 
-  {
-    "pk": 59, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 19:35:21", 
-      "object_repr": "Champs 2011", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 33
-    }
-  }, 
-  {
-    "pk": 58, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 19:06:50", 
-      "object_repr": "Creative Commons Attribution 2.0", 
-      "object_id": "1", 
-      "change_message": "Changed logo.", 
-      "user": 1, 
-      "content_type": 11
-    }
-  }, 
-  {
-    "pk": 57, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 18:31:27", 
-      "object_repr": "localhost:8000", 
-      "object_id": "1", 
-      "change_message": "Changed domain.", 
-      "user": 1, 
-      "content_type": 8
-    }
-  }, 
-  {
-    "pk": 56, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 18:30:57", 
-      "object_repr": "Harnser", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 33
-    }
-  }, 
-  {
-    "pk": 55, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 18:21:09", 
-      "object_repr": "Blackbird", 
-      "object_id": "1", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 33
-    }
-  }, 
-  {
-    "pk": 54, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 18:20:58", 
-      "object_repr": "Robin Myerscough", 
-      "object_id": "16", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 53, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 3, 
-      "action_time": "2012-01-08 17:16:19", 
-      "object_repr": "Hard Chinebbb", 
-      "object_id": "1", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 52, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:14:42", 
-      "object_repr": "Grebe", 
-      "object_id": "1", 
-      "change_message": "Changed design.", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 51, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:14:17", 
-      "object_repr": "Hardchine", 
-      "object_id": "2", 
-      "change_message": "Changed name.", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 50, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:14:06", 
-      "object_repr": "Hard Chinebbb", 
-      "object_id": "1", 
-      "change_message": "Changed name.", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 49, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:11:18", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race trophy \"Hardchine Trophy - Harnser (James Jarvey, Paul Jarvey)\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 48, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:10:45", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race trophy \"Broadshaven Trophy - Swallow II (William Daniels, Rob Marriott)\". Added race trophy \"First Lady Crew - Peregrine (Simon Clayton, Rachel Clayton)\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 47, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:10:10", 
-      "object_repr": "Swallow II", 
-      "object_id": "7", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 46, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:08:58", 
-      "object_repr": "Rob Marriott", 
-      "object_id": "15", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 45, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:08:46", 
-      "object_repr": "William Daniels", 
-      "object_id": "14", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 44, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 17:07:51", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race trophy \"First Lady Helm - Snow Goose (Jane Pye, Ian Bray)\". Added race trophy \"Cuckoo Trophy - Rushlight (Max Dixey, Felix Dixey)\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 43, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:07:45", 
-      "object_repr": "Rushlight", 
-      "object_id": "6", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 42, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:07:29", 
-      "object_repr": "Wood (Carvel)", 
-      "object_id": "5", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 29
-    }
-  }, 
-  {
-    "pk": 41, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:07:06", 
-      "object_repr": "Herbert Woods of Potter Heigham", 
-      "object_id": "6", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 26
-    }
-  }, 
-  {
-    "pk": 40, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:06:54", 
-      "object_repr": "Traditional", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 39, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:06:49", 
-      "object_repr": "Herbert Woods", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 27
-    }
-  }, 
-  {
-    "pk": 38, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:03:31", 
-      "object_repr": "Felix Dixey", 
-      "object_id": "13", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 37, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:03:19", 
-      "object_repr": "Max Dixey", 
-      "object_id": "12", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 36, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:02:26", 
-      "object_repr": "Snow Goose", 
-      "object_id": "5", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 35, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:01:38", 
-      "object_repr": "Carbon Foam Sandwich (Wooden Decks)", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 29
-    }
-  }, 
-  {
-    "pk": 34, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 17:00:57", 
-      "object_repr": "Jeff Green", 
-      "object_id": "5", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 26
-    }
-  }, 
-  {
-    "pk": 33, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:59:20", 
-      "object_repr": "Ian Bray", 
-      "object_id": "11", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 32, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:58:27", 
-      "object_repr": "Jane Pye", 
-      "object_id": "10", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 31, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:57:34", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race trophy \"Progress Trophy - Blackbird (Andrew Friend, Ben Girling)\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 30, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:56:40", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race position \"3rd - Peregrine\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 29, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:56:22", 
-      "object_repr": "Peregrine", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 28, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:55:44", 
-      "object_repr": "Richard Parker", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 26
-    }
-  }, 
-  {
-    "pk": 27, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:54:40", 
-      "object_repr": "Rachel Clayton", 
-      "object_id": "9", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 26, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:54:20", 
-      "object_repr": "Simon Clayton", 
-      "object_id": "8", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 25, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:53:39", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race position \"2nd - Blackbird\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 24, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:53:26", 
-      "object_repr": "Blackbird", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 23, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:53:12", 
-      "object_repr": "Cold-moulded Plywood", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 29
-    }
-  }, 
-  {
-    "pk": 22, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:52:57", 
-      "object_repr": "S. Read", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 26
-    }
-  }, 
-  {
-    "pk": 21, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:52:43", 
-      "object_repr": "Morrison", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 20, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:52:21", 
-      "object_repr": "Phil Morrison", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 27
-    }
-  }, 
-  {
-    "pk": 19, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:50:20", 
-      "object_repr": "Ben Girling", 
-      "object_id": "7", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 18, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:50:11", 
-      "object_repr": "Andrew Friend", 
-      "object_id": "6", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 17, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:49:36", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "Added race position \"1st - Harnser\".", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 16, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:49:18", 
-      "object_repr": "Paul Jarvey", 
-      "object_id": "5", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 15, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:48:43", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "No fields changed.", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 14, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:48:16", 
-      "object_repr": "Harnser", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 30
-    }
-  }, 
-  {
-    "pk": 13, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:47:54", 
-      "object_repr": "T.A. Clarence-Smith", 
-      "object_id": "4", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 12, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:46:50", 
-      "object_repr": "James Jarvey", 
-      "object_id": "3", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 25
-    }
-  }, 
-  {
-    "pk": 11, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:46:22", 
-      "object_repr": "Plywood", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 29
-    }
-  }, 
-  {
-    "pk": 10, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:46:08", 
-      "object_repr": "Eastwood and Whelpton of Upton", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 26
-    }
-  }, 
-  {
-    "pk": 9, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:45:53", 
-      "object_repr": "Hard Chine", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 28
-    }
-  }, 
-  {
-    "pk": 8, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:45:51", 
-      "object_repr": "Wyche and Coppock", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 27
-    }
-  }, 
-  {
-    "pk": 7, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:43:36", 
-      "object_repr": "Championships 2011 (2011) Results", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 38
-    }
-  }, 
-  {
-    "pk": 6, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 2, 
-      "action_time": "2012-01-08 16:42:37", 
-      "object_repr": "Championship", 
-      "object_id": "2", 
-      "change_message": "Changed name.", 
-      "user": 1, 
-      "content_type": 36
-    }
-  }, 
-  {
-    "pk": 5, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:42:11", 
-      "object_repr": "Championships 2011 (2011)", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 37
-    }
-  }, 
-  {
-    "pk": 4, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:39:37", 
-      "object_repr": "Norfolk Punt Club", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 24
-    }
-  }, 
-  {
-    "pk": 3, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:36:53", 
-      "object_repr": "Chanmpionship", 
-      "object_id": "2", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 36
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:33:11", 
-      "object_repr": "Creative Commons Attribution 2.0", 
-      "object_id": "1", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 11
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "admin.logentry", 
-    "fields": {
-      "action_flag": 1, 
-      "action_time": "2012-01-08 16:30:33", 
-      "object_repr": "Creative Commons", 
-      "object_id": "1", 
-      "change_message": "", 
-      "user": 1, 
-      "content_type": 10
     }
   }, 
   {
@@ -3475,12 +2749,896 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2011-03-02 21:06:36", 
+      "last_login": "2012-04-25T19:44:48.684", 
       "groups": [], 
       "user_permissions": [], 
-      "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 
+      "password": "pbkdf2_sha256$10000$rfjIpWMqbpli$ZgW+x60PvKjmfczIF2xiok3JJzlBwC0O2fDi420wNeE=", 
       "email": "rupert@neontribe.co.uk", 
-      "date_joined": "2011-03-02 21:06:36"
+      "date_joined": "2011-03-02T21:06:36"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-04-25T20:19:25.474", 
+      "object_repr": "Never Look Back", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-18T13:54:12.574", 
+      "object_repr": "Annual General Meeting (2012)", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-18T13:53:30.259", 
+      "object_repr": "New Victory Hall, Neatishead", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-18T13:51:06.711", 
+      "object_repr": "Meeting", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-18T08:25:01.825", 
+      "object_repr": "Peregrine", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T22:57:01.089", 
+      "object_repr": "Triple B (2010)", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T22:56:37.468", 
+      "object_repr": "Championships 2011 (2011)", 
+      "object_id": "2", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T19:47:55.583", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "Changed caption.", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T19:37:33.298", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "Changed target for boat depiction \"BoatDepiction object\".", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T19:35:21.385", 
+      "object_repr": "Champs 2011", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T19:06:50.066", 
+      "object_repr": "Creative Commons Attribution 2.0", 
+      "object_id": "1", 
+      "change_message": "Changed logo.", 
+      "user": 1, 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T18:31:27.126", 
+      "object_repr": "localhost:8000", 
+      "object_id": "1", 
+      "change_message": "Changed domain.", 
+      "user": 1, 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T18:30:57.508", 
+      "object_repr": "Harnser", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T18:21:09.940", 
+      "object_repr": "Blackbird", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T18:20:58.244", 
+      "object_repr": "Robin Myerscough", 
+      "object_id": "16", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 3, 
+      "action_time": "2012-01-08T17:16:19.462", 
+      "object_repr": "Hard Chinebbb", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:14:42.706", 
+      "object_repr": "Grebe", 
+      "object_id": "1", 
+      "change_message": "Changed design.", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:14:17.267", 
+      "object_repr": "Hardchine", 
+      "object_id": "2", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:14:06.748", 
+      "object_repr": "Hard Chinebbb", 
+      "object_id": "1", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:11:18.705", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Hardchine Trophy - Harnser (James Jarvey, Paul Jarvey)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:10:45.605", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Broadshaven Trophy - Swallow II (William Daniels, Rob Marriott)\". Added race trophy \"First Lady Crew - Peregrine (Simon Clayton, Rachel Clayton)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:10:10.813", 
+      "object_repr": "Swallow II", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:08:58.088", 
+      "object_repr": "Rob Marriott", 
+      "object_id": "15", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:08:46.877", 
+      "object_repr": "William Daniels", 
+      "object_id": "14", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T17:07:51.434", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"First Lady Helm - Snow Goose (Jane Pye, Ian Bray)\". Added race trophy \"Cuckoo Trophy - Rushlight (Max Dixey, Felix Dixey)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:07:45.695", 
+      "object_repr": "Rushlight", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:07:29.100", 
+      "object_repr": "Wood (Carvel)", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:07:06.626", 
+      "object_repr": "Herbert Woods of Potter Heigham", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:06:54.136", 
+      "object_repr": "Traditional", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:06:49.930", 
+      "object_repr": "Herbert Woods", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:03:31.139", 
+      "object_repr": "Felix Dixey", 
+      "object_id": "13", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:03:19.021", 
+      "object_repr": "Max Dixey", 
+      "object_id": "12", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:02:26.022", 
+      "object_repr": "Snow Goose", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:01:38.790", 
+      "object_repr": "Carbon Foam Sandwich (Wooden Decks)", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T17:00:57.201", 
+      "object_repr": "Jeff Green", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:59:20.819", 
+      "object_repr": "Ian Bray", 
+      "object_id": "11", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:58:27.851", 
+      "object_repr": "Jane Pye", 
+      "object_id": "10", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:57:34.647", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race trophy \"Progress Trophy - Blackbird (Andrew Friend, Ben Girling)\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:56:40.440", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"3rd - Peregrine\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:56:22.025", 
+      "object_repr": "Peregrine", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:55:44.344", 
+      "object_repr": "Richard Parker", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:54:40.365", 
+      "object_repr": "Rachel Clayton", 
+      "object_id": "9", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:54:20.461", 
+      "object_repr": "Simon Clayton", 
+      "object_id": "8", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:53:39.971", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"2nd - Blackbird\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:53:26.633", 
+      "object_repr": "Blackbird", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:53:12.771", 
+      "object_repr": "Cold-moulded Plywood", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:52:57.635", 
+      "object_repr": "S. Read", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:52:43.513", 
+      "object_repr": "Morrison", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:52:21.404", 
+      "object_repr": "Phil Morrison", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:50:20.846", 
+      "object_repr": "Ben Girling", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:50:11.094", 
+      "object_repr": "Andrew Friend", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:49:36.881", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "Added race position \"1st - Harnser\".", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:49:18.795", 
+      "object_repr": "Paul Jarvey", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:48:43.040", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:48:16.452", 
+      "object_repr": "Harnser", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:47:54.776", 
+      "object_repr": "T.A. Clarence-Smith", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:46:50.096", 
+      "object_repr": "James Jarvey", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:46:22.654", 
+      "object_repr": "Plywood", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:46:08.613", 
+      "object_repr": "Eastwood and Whelpton of Upton", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:45:53.957", 
+      "object_repr": "Hard Chine", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:45:51.316", 
+      "object_repr": "Wyche and Coppock", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:43:36.580", 
+      "object_repr": "Championships 2011 (2011) Results", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-01-08T16:42:37.955", 
+      "object_repr": "Championship", 
+      "object_id": "2", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:42:11.964", 
+      "object_repr": "Championships 2011 (2011)", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:39:37.252", 
+      "object_repr": "Norfolk Punt Club", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:36:53.751", 
+      "object_repr": "Chanmpionship", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:33:11.215", 
+      "object_repr": "Creative Commons Attribution 2.0", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-01-08T16:30:33.910", 
+      "object_repr": "Creative Commons", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 10
     }
   }
 ]
