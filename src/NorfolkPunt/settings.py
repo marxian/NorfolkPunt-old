@@ -6,7 +6,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 STATIC_DOC_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'site-media'))
-
+STATIC_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'site-media'))
+STATIC_URL = '/media/'
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -60,7 +61,7 @@ MEDIA_URL = '/media/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/admin-media/'
+#ADMIN_MEDIA_PREFIX = '/admin-media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'tt#=_i6vu2gnq253pw2)=-@gtv$(x2w+n1((#7ek30c_v77th1e@'
@@ -104,10 +105,10 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'south',
-    'admin_tools',
-    'admin_tools.theming',
-    'admin_tools.menu',
-    'admin_tools.dashboard',
+    #'admin_tools',
+    #'admin_tools.theming',
+    #'admin_tools.menu',
+    #'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
