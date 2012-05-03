@@ -33,7 +33,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 input, select { vertical-align: middle; }
 
-body { font:13px/1.231 sans-serif; *font-size:small; }
+body { font-family:serif; font:13px/1.231 sans-serif; *font-size:small; }
 select, input, textarea, button { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -108,7 +108,7 @@ img.bg {
 
 /* TYPOGRAPHIC */
 @font-face {
-    font-family: 'VollkornRegular';
+    font-family: 'Vollkorn';
     src: url('Vollkorn-Regular-webfont.eot');
     src: url('Vollkorn-Regular-webfont.eot?iefix') format('eot'),
          url('Vollkorn-Regular-webfont.woff') format('woff'),
@@ -120,54 +120,56 @@ img.bg {
 }
 
 @font-face {
-    font-family: 'VollkornBold';
+    font-family: 'Vollkorn';
     src: url('Vollkorn-Bold-webfont.eot');
     src: url('Vollkorn-Bold-webfont.eot?iefix') format('eot'),
          url('Vollkorn-Bold-webfont.woff') format('woff'),
          url('Vollkorn-Bold-webfont.ttf') format('truetype'),
          url('Vollkorn-Bold-webfont.svg#webfontJxRRhfTP') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'VollkornItalic';
+    font-family: 'Vollkorn';
     src: url('Vollkorn-Italic-webfont.eot');
     src: url('Vollkorn-Italic-webfont.eot?iefix') format('eot'),
          url('Vollkorn-Italic-webfont.woff') format('woff'),
          url('Vollkorn-Italic-webfont.ttf') format('truetype'),
          url('Vollkorn-Italic-webfont.svg#webfontDzVwoiMp') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
 @font-face {
-    font-family: 'VollkornBoldItalic';
+    font-family: 'Vollkorn';
     src: url('Vollkorn-BoldItalic-webfont.eot');
     src: url('Vollkorn-BoldItalic-webfont.eot?iefix') format('eot'),
          url('Vollkorn-BoldItalic-webfont.woff') format('woff'),
          url('Vollkorn-BoldItalic-webfont.ttf') format('truetype'),
          url('Vollkorn-BoldItalic-webfont.svg#webfontDwvVGCpS') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: bold;
+    font-style: italic;
 
 }
 
+body {
+font-family:'Vollkorn', serif;
+}
+
 h1 {
-    font-family:'VollkornBold', serif;
+    font-weight:bold;
     font-size: 33px;
     margin:0 0 10px 0;
 }
 
 strong {
-    font-family:'VollkornBold', serif;
-    font-weight:normal;
+    font-weight:bold;
 }
 
 em {
-    font-family:'VollkornItalic', serif;
     font-style:italic;
 }
 
@@ -214,15 +216,28 @@ p {
 nav#main {
 	float:right;
 	color: #FFFFFF;
+        padding:5px;
 }
 
 nav#main a {
 	text-decoration:none;
+color:#fff;
+font-size:16px;
+text-transform:capitalize;
+}
+
+nav#main a:after {
+content:' \2248';
+padding:3px;
+}
+
+
+nav#main a:last-child:after {
+content:'';
 }
 
 nav#main a.current {
-	color: yellow;
-	font-style: bold;
+	font-weight:bold;
 }
 
 section {
@@ -244,6 +259,7 @@ section {
 	position: relative;
 	width: 100%;
 	color: white;
+border-bottom:2px solid #999;
 }
 
 strong {
@@ -256,6 +272,7 @@ em {
 
 #header h1 {
 	padding: 10px;
+line-height:1;
 }
 
 #header h1 a {
@@ -265,12 +282,11 @@ em {
 }
 
 #header h1 strong {
-	font-size: x-large;
 }
 
 #header h1 em {
-	font-size: large;
-	padding: 0 0 0 1em;
+	font-size: x-large;
+        color:#999;
 }
 
 #page-wrap { position: relative; 
@@ -405,19 +421,19 @@ body {
 }
 
 .morrison {
-  background-color: #ff00ff
+  background-color: #DE6846;
 }
 
 .hardchine {
-	background-color: #ff0000;
+	background-color: #B52C38;
 }
 
 .traditional {
-	background-color: #cc0000;
+	background-color: #536682;
 }
 
 .people {
-  background-color: #000000;
+  background-color: #D9964B;
 }
 
 /* list options */
@@ -674,7 +690,6 @@ li.event {
 }
 
 li.event h2 {
-  font-family:'VollkornBold', serif;
   font-weight: bold;
 }
 
