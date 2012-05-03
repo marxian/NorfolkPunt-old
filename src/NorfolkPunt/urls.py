@@ -6,7 +6,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^admin_tools/', include('admin_tools.urls')),
+    #(r'^admin_tools/', include('admin_tools.urls')),
     #Serve site_media while in development             
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
@@ -15,7 +15,7 @@ urlpatterns = patterns('',
         {'document_root': settings.MEDIA_ROOT}),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
