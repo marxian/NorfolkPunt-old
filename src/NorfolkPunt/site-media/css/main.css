@@ -300,7 +300,19 @@ line-height:1;
 	padding: 20px;
 }
 			 
+/* Home Page */
+body.home #pictures {
+  float:left;
+}
 
+body.home div.right {
+  float: right;
+  max-width: 50%;
+}
+
+body.home div.right section {
+  margin-bottom: 2em;
+}
 
 /* Boat Listing */
 

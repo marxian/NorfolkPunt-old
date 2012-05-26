@@ -1,12 +1,47 @@
 {% extends "base.html" %}
 
 {% block title %}Norfolk Punts : Home{% endblock %}
-
+{% block bodyclass %}home{% endblock %}
 {% block content %}
-<section id="home">
-<h2>NORFOLK PUNT Home</h2>
+<div class="right">
+    <section id="about">
+        <p><strong>The Norfolk Punt</strong> was derived from the flat-bottomed gun punts that roamed the Broadland waters in the mid-to-late 19th century. However, at the turn of the 20th Century, in order to get to and from the hunting grounds more efficiently, the punters developed their highly unstable craft to carry a basic mast and sail for travelling with the wind. It is from these humble beginnings that one of the country’s most exciting and powerful racing dinghy classes was born.</p>
+    </section>
 
-  
+    <section id="events">
+
+        <span class="type {{event.type|slugify}}">{{event.type}}</span>
+	    	<h2><a href="{{ event.get_absolute_url }}">
+			  {{ event.name }}
+			</a></h2>
+			<em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
+
+    </section>
+</div>
+
+<section id="picture">
+    {% with slides|first as slide1 %}
+    <div id="slideshow" style="height:300px;width:400px;background-image: url({{slide1.get_slideshow_url}})" >
+    </div>
+    {% endwith %}
 </section>
-
 {% endblock content %}
+{% block scripts %}
+	<script type="text/javascript" src="/site_media/js/jquery.cross-slide.min.js"></script>
+	<script>
+		 
+    $('#slideshow').crossSlide({
+        sleep: 3,
+        fade: 1
+      }, [
+        {% for o in slides %}
+            { src: '{{o.get_slideshow_url}}',
+              href: '{{o.get_absolute_url}}'}{% if not forloop.last %},{% endif %}
+        {% endfor %}
+      ]);
+
+
+	</script>
+{% endblock scripts %}
+
+
