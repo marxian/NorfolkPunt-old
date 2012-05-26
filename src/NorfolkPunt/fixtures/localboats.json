@@ -113,6 +113,13 @@
     }
   }, 
   {
+    "pk": 27, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "H F Webster"
+    }
+  }, 
+  {
     "pk": 11, 
     "model": "localboats.person", 
     "fields": {
@@ -211,6 +218,13 @@
     }
   }, 
   {
+    "pk": 26, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "S A Brooks (Lt Cdr RN)"
+    }
+  }, 
+  {
     "pk": 21, 
     "model": "localboats.person", 
     "fields": {
@@ -253,6 +267,13 @@
     }
   }, 
   {
+    "pk": 10, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "A E Pegg of Wroxham"
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "localboats.boatbuilder", 
     "fields": {
@@ -281,6 +302,13 @@
     }
   }, 
   {
+    "pk": 9, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "R Southgate of Horning"
+    }
+  }, 
+  {
     "pk": 4, 
     "model": "localboats.boatbuilder", 
     "fields": {
@@ -299,6 +327,13 @@
     "model": "localboats.boatbuilder", 
     "fields": {
       "name": "Unknown"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "W F Jermy of Brundall"
     }
   }, 
   {
@@ -508,6 +543,54 @@
     }
   }, 
   {
+    "pk": 13, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1925, 
+      "name": "Venture", 
+      "handicap": null, 
+      "builder": 11, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 4, 
+      "slug": "venture"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 20.0, 
+      "year_built": 1929, 
+      "name": "Bittern", 
+      "handicap": null, 
+      "builder": 10, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 3, 
+      "slug": "bittern"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 19.0, 
+      "year_built": 1927, 
+      "name": "Jenny Spinner", 
+      "handicap": null, 
+      "builder": 9, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 2, 
+      "slug": "jenny-spinner"
+    }
+  }, 
+  {
     "pk": 10, 
     "model": "localboats.boat", 
     "fields": {
@@ -695,6 +778,46 @@
       "owned_from": 1930, 
       "owned_to": 1967, 
       "boat": 10
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 27, 
+      "owned_from": 1930, 
+      "owned_to": 1938, 
+      "boat": 13
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 26, 
+      "owned_from": 1929, 
+      "owned_to": null, 
+      "boat": 12
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 17, 
+      "owned_from": 1927, 
+      "owned_to": null, 
+      "boat": 11
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 2, 
+      "owned_from": 1925, 
+      "owned_to": 1930, 
+      "boat": 13
     }
   }, 
   {

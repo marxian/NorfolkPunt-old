@@ -697,6 +697,13 @@
     }
   }, 
   {
+    "pk": 27, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "H F Webster"
+    }
+  }, 
+  {
     "pk": 11, 
     "model": "localboats.person", 
     "fields": {
@@ -795,6 +802,13 @@
     }
   }, 
   {
+    "pk": 26, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "S A Brooks (Lt Cdr RN)"
+    }
+  }, 
+  {
     "pk": 21, 
     "model": "localboats.person", 
     "fields": {
@@ -837,6 +851,13 @@
     }
   }, 
   {
+    "pk": 10, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "A E Pegg of Wroxham"
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "localboats.boatbuilder", 
     "fields": {
@@ -865,6 +886,13 @@
     }
   }, 
   {
+    "pk": 9, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "R Southgate of Horning"
+    }
+  }, 
+  {
     "pk": 4, 
     "model": "localboats.boatbuilder", 
     "fields": {
@@ -883,6 +911,13 @@
     "model": "localboats.boatbuilder", 
     "fields": {
       "name": "Unknown"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "W F Jermy of Brundall"
     }
   }, 
   {
@@ -1092,6 +1127,54 @@
     }
   }, 
   {
+    "pk": 13, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 22.0, 
+      "year_built": 1925, 
+      "name": "Venture", 
+      "handicap": null, 
+      "builder": 11, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 4, 
+      "slug": "venture"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 20.0, 
+      "year_built": 1929, 
+      "name": "Bittern", 
+      "handicap": null, 
+      "builder": 10, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 3, 
+      "slug": "bittern"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 19.0, 
+      "year_built": 1927, 
+      "name": "Jenny Spinner", 
+      "handicap": null, 
+      "builder": 9, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 2, 
+      "slug": "jenny-spinner"
+    }
+  }, 
+  {
     "pk": 10, 
     "model": "localboats.boat", 
     "fields": {
@@ -1279,6 +1362,46 @@
       "owned_from": 1930, 
       "owned_to": 1967, 
       "boat": 10
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 27, 
+      "owned_from": 1930, 
+      "owned_to": 1938, 
+      "boat": 13
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 26, 
+      "owned_from": 1929, 
+      "owned_to": null, 
+      "boat": 12
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 17, 
+      "owned_from": 1927, 
+      "owned_to": null, 
+      "boat": 11
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 2, 
+      "owned_from": 1925, 
+      "owned_to": 1930, 
+      "boat": 13
     }
   }, 
   {
@@ -3326,6 +3449,110 @@
       "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 
       "email": "rupert@neontribe.co.uk", 
       "date_joined": "2011-03-02T21:06:36"
+    }
+  }, 
+  {
+    "pk": 135, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:24:50.509", 
+      "object_repr": "Venture", 
+      "object_id": "13", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 134, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:24:05.175", 
+      "object_repr": "H F Webster", 
+      "object_id": "27", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 133, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:23:33.619", 
+      "object_repr": "W F Jermy of Brundall", 
+      "object_id": "11", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 132, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:22:45.621", 
+      "object_repr": "Bittern", 
+      "object_id": "12", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 131, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:22:32.081", 
+      "object_repr": "S A Brooks (Lt Cdr RN)", 
+      "object_id": "26", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 130, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:22:00.024", 
+      "object_repr": "A E Pegg of Wroxham", 
+      "object_id": "10", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 129, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:21:08.653", 
+      "object_repr": "Jenny Spinner", 
+      "object_id": "11", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 128, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:20:47.469", 
+      "object_repr": "R Southgate of Horning", 
+      "object_id": "9", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
     }
   }, 
   {
