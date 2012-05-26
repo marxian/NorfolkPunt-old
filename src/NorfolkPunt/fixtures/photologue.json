@@ -48,6 +48,22 @@
     }
   }, 
   {
+    "pk": 5, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "slideshow", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": true, 
+      "height": 300, 
+      "width": 400, 
+      "upscale": false, 
+      "pre_cache": false, 
+      "quality": 70
+    }
+  }, 
+  {
     "pk": 2, 
     "model": "photologue.photosize", 
     "fields": {

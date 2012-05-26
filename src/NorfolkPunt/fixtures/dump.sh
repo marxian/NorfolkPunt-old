@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ../manage.py dumpdata --indent=2 > ./everything.json
-../manage.py dumpdata --indent=2 menu > ./admin_tools_menu.json
-../manage.py dumpdata --indent=2 dashboard > ./admin_tools_dashboard.json
+#../manage.py dumpdata --indent=2 menu > ./admin_tools_menu.json
+#../manage.py dumpdata --indent=2 dashboard > ./admin_tools_dashboard.json
 ../manage.py dumpdata --indent=2 licenses > ./licenses.json
 ../manage.py dumpdata --indent=2 localboats > ./localboats.json
 ../manage.py dumpdata --indent=2 events > ./localboats_events.json

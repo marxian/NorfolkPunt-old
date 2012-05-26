@@ -525,6 +525,14 @@
     }
   }, 
   {
+    "pk": "faa88f1888ee399a6b4f3f13b2581030", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2012-06-09T11:17:43.688", 
+      "session_data": "YTVmOTdiNjViODVlYWNjM2Y3M2Y3ODI1NmU3OWJjMWUyMGE4MjM4MDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "sites.site", 
     "fields": {
@@ -1584,6 +1592,22 @@
       "crop": false, 
       "height": 0, 
       "width": 250, 
+      "upscale": false, 
+      "pre_cache": false, 
+      "quality": 70
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "photologue.photosize", 
+    "fields": {
+      "name": "slideshow", 
+      "watermark": null, 
+      "increment_count": false, 
+      "effect": null, 
+      "crop": true, 
+      "height": 300, 
+      "width": 400, 
       "upscale": false, 
       "pre_cache": false, 
       "quality": 70
@@ -2749,12 +2773,25 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2012-04-25T19:44:48.684", 
+      "last_login": "2012-05-26T11:17:43.478", 
       "groups": [], 
       "user_permissions": [], 
       "password": "pbkdf2_sha256$10000$rfjIpWMqbpli$ZgW+x60PvKjmfczIF2xiok3JJzlBwC0O2fDi420wNeE=", 
       "email": "rupert@neontribe.co.uk", 
       "date_joined": "2011-03-02T21:06:36"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T11:56:58.167", 
+      "object_repr": "slideshow", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 17
     }
   }, 
   {
