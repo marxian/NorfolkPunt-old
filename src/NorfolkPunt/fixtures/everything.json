@@ -669,6 +669,13 @@
     }
   }, 
   {
+    "pk": 17, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Arthur R. Batchelor"
+    }
+  }, 
+  {
     "pk": 7, 
     "model": "localboats.person", 
     "fields": {
@@ -683,10 +690,31 @@
     }
   }, 
   {
+    "pk": 20, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "H A Morris"
+    }
+  }, 
+  {
     "pk": 11, 
     "model": "localboats.person", 
     "fields": {
       "name": "Ian Bray"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "J Cooke"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "J M Evans"
     }
   }, 
   {
@@ -704,10 +732,31 @@
     }
   }, 
   {
+    "pk": 22, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "M Boardman"
+    }
+  }, 
+  {
     "pk": 12, 
     "model": "localboats.person", 
     "fields": {
       "name": "Max Dixey"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "National Maritime Museum"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Norfolk Education Committee"
     }
   }, 
   {
@@ -746,6 +795,13 @@
     }
   }, 
   {
+    "pk": 21, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "S H Morris"
+    }
+  }, 
+  {
     "pk": 8, 
     "model": "localboats.person", 
     "fields": {
@@ -757,6 +813,13 @@
     "model": "localboats.person", 
     "fields": {
       "name": "T.A. Clarence-Smith"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "localboats.person", 
+    "fields": {
+      "name": "Theta Club"
     }
   }, 
   {
@@ -813,6 +876,20 @@
     "model": "localboats.boatbuilder", 
     "fields": {
       "name": "S. Read"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "Unknown"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.boatbuilder", 
+    "fields": {
+      "name": "W G Woods of Potter Heigham"
     }
   }, 
   {
@@ -1015,6 +1092,54 @@
     }
   }, 
   {
+    "pk": 10, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": null, 
+      "year_built": 1916, 
+      "name": "Shrimp", 
+      "handicap": null, 
+      "builder": 8, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 1, 
+      "slug": "shrimp"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": 20.0, 
+      "year_built": 1936, 
+      "name": "Blue Winged Olive", 
+      "handicap": null, 
+      "builder": 7, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 0, 
+      "slug": "blue-winged-olive"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.boat", 
+    "fields": {
+      "loa": null, 
+      "year_built": 1936, 
+      "name": "Sanderling", 
+      "handicap": null, 
+      "builder": 7, 
+      "previous_names": "", 
+      "construction": 5, 
+      "design": 4, 
+      "sail_number": 0, 
+      "slug": "sanderling"
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "localboats.note", 
     "fields": {
@@ -1028,6 +1153,22 @@
     "fields": {
       "text": "Decked in wood by James Jarvey", 
       "refers_to": 5
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "localboats.note", 
+    "fields": {
+      "text": "Won the 1st Punt Race on record at Hickling Broad Open Regatta August 1923 , sailed by S H Morris.", 
+      "refers_to": 10
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.note", 
+    "fields": {
+      "text": "1994 Presented to National Maritime Museum Greenwich , available to be borrowed back for Broads Museum.", 
+      "refers_to": 10
     }
   }, 
   {
@@ -1051,6 +1192,36 @@
     }
   }, 
   {
+    "pk": 7, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 19, 
+      "owned_from": 2000, 
+      "owned_to": null, 
+      "boat": 9
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 25, 
+      "owned_from": 1994, 
+      "owned_to": null, 
+      "boat": 10
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 24, 
+      "owned_from": 1991, 
+      "owned_to": 1994, 
+      "boat": 10
+    }
+  }, 
+  {
     "pk": 3, 
     "model": "localboats.ownership", 
     "fields": {
@@ -1058,6 +1229,76 @@
       "owned_from": 1974, 
       "owned_to": 1991, 
       "boat": 2
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 23, 
+      "owned_from": 1967, 
+      "owned_to": 1991, 
+      "boat": 10
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 18, 
+      "owned_from": 1965, 
+      "owned_to": 2000, 
+      "boat": 9
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 2, 
+      "owned_from": 1936, 
+      "owned_to": 1965, 
+      "boat": 9
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 17, 
+      "owned_from": 1936, 
+      "owned_to": null, 
+      "boat": 8
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 22, 
+      "owned_from": 1930, 
+      "owned_to": 1967, 
+      "boat": 10
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 21, 
+      "owned_from": 1924, 
+      "owned_to": 1930, 
+      "boat": 10
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "localboats.ownership", 
+    "fields": {
+      "owner": 20, 
+      "owned_from": 1916, 
+      "owned_to": 1924, 
+      "boat": 10
     }
   }, 
   {
@@ -1466,7 +1707,7 @@
       "flags": [], 
       "location": 4, 
       "type": 5, 
-      "slug": "hickling-autumn-regatta", 
+      "slug": "hickling-autumn-regatta-2012-10-06-100000", 
       "description": ""
     }
   }, 
@@ -1482,7 +1723,7 @@
       ], 
       "location": 1, 
       "type": 1, 
-      "slug": "triple-b", 
+      "slug": "triple-b-2012-09-22-090000", 
       "description": ""
     }
   }, 
@@ -1498,7 +1739,7 @@
       ], 
       "location": 2, 
       "type": 4, 
-      "slug": "athene-cup", 
+      "slug": "athene-cup-2012-09-15-100000", 
       "description": ""
     }
   }, 
@@ -1512,7 +1753,7 @@
       "flags": [], 
       "location": 2, 
       "type": 5, 
-      "slug": "barton-open-regatta", 
+      "slug": "barton-open-regatta-2012-08-27-100000", 
       "description": ""
     }
   }, 
@@ -1528,7 +1769,7 @@
       ], 
       "location": 2, 
       "type": 5, 
-      "slug": "npc-regatta", 
+      "slug": "npc-regatta-2012-08-25-100000", 
       "description": ""
     }
   }, 
@@ -1544,7 +1785,7 @@
       ], 
       "location": 2, 
       "type": 2, 
-      "slug": "punt-championships", 
+      "slug": "punt-championships-2012-08-18-100000", 
       "description": ""
     }
   }, 
@@ -1558,7 +1799,7 @@
       "flags": [], 
       "location": 6, 
       "type": 5, 
-      "slug": "aldeburgh-week", 
+      "slug": "aldeburgh-week-2012-08-12-100000", 
       "description": ""
     }
   }, 
@@ -1574,7 +1815,7 @@
       ], 
       "location": 4, 
       "type": 5, 
-      "slug": "hickling-summer-regatta", 
+      "slug": "hickling-summer-regatta-2012-07-28-100000", 
       "description": ""
     }
   }, 
@@ -1588,7 +1829,7 @@
       "flags": [], 
       "location": 5, 
       "type": 5, 
-      "slug": "wroxham-week", 
+      "slug": "wroxham-week-2012-07-23-100000", 
       "description": ""
     }
   }, 
@@ -1604,7 +1845,7 @@
       ], 
       "location": 4, 
       "type": 4, 
-      "slug": "hickling-punt-open", 
+      "slug": "hickling-punt-open-2012-07-22-100000", 
       "description": ""
     }
   }, 
@@ -1620,7 +1861,7 @@
       ], 
       "location": 2, 
       "type": 4, 
-      "slug": "punt-open", 
+      "slug": "punt-open-2012-07-07-100000", 
       "description": ""
     }
   }, 
@@ -1650,7 +1891,7 @@
       ], 
       "location": 4, 
       "type": 5, 
-      "slug": "hickling-spring-regatta", 
+      "slug": "hickling-spring-regatta-2012-05-06-100000", 
       "description": ""
     }
   }, 
@@ -1664,7 +1905,7 @@
       "flags": [], 
       "location": 3, 
       "type": 3, 
-      "slug": "annual-general-meeting", 
+      "slug": "annual-general-meeting-2012-01-20-193000", 
       "description": "Beers afterwards at the White Horse"
     }
   }, 
@@ -1678,7 +1919,7 @@
       "flags": [], 
       "location": 2, 
       "type": 2, 
-      "slug": "championships-2011", 
+      "slug": "championships-2011-2011-08-20-110000", 
       "description": "Briefing Sat 11.30 with tow out 11.00.\r\n\r\nRaces Sat 12.00, 14.00 & 16.00, Sun 10.30 & 12.00, best 4 to count.  Many trophies or prizes. \r\n\r\nEntry fee \u00a325 before Wed 17 August, \u00a330 after, before 11 am Saturday. \r\n\r\nThe legendary NPC tea and home made cake included in the entry fee!  As are drinks and nibbles at Marsh House on the Saturday evening for competitors and crews.\r\n\r\nMore info and entry forms available from rachelclayton@mypostoffice.co.uk"
     }
   }, 
@@ -1692,7 +1933,7 @@
       "flags": [], 
       "location": 1, 
       "type": 1, 
-      "slug": "triple-b", 
+      "slug": "triple-b-2010-10-16-120000", 
       "description": "Buckenhan to Breydon and Back"
     }
   }, 
@@ -3085,6 +3326,500 @@
       "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 
       "email": "rupert@neontribe.co.uk", 
       "date_joined": "2011-03-02T21:06:36"
+    }
+  }, 
+  {
+    "pk": 127, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:08:29.688", 
+      "object_repr": "Shrimp", 
+      "object_id": "10", 
+      "change_message": "Added ownership \"J M Evans (1991 - 1994)\". Added ownership \"National Maritime Museum (1994 to present)\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:08:15.800", 
+      "object_repr": "National Maritime Museum", 
+      "object_id": "25", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:07:32.584", 
+      "object_repr": "J M Evans", 
+      "object_id": "24", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:06:52.684", 
+      "object_repr": "Shrimp", 
+      "object_id": "10", 
+      "change_message": "Added ownership \"S H Morris (1924 - 1930)\". Added ownership \"M Boardman (1930 - 1967)\". Added ownership \"Norfolk Education Committee (1967 - 1991)\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:06:31.912", 
+      "object_repr": "Norfolk Education Committee", 
+      "object_id": "23", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:05:43.694", 
+      "object_repr": "M Boardman", 
+      "object_id": "22", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:05:00.618", 
+      "object_repr": "S H Morris", 
+      "object_id": "21", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:04:37.892", 
+      "object_repr": "Shrimp", 
+      "object_id": "10", 
+      "change_message": "Added ownership \"H A Morris (1916 - 1924)\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 119, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:04:18.304", 
+      "object_repr": "H A Morris", 
+      "object_id": "20", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:03:58.525", 
+      "object_repr": "Shrimp", 
+      "object_id": "10", 
+      "change_message": "Added note \"Note object\". Added note \"Note object\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:03:14.039", 
+      "object_repr": "Shrimp", 
+      "object_id": "10", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:03:00.008", 
+      "object_repr": "W G Woods of Potter Heigham", 
+      "object_id": "8", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:01:24.048", 
+      "object_repr": "Sanderling", 
+      "object_id": "9", 
+      "change_message": "Added ownership \"Theta Club (1965 - 2000)\". Added ownership \"J Cooke (2000 to present)\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:01:13.961", 
+      "object_repr": "J Cooke", 
+      "object_id": "19", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T22:00:50.418", 
+      "object_repr": "Theta Club", 
+      "object_id": "18", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T22:00:30.438", 
+      "object_repr": "Sanderling", 
+      "object_id": "9", 
+      "change_message": "Added ownership \"Unknown (1936 - 1965)\".", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T21:59:49.755", 
+      "object_repr": "Sanderling", 
+      "object_id": "9", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:32.898", 
+      "object_repr": "Triple B (2010)", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:30.447", 
+      "object_repr": "Championships 2011 (2011)", 
+      "object_id": "2", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:28.132", 
+      "object_repr": "Hickling Spring Regatta (2012)", 
+      "object_id": "5", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:25.356", 
+      "object_repr": "Annual General Meeting (2012)", 
+      "object_id": "3", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:22.725", 
+      "object_repr": "Hickling Spring Regatta (2012)", 
+      "object_id": "5", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:18.602", 
+      "object_repr": "Punt Open (2012)", 
+      "object_id": "4", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:15.969", 
+      "object_repr": "Hickling Punt Open (2012)", 
+      "object_id": "6", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:12.924", 
+      "object_repr": "Wroxham Week (2012)", 
+      "object_id": "7", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 102, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:09.955", 
+      "object_repr": "Hickling Summer Regatta (2012)", 
+      "object_id": "9", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 101, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:07.104", 
+      "object_repr": "Aldeburgh Week (2012)", 
+      "object_id": "10", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:04.521", 
+      "object_repr": "Punt Championships (2012)", 
+      "object_id": "11", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:55:01.289", 
+      "object_repr": "NPC Regatta (2012)", 
+      "object_id": "12", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:54:57.709", 
+      "object_repr": "Barton Open Regatta (2012)", 
+      "object_id": "13", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:54:54.773", 
+      "object_repr": "Athene Cup (2012)", 
+      "object_id": "14", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:54:51.715", 
+      "object_repr": "Triple B (2012)", 
+      "object_id": "16", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:54:48.491", 
+      "object_repr": "Hickling Autumn Regatta (2012)", 
+      "object_id": "15", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:53:03.721", 
+      "object_repr": "Triple B (2010)", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T21:52:56.217", 
+      "object_repr": "Triple B (2012)", 
+      "object_id": "16", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T21:31:18.991", 
+      "object_repr": "Blue Winged Olive", 
+      "object_id": "8", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T21:30:50.246", 
+      "object_repr": "Arthur R. Batchelor", 
+      "object_id": "17", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T21:30:14.731", 
+      "object_repr": "Unknown", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 26
     }
   }, 
   {
