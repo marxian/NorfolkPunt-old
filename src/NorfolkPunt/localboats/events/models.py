@@ -43,7 +43,7 @@ class Event(models.Model):
         
     def save(self, *args, **kwargs):
         
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.name + ' ' + str(self.start))
         return super(Event, self).save(*args, **kwargs)
     
 class RaceResult(models.Model):

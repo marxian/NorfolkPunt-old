@@ -515,6 +515,10 @@ body {
 */
 /* pictures */
 
+body.gallery #sitegallery h1 {
+  display: none;
+}
+
 #picturewrap {
 	text-align: center;
 }

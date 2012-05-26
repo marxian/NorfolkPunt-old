@@ -18,13 +18,13 @@
 			<dt>Design</dt>
 			<dd>{{boat.design.name}} by {{boat.design.designer.name}}</dd>
 			<dt>L.O.A</dt>
-			<dd>{{boat.loa}} feet</dd>
+			<dd>{{boat.loa|default:"Unknown"}} feet</dd>
 			<dt>Builder</dt>
 			<dd>{{boat.builder.name}}</dd>
 			<dt>Construction</dt>
 			<dd>{{boat.construction.name}}</dd>
 			<dt>Handicap</dt>
-			<dd>{{boat.handicap}}</dd>
+			<dd>{{boat.handicap|default:"Unknown"}}</dd>
 	    </dl>
 		{% if has_pics %}
 			<a id="main_pic" href="{{main_pic.get_absolute_url}}"><img src="{{main_pic.get_feature_url}}" alt="{{main_pic.title}}"/></a>
