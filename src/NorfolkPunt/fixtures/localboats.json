@@ -39,6 +39,45 @@
     }
   }, 
   {
+    "pk": 4, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.hicklingbroad.com/", 
+      "name": "Hickling Broad Sailing CLub", 
+      "longitude": 1.5700900554656982, 
+      "postcode": "NR12 0YJ", 
+      "address": "Staithe Rd, \r\nHickling, \r\nNorwich, \r\nNorfolk\r\n", 
+      "latitude": 52.745580150689364, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.nbyc.co.uk/", 
+      "name": "Norfolk Broads Yacht Club", 
+      "longitude": null, 
+      "postcode": "NR12 8TS", 
+      "address": "The Avenue,\t\r\nWroxham,\t\r\nNorwich,\t\r\nNorfolk\t\r\n", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.aldeburghyc.org.uk/", 
+      "name": "Aldeburgh Yacht Club", 
+      "longitude": null, 
+      "postcode": "IP15 5NA", 
+      "address": "Slaughden Road, \r\nAldeburgh,\r\nSuffolk\r\n", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
     "pk": 6, 
     "model": "localboats.person", 
     "fields": {

@@ -99,6 +99,15 @@
     }
   }, 
   {
+    "pk": 12, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-05-26T13:06:36.791", 
+      "app_name": "events", 
+      "migration": "0004_auto__add_eventflag"
+    }
+  }, 
+  {
     "pk": 29, 
     "model": "contenttypes.contenttype", 
     "fields": {
@@ -194,6 +203,15 @@
     "fields": {
       "model": "event", 
       "name": "event", 
+      "app_label": "events"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "eventflag", 
+      "name": "event flag", 
       "app_label": "events"
     }
   }, 
@@ -600,6 +618,45 @@
       "longitude": null, 
       "postcode": "NR12 8AD", 
       "address": "", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.hicklingbroad.com/", 
+      "name": "Hickling Broad Sailing CLub", 
+      "longitude": 1.5700900554656982, 
+      "postcode": "NR12 0YJ", 
+      "address": "Staithe Rd, \r\nHickling, \r\nNorwich, \r\nNorfolk\r\n", 
+      "latitude": 52.745580150689364, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.nbyc.co.uk/", 
+      "name": "Norfolk Broads Yacht Club", 
+      "longitude": null, 
+      "postcode": "NR12 8TS", 
+      "address": "The Avenue,\t\r\nWroxham,\t\r\nNorwich,\t\r\nNorfolk\t\r\n", 
+      "latitude": null, 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "localboats.place", 
+    "fields": {
+      "website": "http://www.aldeburghyc.org.uk/", 
+      "name": "Aldeburgh Yacht Club", 
+      "longitude": null, 
+      "postcode": "IP15 5NA", 
+      "address": "Slaughden Road, \r\nAldeburgh,\r\nSuffolk\r\n", 
       "latitude": null, 
       "description": ""
     }
@@ -1379,12 +1436,232 @@
     }
   }, 
   {
+    "pk": 4, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Open Racing"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Regatta"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.eventflag", 
+    "fields": {
+      "name": "Travellers Series"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-10-07T18:00:00", 
+      "name": "Hickling Autumn Regatta", 
+      "start": "2012-10-06T10:00:00", 
+      "flags": [], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-autumn-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2012-09-22T09:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 1, 
+      "type": 1, 
+      "slug": "triple-b", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Athene Cup", 
+      "start": "2012-09-15T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 4, 
+      "slug": "athene-cup", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Barton Open Regatta", 
+      "start": "2012-08-27T10:00:00", 
+      "flags": [], 
+      "location": 2, 
+      "type": 5, 
+      "slug": "barton-open-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-26T16:00:00", 
+      "name": "NPC Regatta", 
+      "start": "2012-08-25T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 5, 
+      "slug": "npc-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-19T18:00:00", 
+      "name": "Punt Championships", 
+      "start": "2012-08-18T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 2, 
+      "slug": "punt-championships", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-17T18:00:00", 
+      "name": "Aldeburgh Week", 
+      "start": "2012-08-12T10:00:00", 
+      "flags": [], 
+      "location": 6, 
+      "type": 5, 
+      "slug": "aldeburgh-week", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-29T18:00:00", 
+      "name": "Hickling Summer Regatta", 
+      "start": "2012-07-28T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-summer-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-29T16:00:00", 
+      "name": "Wroxham Week", 
+      "start": "2012-07-23T10:00:00", 
+      "flags": [], 
+      "location": 5, 
+      "type": 5, 
+      "slug": "wroxham-week", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-22T17:00:00", 
+      "name": "Hickling Punt Open", 
+      "start": "2012-07-22T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 4, 
+      "slug": "hickling-punt-open", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-08T16:00:00", 
+      "name": "Punt Open", 
+      "start": "2012-07-07T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 4, 
+      "slug": "punt-open", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-05-27T22:00:00", 
+      "name": "Hickling Evening Regatta", 
+      "start": "2012-06-25T18:00:00", 
+      "flags": [], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-evening-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-05-07T16:00:00", 
+      "name": "Hickling Spring Regatta", 
+      "start": "2012-05-06T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-spring-regatta", 
+      "description": ""
+    }
+  }, 
+  {
     "pk": 3, 
     "model": "events.event", 
     "fields": {
       "end": null, 
       "name": "Annual General Meeting", 
       "start": "2012-01-20T19:30:00", 
+      "flags": [], 
       "location": 3, 
       "type": 3, 
       "slug": "annual-general-meeting", 
@@ -1398,6 +1675,7 @@
       "end": "2011-08-21T16:00:00", 
       "name": "Championships 2011", 
       "start": "2011-08-20T11:00:00", 
+      "flags": [], 
       "location": 2, 
       "type": 2, 
       "slug": "championships-2011", 
@@ -1411,6 +1689,7 @@
       "end": null, 
       "name": "Triple B", 
       "start": "2010-10-16T12:00:00", 
+      "flags": [], 
       "location": 1, 
       "type": 1, 
       "slug": "triple-b", 
@@ -1843,6 +2122,33 @@
       "codename": "delete_event", 
       "name": "Can delete event", 
       "content_type": 37
+    }
+  }, 
+  {
+    "pk": 127, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_eventflag", 
+      "name": "Can add event flag", 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 128, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_eventflag", 
+      "name": "Can change event flag", 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 129, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_eventflag", 
+      "name": "Can delete event flag", 
+      "content_type": 43
     }
   }, 
   {
@@ -2773,12 +3079,272 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2012-05-26T11:17:43.478", 
+      "last_login": "2011-03-02T21:06:36", 
       "groups": [], 
       "user_permissions": [], 
-      "password": "pbkdf2_sha256$10000$rfjIpWMqbpli$ZgW+x60PvKjmfczIF2xiok3JJzlBwC0O2fDi420wNeE=", 
+      "password": "sha1$5be6e$1614686fc42633350e08a5bb86d1b94a2b073b1b", 
       "email": "rupert@neontribe.co.uk", 
       "date_joined": "2011-03-02T21:06:36"
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:54:46.695", 
+      "object_repr": "Triple B (2012)", 
+      "object_id": "16", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:53:27.847", 
+      "object_repr": "Hickling Autumn Regatta (2012)", 
+      "object_id": "15", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:52:11.179", 
+      "object_repr": "Athene Cup (2012)", 
+      "object_id": "14", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:50:42.773", 
+      "object_repr": "Barton Open Regatta (2012)", 
+      "object_id": "13", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:49:53.247", 
+      "object_repr": "NPC Regatta (2012)", 
+      "object_id": "12", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:48:27.290", 
+      "object_repr": "Punt Championships (2012)", 
+      "object_id": "11", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:47:31.296", 
+      "object_repr": "Aldeburgh Week (2012)", 
+      "object_id": "10", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:47:23.174", 
+      "object_repr": "Aldeburgh Yacht Club", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:43:19.365", 
+      "object_repr": "Hickling Summer Regatta (2012)", 
+      "object_id": "9", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-05-26T13:42:07.906", 
+      "object_repr": "Hickling Spring Regatta (2012)", 
+      "object_id": "5", 
+      "change_message": "Changed name.", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:41:55.427", 
+      "object_repr": "Hickling Evening Regatta (2012)", 
+      "object_id": "8", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:40:24.933", 
+      "object_repr": "Wroxham Week (2012)", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:22:17.101", 
+      "object_repr": "Norfolk Broads Yacht Club", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:18:58.686", 
+      "object_repr": "Hickling Punt Open (2012)", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:17:32.942", 
+      "object_repr": "HBSC Spring Regatta (2012)", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:17:22.866", 
+      "object_repr": "Hickling Broad Sailing CLub", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:13:57.634", 
+      "object_repr": "Regatta", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:12:33.451", 
+      "object_repr": "Punt Open (2012)", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:10:45.359", 
+      "object_repr": "Open Racing", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2012-05-26T13:08:55.649", 
+      "object_repr": "Travellers Series", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 43
     }
   }, 
   {

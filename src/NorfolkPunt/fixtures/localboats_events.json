@@ -21,12 +21,232 @@
     }
   }, 
   {
+    "pk": 4, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Open Racing"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.eventtype", 
+    "fields": {
+      "name": "Regatta"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "events.eventflag", 
+    "fields": {
+      "name": "Travellers Series"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-10-07T18:00:00", 
+      "name": "Hickling Autumn Regatta", 
+      "start": "2012-10-06T10:00:00", 
+      "flags": [], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-autumn-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Triple B", 
+      "start": "2012-09-22T09:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 1, 
+      "type": 1, 
+      "slug": "triple-b", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Athene Cup", 
+      "start": "2012-09-15T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 4, 
+      "slug": "athene-cup", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "events.event", 
+    "fields": {
+      "end": null, 
+      "name": "Barton Open Regatta", 
+      "start": "2012-08-27T10:00:00", 
+      "flags": [], 
+      "location": 2, 
+      "type": 5, 
+      "slug": "barton-open-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-26T16:00:00", 
+      "name": "NPC Regatta", 
+      "start": "2012-08-25T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 5, 
+      "slug": "npc-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-19T18:00:00", 
+      "name": "Punt Championships", 
+      "start": "2012-08-18T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 2, 
+      "slug": "punt-championships", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-08-17T18:00:00", 
+      "name": "Aldeburgh Week", 
+      "start": "2012-08-12T10:00:00", 
+      "flags": [], 
+      "location": 6, 
+      "type": 5, 
+      "slug": "aldeburgh-week", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-29T18:00:00", 
+      "name": "Hickling Summer Regatta", 
+      "start": "2012-07-28T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-summer-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-29T16:00:00", 
+      "name": "Wroxham Week", 
+      "start": "2012-07-23T10:00:00", 
+      "flags": [], 
+      "location": 5, 
+      "type": 5, 
+      "slug": "wroxham-week", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-22T17:00:00", 
+      "name": "Hickling Punt Open", 
+      "start": "2012-07-22T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 4, 
+      "slug": "hickling-punt-open", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-07-08T16:00:00", 
+      "name": "Punt Open", 
+      "start": "2012-07-07T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 2, 
+      "type": 4, 
+      "slug": "punt-open", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-05-27T22:00:00", 
+      "name": "Hickling Evening Regatta", 
+      "start": "2012-06-25T18:00:00", 
+      "flags": [], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-evening-regatta", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "events.event", 
+    "fields": {
+      "end": "2012-05-07T16:00:00", 
+      "name": "Hickling Spring Regatta", 
+      "start": "2012-05-06T10:00:00", 
+      "flags": [
+        1
+      ], 
+      "location": 4, 
+      "type": 5, 
+      "slug": "hickling-spring-regatta", 
+      "description": ""
+    }
+  }, 
+  {
     "pk": 3, 
     "model": "events.event", 
     "fields": {
       "end": null, 
       "name": "Annual General Meeting", 
       "start": "2012-01-20T19:30:00", 
+      "flags": [], 
       "location": 3, 
       "type": 3, 
       "slug": "annual-general-meeting", 
@@ -40,6 +260,7 @@
       "end": "2011-08-21T16:00:00", 
       "name": "Championships 2011", 
       "start": "2011-08-20T11:00:00", 
+      "flags": [], 
       "location": 2, 
       "type": 2, 
       "slug": "championships-2011", 
@@ -53,6 +274,7 @@
       "end": null, 
       "name": "Triple B", 
       "start": "2010-10-16T12:00:00", 
+      "flags": [], 
       "location": 1, 
       "type": 1, 
       "slug": "triple-b", 

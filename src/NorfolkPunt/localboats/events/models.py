@@ -15,9 +15,15 @@ class EventType(models.Model):
     def __unicode__(self):
         return self.name
     
+class EventFlag(models.Model):
+    name = models.CharField(max_length=100)
+    def __unicode__(self):
+        return self.name
+    
 class Event(models.Model):
     name = models.CharField(max_length=100)
     type = models.ForeignKey(EventType, related_name="events")
+    flags = models.ManyToManyField(EventFlag, blank=True, null=True, related_name="events")
     description = models.TextField(blank=True)
     start = models.DateTimeField()
     end = models.DateTimeField(blank=True, null=True)
