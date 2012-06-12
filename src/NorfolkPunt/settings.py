@@ -104,7 +104,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'south',
+    #'south',
     #'admin_tools',
     #'admin_tools.theming',
     #'admin_tools.menu',
