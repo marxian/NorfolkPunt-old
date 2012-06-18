@@ -14,6 +14,7 @@
 		{% for design in designs %}
 			<li><a href="#{{ design|slugify }}" data-filter=".{{ design|slugify }}">{{design}}</a></li>
 		{% endfor %}
+		<li><a href="#forsale" data-filter=".forsale">For Sale</a></li>
       </ul>
       <h3>Sort:</h3>
       <ul id="sort" class="option-set">
@@ -32,7 +33,7 @@
 	<ul id="super-list" class="fitRows clearfix">
 	{% for boat in boats %}
 	    <li id="{{ boat.slug }}" 
-			class="boat {{ boat.design|slugify }}"
+			class="boat {{ boat.design|slugify }} {% if boat.forsale.count %}forsale{% endif %}"
 			data-handicap="{{ boat.handicap }}" 
 			data-year-built="{{ boat.year_built }}"
 			data-sail-number="{{ boat.sail_number }}">
