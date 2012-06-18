@@ -9,22 +9,21 @@
 
 {% block content %}
 	<nav id="list-options" class="white80 shadow">
-      <h3>Filter:</h3>
-      <ul id="filter" class="option-set">
-        <li><a href="#show-all" data-filter="*" class="selected">All</a></li>
-		{% for event_type in event_types %}
-			<li><a href="#{{ event_type|slugify }}" data-filter=".{{ event_type|slugify }}">{{event_type}}</a></li>
-		{% endfor %}
-			<li><a href="#results" data-filter=".results">Results</a></li>
+      <h3>Show:</h3>
+      <ul id="filter" class="option-set"> 
+		<li><a href="#future" data-filter=".future" class="selected">Future</a></li>
+		<li><a href="#past" data-filter=".past">Past</a></li>
+		<li><a href="#results" data-filter=".results">Results</a></li>
       </ul>
   	</nav>
 
 	<ul id="super-list" class="fitRows clearfix">
-	{% for event in events %}
+	{% for event in future %}
 	    <li id="{{ event.slug }}" 
-			class="event {{ event.type|slugify }} {% if event.results.count %}results{% endif %}"
+			class="event {{ event.type|slugify }} {% if event.results.count %}results{% endif %} future"
 			data-start="{{ event.start }}"
 			data-results="{{ event.results.count }}"
+			data-tense="future"
 			>
 			<span class="type {{event.type|slugify}}">{{event.type}}</span>
 	    	<h2><a href="{{ event.get_absolute_url }}">
@@ -33,7 +32,21 @@
 			<em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
 		</li>
 	{% endfor %}
-	</ul>
+	{% for event in past %}
+	    <li id="{{ event.slug }}" 
+			class="event {{ event.type|slugify }} {% if event.results.count %}results{% endif %} past"
+			data-start="{{ event.start }}"
+			data-results="{{ event.results.count }}"
+			data-tense="past"
+			>
+			<span class="type {{event.type|slugify}}">{{event.type}}</span>
+	    	<h2><a href="{{ event.get_absolute_url }}">
+			  {{ event.name }}
+			</a></h2>
+			<em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
+		</li>
+	{% endfor %}
+	</ul> 
 {% endblock content %}
 
 {% block scripts %}
@@ -68,6 +81,7 @@
 		  
 		  $list.isotope({
 		    layoutMode : 'straightDown',
+		    filter: '.future',
 		    masonry : {
 		      columnWidth: 220
 		    },

@@ -1,5 +1,6 @@
 Django==1.4
 PIL==1.1.7
+#pillow
 South==0.7.4
 #hg+https://bitbucket.org/rsalmaso/django-admin-tools#egg=django-admin-tools
 #django-admin-tools==0.4.1
