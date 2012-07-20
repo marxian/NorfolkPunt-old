@@ -35,7 +35,17 @@
 				<p class="note">{{note.text}}</p>
 			{% endfor %}
 		{% endif %}
-    
+    	
+    	{% if boat.forsale.count %}
+    		{% for sale in boat.forsale.all %}
+    			<section id="forsale" style="clear:both;margin-bottom:20px;text-align:center;">
+    				<h2>For Sale: {{ sale.price }}</h2>
+    				<em>{{ sale.title }}</em>
+    				<p>{{ sale.details }}</p>
+    				<p>{{ sale.contact }}</p> 
+    			</section>
+    		{% endfor %}
+    	{% endif %}
 
 		<!--<section id="honours">
 			<h2>Honours</h2>

@@ -152,6 +152,8 @@ class Ownership(models.Model):
             return "%s (%s to present)" % (self.owner, self.owned_from)
         if not self.owned_from and self.owned_to:
             return "%s (until %s)" % (self.owner, self.owned_to)
+        if not self.owned_from and not self.owned_to:
+            return "%s (at some point)" % (self.owner)
 
 class Picture(ImageModel):
 
