@@ -114,7 +114,7 @@ class Boat(models.Model):
     
     def save(self, *args, **kwargs):
         
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.name + '-' + str(self.sail_number))
         return super(Boat, self).save(*args, **kwargs)
     
     @models.permalink
