@@ -322,17 +322,6 @@
     }
   }, 
   {
-    "pk": 3, 
-    "model": "events.racetrophy", 
-    "fields": {
-      "helm": 12, 
-      "raceresult": 2, 
-      "name": "Cuckoo Trophy", 
-      "boat": 6, 
-      "crew": 13
-    }
-  }, 
-  {
     "pk": 4, 
     "model": "events.racetrophy", 
     "fields": {
@@ -363,6 +352,17 @@
       "name": "Hardchine Trophy", 
       "boat": 2, 
       "crew": 5
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "events.racetrophy", 
+    "fields": {
+      "helm": 12, 
+      "raceresult": 2, 
+      "name": "Cuckoo Trophy", 
+      "boat": 37, 
+      "crew": 13
     }
   }, 
   {
