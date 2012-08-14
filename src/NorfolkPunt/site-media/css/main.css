@@ -593,7 +593,7 @@ div.meta {
 
 section#sitegallery {
   display: inline-block;
-  max-width: 70%;
+  max-width: 700px;
 }
 
 #sitegallery ul#pictures {
