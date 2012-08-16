@@ -10,23 +10,20 @@
 		{% if event.results %}
 			{% for result in event.results.all %}
 				<div class="result">
-					{% if result.positions %}
-						<dl class="details positions">						
+					<dl class="details">
+						{% if result.positions %}				
 							{% for position in result.positions.all %}
 								<dt>{{ position.position|ordinal }}</dt>
 								<dd><a href="{{position.boat.get_absolute_url}}">{{position.boat.name}}</a> ({{position.helm.name}} and {{position.crew.name}})</dd>
 							{% endfor %}
-						</dl>
-					{% endif %}
-					{% if result.trophies %}
-						<dl class="details trophies">
+						{% endif %}
+						{% if result.trophies %}
 							{% for trophy in result.trophies.all %}
 								<dt>{{trophy.name}}</dt>
 								<dd><a href="{{trophy.boat.get_absolute_url}}">{{trophy.boat.name}}</a> ({{trophy.helm.name}} and {{trophy.crew.name}})</dd>
 							{% endfor %}
-						</dl>
-					{% endif %}
-					
+						{% endif %}
+					</dl>
 					<p class="report">
 						{{ result.report|linebreaks }}
 					</p>
