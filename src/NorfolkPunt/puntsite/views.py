@@ -15,7 +15,7 @@ def history(request):
                               context_instance=RequestContext(request))
     
 def home(request):
-    all_pics = Picture.objects.order_by('?')[:5]
+    all_pics = Picture.objects.order_by('?')[:10]
     landscapes = [x for x in all_pics if x.get_display_size()[0] > x.get_display_size()[1]]
     today = datetime.date.today()
     next_event = Event.objects.filter(
