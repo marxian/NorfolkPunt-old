@@ -18,9 +18,10 @@ def home(request):
     all_pics = Picture.objects.order_by('?')[:10]
     landscapes = [x for x in all_pics if x.get_display_size()[0] > x.get_display_size()[1]]
     today = datetime.date.today()
-    next_event = Event.objects.filter(
+    next_events = Event.objects.filter(
         start__gte=today, # Starting next
-    ).order_by('start')[0]
+    ).order_by('start')
+    next_event = len(next_events) and next_events[0] or False
     return render_to_response('puntsite/home.html',
                               {
                                 "slides": landscapes,
