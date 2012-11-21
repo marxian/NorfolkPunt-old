@@ -538,6 +538,12 @@ section#picture {
 	display: inline-block;
 }
 
+section#picture a.fullsize {
+  float: right;
+  font-style: italic;
+  text-decoration: none;
+}
+
 section#picture ul#depictions {
   margin: 0px;
 }

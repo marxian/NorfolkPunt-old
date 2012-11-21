@@ -9,7 +9,9 @@
 {% block content %}
 	<div id="picturewrap">
 		<section id="picture">
+			<a class="fullsize" href="/media/photologue/photos/{{ picture.image_filename }}">full size</a>
 			<h2>{{picture.title}}</h2>
+
 			<img class="depictions" src="{{ picture.get_display_url}}" 
 				alt="{{picture.title}}" longdesc="{{picure.caption}}"
 				data-picture_id="{{picture.id}}"
@@ -28,7 +30,9 @@
 						 </li>
 						{% endfor %}
 					{% endif %}
-					<li><a href="javascript:void(0);" id="add-depiction" title="add"><span class="hint" style="display:none;">click the image to position a new tag</span></a></li>
+					{% if user.is_staff %}
+						<li><a href="javascript:void(0);" id="add-depiction" title="add"><span class="hint" style="display:none;">click the image to position a new tag</span></a></li>
+					{% endif %}
 				</ul>
 				
 				<div class="meta">
