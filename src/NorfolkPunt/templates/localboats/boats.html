@@ -3,7 +3,7 @@
 {% block title %}{{ block.super }} : Boats{% endblock title %}
 
 {% block styles %}
-	<link rel="stylesheet" type="text/css" href="/site_media/css/isotope.css">
+	
 {% endblock styles %}
 
 {% block content %}
@@ -81,7 +81,7 @@
 			}
 		});
 		
-		$(function(){
+		//$(function(){
 		  
 		  $list.isotope({
 		    layoutMode : 'fitRows',
@@ -103,10 +103,11 @@
 			  }
 		    }
 		  });
-		  
+		  // horrid hack - probably to get around a font rendering issue
+		  setTimeout(function(){$list.isotope('reLayout');}, 10);
 
 		  
-		});
+		//});
 
 	</script>
 {% endblock scripts %}
