@@ -3,7 +3,7 @@ from django.template.defaultfilters import slugify, truncatewords
 from datetime import datetime
 from django.contrib.humanize.templatetags.humanize import ordinal 
 
-from localboats.models import slugify_uniquely, Boat, Person, Place
+from localboats.models import slugify_uniquely, Boat, Person, Place, Picture
     
 
 class EventType(models.Model):
@@ -41,11 +41,21 @@ class Event(models.Model):
     class Meta:
         ordering = ['-start']
         
-    def save(self, *args, **kwargs):
-        
+    def save(self, *args, **kwargs):    
         self.slug = slugify(self.name + ' ' + str(self.start))
         return super(Event, self).save(*args, **kwargs)
-    
+
+    @property
+    def gallery(self):
+        #pics = Picture.objects.filter(boats__id=self.id).annotate(num_boats=models.Count('boats')).order_by('num_boats')
+        #listing = pics.all()
+        #return [x for x in listing]
+
+class EventDepiction(models.Model):
+    type = 'events'
+    target = models.ForeignKey(Event, related_name="depictions")
+    image = models.ForeignKey(Picture)
+
 class RaceResult(models.Model):
     event = models.ForeignKey(Event, related_name='results')
     report = models.TextField(blank=True)

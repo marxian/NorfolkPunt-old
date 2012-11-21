@@ -123,7 +123,6 @@ class Boat(models.Model):
     
     @property
     def gallery(self):
-
         pics = Picture.objects.filter(boats__id=self.id).annotate(num_boats=models.Count('boats')).order_by('num_boats')
         listing = pics.all()
         return [x for x in listing]
@@ -166,7 +165,7 @@ class Picture(ImageModel):
     created = models.DateField(blank=True)    
     boats = models.ManyToManyField(Boat, blank=True, through='BoatDepiction', related_name='pictures') 
     people = models.ManyToManyField(Person, blank=True, through='PersonDepiction', related_name='pictures')
-    
+    #events = models.ManyToManyField('events.Event', blank=True, through='EventDepiction', related_name='pictures')
     license = models.ForeignKey(License, blank=True, related_name="media")
     attribution = models.ForeignKey(Person, blank=True, related_name="photographs")
     

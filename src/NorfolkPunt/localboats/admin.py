@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from models import *
+from events.models import *
 
 class OwnershipInline(admin.StackedInline):
     model = Ownership
@@ -35,13 +36,18 @@ class PersonDepictionInline(admin.StackedInline):
     model = PersonDepiction
     fields = ['target']
     extra = 0
+
+class EventDepictionInline(admin.StackedInline):
+    model = EventDepiction
+    fields =['target']
+    extra = 0
     
 class PictureAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,{'fields': ['title', 'caption', 'created', 'image', 'license', 'attribution']})
     ]
     list_display = ('title','caption','added','created','depiction_count','admin_thumbnail')
-    inlines = [BoatDepictionInline, PersonDepictionInline]
+    inlines = [BoatDepictionInline, PersonDepictionInline, EventDepictionInline]
 
 
 admin.site.register(Boat, BoatAdmin)
