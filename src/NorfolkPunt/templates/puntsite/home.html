@@ -8,14 +8,26 @@
         <p><strong>The Norfolk Punt</strong> was derived from the flat-bottomed gun punts that roamed the Broadland waters in the mid-to-late 19th century. However, at the turn of the 20th Century, in order to get to and from the hunting grounds more efficiently, the punters developed their highly unstable craft to carry a basic mast and sail for travelling with the wind. It is from these humble beginnings that one of the country’s most exciting and powerful racing dinghy classes was born.</p>
     </section>
     {% if event %}
+    
         <section id="events">
-
-            <span class="type {{event.type|slugify}}">{{event.type}}</span>
-    	    	<h2><a href="{{ event.get_absolute_url }}">
+            <h2>Next Event</h2>
+    	    	<a href="{{ event.get_absolute_url }}">
     			  {{ event.name }}
-    			</a></h2>
+    			</a>
     			<em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
 
+        </section>
+    {% endif %}
+    {% if sales %}
+        <section id="forsale">
+            <h2>For Sale</h2>
+            <ul class="forsale">
+                {% for sale in sales %}
+                <li class="boat {{ sale.boat.design|slugify }}">
+                    <a href="{{ sale.boat.get_absolute_url }}">{{ sale.boat.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </section>
     {% endif %}
 </div>

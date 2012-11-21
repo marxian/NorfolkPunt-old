@@ -314,6 +314,14 @@ body.home div.right section {
   margin-bottom: 2em;
 }
 
+.home #events a {
+  font-size: x-large;
+  text-decoration: none;
+}
+
+body.home #about p {
+  font-size: larger;
+}
 /* Boat Listing */
 
 /**** Isotope styles ****/
@@ -395,24 +403,24 @@ body {
 
 /* super list */
 
-#super-list {
+#super-list, ul.forsale {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
 }
 
-#super-list li {
+#super-list li, ul.forsale li {
   display: inline-block;
   float: left;
   font-size: large;
   line-height: 1.2em;
-  margin: 2px;
+  margin: 5px;
   font-weight: 300;
 }
 
 #super-list li span,
-#super-list li a {
+#super-list li a, ul.forsale li a{
   display: block;
   padding: 0.2em 0.5em;
 }
@@ -443,6 +451,8 @@ body {
 .traditional {
 	background-color: #536682;
 }
+
+
 
 .people {
   background-color: #D9964B;
@@ -503,16 +513,7 @@ body {
   color: white;
 }
 
-/* fancy borders for those who can 
-#list-options .option-set li:first-child a {
-  border-radius: 7px 0 0 7px;
-  border-left: none;
-}
 
-#list-options .option-set li:last-child a {
-  border-radius: 0 7px 7px 0;
-}
-*/
 /* pictures */
 
 body.gallery #sitegallery h1 {
