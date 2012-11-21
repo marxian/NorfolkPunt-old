@@ -301,7 +301,7 @@ line-height:1;
 }
 			 
 /* Home Page */
-body.home #pictures {
+body.home div.left {
   float:left;
 }
 
@@ -310,8 +310,8 @@ body.home div.right {
   max-width: 50%;
 }
 
-body.home div.right section {
-  margin-bottom: 2em;
+body.home section {
+  margin-bottom: 2.5em;
 }
 
 .home #events a {
