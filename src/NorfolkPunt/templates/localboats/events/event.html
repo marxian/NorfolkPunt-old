@@ -1,6 +1,6 @@
 {% extends "localboats/base.html" %}
 {% load humanize %}
-
+{% block bodyclass %}event{% endblock bodyclass %}
 {% block title %} {{ block.super }} : {{ event.name }}{% endblock %}
 
 {% block content %}
@@ -24,33 +24,24 @@
 							{% endfor %}
 						{% endif %}
 					</dl>
-					<p class="report">
-						{{ result.report|linebreaks }}
-					</p>
-					
+					{{ result.report|linebreaks }}
 					<hr/>
 				</div>
 			{% endfor %}
 		{% endif %}
-		
-	    <dl class="details">
-	    	<dt>From</dt>
-			<dd>{{event.start}}</dd>
-			<dt>To</dt>
-			<dd>{{event.end}}</dd>
-			<dt>At</dt>
-			<dd>{{event.location.name}}</dd>
-			<dt>Type</dt>
-			<dd>{{event.type}}</dd>
-	    </dl>
-		
-		<p class="description">
+		<div>
+		    <dl class="details">
+		    	<dt>From</dt>
+				<dd>{{event.start}}</dd>
+				<dt>To</dt>
+				<dd>{{event.end}}</dd>
+				<dt>At</dt>
+				<dd>{{event.location.name}}</dd>
+				<dt>Type</dt>
+				<dd>{{event.type}}</dd>
+		    </dl>
 			{{ event.description|linebreaks }}
-		</p>
-		
-		
-	
-		
+		</div>
 		<div style="clear:both;"></div>
 	</section>
 	

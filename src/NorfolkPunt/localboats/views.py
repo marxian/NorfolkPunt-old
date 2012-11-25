@@ -26,7 +26,11 @@ def boat(request, slug):
     has_pics = len(pics)
     main_pic = has_pics and pics[0] or None
     gallery = (has_pics > 1) and pics[1:] or None
+
+    # Get all the racepositions for thei sboat from championship events
+    champs_record = boat.race_positions.filter(raceresult__event__type__name__exact='Championship', position__lte=3).order_by('-raceresult__event__start')
     return render_to_response('localboats/boat.html', {'boat': boat, 
+                                                       'champs_record': champs_record,
                                                        'has_pics':has_pics,
                                                        'main_pic':main_pic,
                                                        'gallery':gallery},

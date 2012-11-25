@@ -1,63 +1,42 @@
 {% extends "localboats/base.html" %}
 {% load humanize %}
-
+{% block bodyclass %}boat{% endblock bodyclass %}
 {% block title %} {{ block.super }} : No. {{ boat.sail_number }}, {{ boat.name }}{% endblock %}
 
 {% block content %}
-    <section id="details">
-    	<h1>{{ boat.name }}</h1>
-	    <dl class="details">
-	    	<dt>Sail Number</dt>
-			<dd>{{boat.sail_number}}</dd>
-			{% if boat.previous_names %}
-				<dt>Previous Names</dt>
-				<dd>{{boat.previous_names}}</dd>
-			{% endif %}
-			<dt>Year Built</dt>
-			<dd>{{boat.year_built}}</dd>
-			<dt>Design</dt>
-			<dd>{{boat.design.name}} by {{boat.design.designer.name}}</dd>
-			<dt>L.O.A</dt>
-			<dd>{{boat.loa|default:"Unknown"}} feet</dd>
-			<dt>Builder</dt>
-			<dd>{{boat.builder.name}}</dd>
-			<dt>Construction</dt>
-			<dd>{{boat.construction.name}}</dd>
-			<dt>Handicap</dt>
-			<dd>{{boat.handicap|default:"Unknown"}}</dd>
-	    </dl>
-		{% if has_pics %}
-			<a id="main_pic" href="{{main_pic.get_absolute_url}}"><img src="{{main_pic.get_feature_url}}" alt="{{main_pic.title}}"/></a>
-		{% endif %}
-		
+	<div class="right">
+	    <section id="details">
+	    	<h1>{{ boat.name }}</h1>
+		    <dl class="details">
+		    	<dt>Sail Number</dt>
+				<dd>{{boat.sail_number}}</dd>
+				{% if boat.previous_names %}
+					<dt>Previous Names</dt>
+					<dd>{{boat.previous_names}}</dd>
+				{% endif %}
+				<dt>Year Built</dt>
+				<dd>{{boat.year_built}}</dd>
+				<dt>Design</dt>
+				<dd>{{boat.design.name}} by {{boat.design.designer.name}}</dd>
+				<dt>L.O.A</dt>
+				<dd>{{boat.loa|default:"Unknown"}} feet</dd>
+				<dt>Builder</dt>
+				<dd>{{boat.builder.name}}</dd>
+				<dt>Construction</dt>
+				<dd>{{boat.construction.name}}</dd>
+				<dt>Handicap</dt>
+				<dd>{{boat.handicap|default:"Unknown"}}</dd>
+		    </dl>
+		    <div class="div-ider"></div>
+		</section>
 		{% if boat.notes.count %}
-			{% for note in boat.notes.all %}
-				<p class="note">{{note.text}}</p>
-			{% endfor %}
-		{% endif %}
-    	
-    	{% if boat.forsale.count %}
-    		{% for sale in boat.forsale.all %}
-    			<section id="forsale" style="clear:both;margin-bottom:20px;text-align:center;">
-    				<h2>For Sale: {{ sale.price }}</h2>
-    				<em>{{ sale.title }}</em>
-    				<p>{{ sale.details }}</p>
-    				<p>{{ sale.contact }}</p> 
-    			</section>
-    		{% endfor %}
-    	{% endif %}
-
-		<!--<section id="honours">
-			<h2>Honours</h2>
-			{% if boat.race_postions.count %}
-			<ul class="positions">
-				{% for position in boat.race_positions.all %}
-					<li>{{ position.position|ordinal }} {{ position.}}</li>	
+		    <section id="notes">
+				{% for note in boat.notes.all %}
+					<p class="note">{{note.text}}</p>
 				{% endfor %}
-			</ul>
+			</section>
 			{% endif %}
-		</section>-->
-	
+		<div class="div-ider"></div>
 		<section id="ownership">
 			<h2>Ownership History</h2>
 			<ul>
@@ -66,16 +45,65 @@
 				{% endfor %}
 			</ul>	
 		</section>
-		
-		{% if gallery %}
-		<section id="gallery">
-			{% for picture in gallery %}
-				<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
-			{% endfor %}
-		</section>
+	</div>
+	<div class="left">
+		{% if has_pics %}
+			<section id="picture">
+				<a id="main_pic" href="{{main_pic.get_absolute_url}}"><img src="{{main_pic.get_feature_url}}" alt="{{main_pic.title}}"/></a>
+			</section>
+			<div class="div-ider"></div>
 		{% endif %}
 		
-		<div style="clear:both;"></div>
-	</section>
+		{% if champs_record %}
+			<section id="honours">
+				<h2>Championship Honours</h2>
+				<div class="championships">
+					{% for place in champs_record %}
+						
+							<a href="{{ place.raceresult.event.get_absolute_url }}" 
+								class="position-{{ place.position|ordinal }}"
+								title="{{ place.position|ordinal }} - Punt Championships {{ place.raceresult.event.start|date:"Y" }}">
+								{{ place.raceresult.event.start|date:"Y" }}
+							</a>
+
+							
+					{% endfor %}
+				</div>
+				<div class="div-ider"></div>
+			</section>
+			<div class="div-ider"></div>
+		{% endif %}
+
+		{% if gallery %}
+			<section id="gallery">
+				{% for picture in gallery %}
+					<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
+				{% endfor %}
+			</section>
+			<div class="div-ider"></div>
+		{% endif %}
+
+	</div>
+	<div class="div-ider"></div>	
+    	
+	{% if boat.forsale.count %}
+		{% for sale in boat.forsale.all %}
+			<section class="forsale">
+				<h2>For Sale: {{ sale.price }}</h2>
+				<em>{{ sale.title }}</em>
+				<p>{{ sale.details|safe }}</p>
+				<p>{{ sale.contact|safe }}</p> 
+			</section>
+			<div class="div-ider"></div>	
+		{% endfor %}
+	{% endif %}
+
+	
+	
+	
+		
+	
+		
+	
 	
 {% endblock %}
