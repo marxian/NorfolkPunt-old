@@ -287,7 +287,7 @@ section {
 	position: relative;
 	width: 100%;
 	color: white;
-border-bottom:2px solid #999;
+  border-bottom:2px solid #999;
 }
 
 strong {
@@ -317,18 +317,20 @@ line-height:1;
         color:#999;
 }
 
-#page-wrap { position: relative; 
-			 width: 100%; 
-			 margin:  0px; 
-			 padding: 0px; 
-			 }
+#page-wrap { 
+  position: relative; 
+  width: 100%; 
+  margin:  0px; 
+  padding: 0px; 
+}
+
 #content {
 	width: 80%;
 	margin: 20px auto;
 	padding: 20px;
 }
 			 
-/* Home Page */
+
 div.left {
   float:left;
 }
@@ -342,12 +344,13 @@ section {
   margin-bottom: 2.5em;
 }
 
-.home #events a {
+/* Home Page */
+#home #events a {
   font-size: x-large;
   text-decoration: none;
 }
 
-body.home #about p {
+body#home #about p {
   font-size: larger;
 }
 /* Boat Listing */
@@ -554,7 +557,7 @@ body {
 
 /* pictures */
 
-body.gallery #sitegallery h1 {
+body#gallery #sitegallery h1 {
   display: none;
 }
 
@@ -652,37 +655,31 @@ section#sitegallery {
 
 /* BOAT PAGE */
 
-.boat section#details {
-
-}
-
-.boat section > h1 {
+#boat .content section > h1 {
 	text-align: center;
 	font-size: x-large;
 }
 
-.boat section > h2 {
+#boat .content section > h2 {
   text-align: center;
   font-size: large;
 }
 
 
 /* Details Displays */
-.boat .right {
+#boat .right {
   width: 48%;
 }
 
-.boat .left {
+#boat .left {
   width: 340px;
 }
 
-
-
-.boat section#honours .championships  {
+#boat section#honours .championships  {
   width: 90%;
   text-align: center;
 }
-.boat section#honours .championships a {
+#boat section#honours .championships a {
   display: inline-block;
   height: 35px;
   width: 44px;
@@ -694,17 +691,17 @@ section#sitegallery {
   font-size: large;
   padding-top: 4px;
 }
-.boat section#honours .championships a.position-1st {
+#boat section#honours .championships a.position-1st {
   background-image: url('../images/laurel_wreath_gold.png');
 }
-.boat section#honours .championships a.position-2nd {
+#boat section#honours .championships a.position-2nd {
   background-image: url('../images/laurel_wreath_silver.png');
 }
-.boat section#honours .championships a.position-3rd {
+#boat section#honours .championships a.position-3rd {
   background-image: url('../images/laurel_wreath_bronze.png');
 }
 
-.boat section.forsale {
+#boat section.forsale {
   clear: both;
   text-align: center;
 }
@@ -734,13 +731,11 @@ section#history img.left {
   width: 95%;
 }
 
-
-
 #results hr {
   width:80%;
 }
 
-.event .details {
+#event .details {
   float:right;
   width: 450px;
 }
