@@ -37,7 +37,7 @@ def boat(request, slug):
                                                        context_instance=RequestContext(request))
 
 def pictures(request):
-    pictures = Picture.objects.all()
+    pictures = Picture.objects.all().order_by('?')
     return render_to_response('localboats/pictures.html', {'pictures':pictures},context_instance=RequestContext(request))
 
 def picture(request, slug):
