@@ -655,12 +655,12 @@ section#sitegallery {
 
 /* BOAT PAGE */
 
-#boat .content section > h1 {
+#boat #content section > h1 {
 	text-align: center;
 	font-size: x-large;
 }
 
-#boat .content section > h2 {
+#boat #content section > h2 {
   text-align: center;
   font-size: large;
 }
