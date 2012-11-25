@@ -14,6 +14,7 @@ class BoatAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['name', 'sail_number', 'year_built', 'previous_names']}),
         ('Details', {'fields': ['handicap', 'loa', 'design', 'builder', 'construction'], 'classes': ['collapse']}),
+        ('Display', {'fields': ['preferred_pic'], 'classes': ['collapse']}),
     ]
     list_display = ('name', 'sail_number')
 

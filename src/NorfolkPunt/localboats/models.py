@@ -102,6 +102,7 @@ class Boat(models.Model):
     builder = models.ForeignKey(Boatbuilder, blank=True, related_name='built')
     design = models.ForeignKey(Design, blank=True, related_name='examples')
     previous_names = models.CharField(max_length=100, blank=True)
+    preferred_pic = models.ForeignKey('Picture', blank=True, null=True)
     
     slug = models.SlugField(editable=False)
 

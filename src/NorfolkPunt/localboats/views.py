@@ -24,8 +24,8 @@ def boat(request, slug):
     
     pics = boat.gallery
     has_pics = len(pics)
-    main_pic = has_pics and pics[0] or None
-    gallery = (has_pics > 1) and pics[1:] or None
+    main_pic = boat.preferred_pic or (has_pics and pics[0]) or None
+    gallery = (has_pics > 1) and pics or None
 
     # Get all the racepositions for thei sboat from championship events
     champs_record = boat.race_positions.filter(raceresult__event__type__name__exact='Championship', position__lte=3).order_by('-raceresult__event__start')
