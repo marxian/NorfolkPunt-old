@@ -3,11 +3,10 @@
 {% block bodyid %}event{% endblock bodyid %}
 {% block title %} {{ block.super }} : {{ event.name }}{% endblock %}
 
-{% block content %}
-    <section id="details">
-    	<h1>{{ event.name }}</h1>
-		
-		{% if event.results %}
+{% block content %}    	
+	{% if event.results.count %}
+		<section id="details">
+			<h1>{{ event.name }}</h1>
 			{% for result in event.results.all %}
 				<div class="result">
 					<dl class="details">
@@ -25,24 +24,38 @@
 						{% endif %}
 					</dl>
 					{{ result.report|linebreaks }}
-					<hr/>
 				</div>
 			{% endfor %}
+		</section>
+		<div class="div-ider"></div>
+	{% endif %}
+	{% if gallery %}
+		<section id="gallery">
+			<h2>Gallery</h2>
+			{% for picture in gallery %}
+				<a href="{{picture.get_absolute_url}}"><img src="{{picture.get_thumbnail_url}}" alt="{{picture.title}}"/></a>
+			{% endfor %}
+		</section>
+		<div class="div-ider"></div>
+	{% endif %}
+
+	<section>
+		{% if not event.results.count %}
+			<h1>{{ event.name }}</h1>
+		{% else %}
+			<h2>Details</h2>
 		{% endif %}
-		<div>
-		    <dl class="details">
-		    	<dt>From</dt>
-				<dd>{{event.start}}</dd>
-				<dt>To</dt>
-				<dd>{{event.end}}</dd>
-				<dt>At</dt>
-				<dd>{{event.location.name}}</dd>
-				<dt>Type</dt>
-				<dd>{{event.type}}</dd>
-		    </dl>
-			{{ event.description|linebreaks }}
-		</div>
-		<div style="clear:both;"></div>
+	    <dl class="details">
+	    	<dt>From</dt>
+			<dd>{{event.start}}</dd>
+			<dt>To</dt>
+			<dd>{{event.end}}</dd>
+			<dt>At</dt>
+			<dd>{{event.location.name}}</dd>
+			<dt>Type</dt>
+			<dd>{{event.type}}</dd>
+	    </dl>
+		{{ event.description|linebreaks }}
+		<div class="div-ider"></div>
 	</section>
-	
 {% endblock %}

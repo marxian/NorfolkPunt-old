@@ -39,9 +39,10 @@ class PersonDepictionInline(admin.StackedInline):
     
 class PictureAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,{'fields': ['title', 'caption', 'created', 'image', 'license', 'attribution']})
+        (None,{'fields': ['title', 'caption', 'created', 'image', 'license', 'attribution']}),
+        ('Event',{'fields': ['event'], 'classes': ['collapse']})
     ]
-    list_display = ('title','caption','added','created','depiction_count','admin_thumbnail')
+    list_display = ('title','caption','created','event','admin_thumbnail')
     inlines = [BoatDepictionInline, PersonDepictionInline]
 
 

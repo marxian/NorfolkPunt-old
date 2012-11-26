@@ -18,10 +18,12 @@ def events(request):
 def event(request, slug):
     event = get_object_or_404(Event, slug=slug)
     results = event.results.all()
-    
+    gallery = event.gallery.all().order_by('?')
     return render_to_response('localboats/events/event.html', 
                               {'event':event,
-                               'results':results},
+                               'results':results,
+                               'gallery': gallery
+                               },
                                context_instance=RequestContext(request))
     
 

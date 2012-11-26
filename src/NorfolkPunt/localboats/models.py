@@ -167,6 +167,7 @@ class Picture(ImageModel):
     created = models.DateField(blank=True)    
     boats = models.ManyToManyField(Boat, blank=True, through='BoatDepiction', related_name='pictures') 
     people = models.ManyToManyField(Person, blank=True, through='PersonDepiction', related_name='pictures')
+    event = models.ForeignKey('events.Event', blank=True, null=True, related_name="gallery")
     
     license = models.ForeignKey(License, blank=True, related_name="media")
     attribution = models.ForeignKey(Person, blank=True, related_name="photographs")
