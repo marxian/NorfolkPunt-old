@@ -11,7 +11,7 @@
 	<nav id="list-options" class="white80 shadow">
       <h3>Show:</h3>
       <ul id="filter" class="option-set"> 
-		<li><a href="#future" data-filter=".future" class="selected">Future</a></li>
+		<li><a href="#future" data-filter=".future">Future</a></li>
 		<li><a href="#past" data-filter=".past">Past</a></li>
 		<li><a href="#results" data-filter=".results">Results</a></li>
       </ul>
@@ -52,36 +52,32 @@
 {% block scripts %}
 	<script type="text/javascript" src="/site_media/js/jquery.isotope.min.js"></script>
 	<script>
-		$list = $('#super-list');
+		var cur_filter = '.' + (qvars.filter || 'future'),
+			currentLayout = 'straightDown',
+			$list = $('#super-list');
   
 		$('#filter a').live('click',function(){
 		  var filterName = $(this).attr('data-filter');
 		  $list.isotope({ filter : filterName });
 		  return false;
 		});
-		
-		
-		
-		var currentLayout = 'straightDown';
-		
-		
-		  
+			 
 		// switches selected class on buttons
 		$('#list-options').find('.option-set a').live('click', function(){
 			var $this = $(this);
-			
 			// don't proceed if already selected
 			if ( !$this.hasClass('selected') ) {
 			  $this.parents('.option-set').find('.selected').removeClass('selected');
 			  $this.addClass('selected');
 			}
 		});
-		
+
+		$('#list-options .option-set a[data-filter="'+cur_filter+'"]').addClass('selected');
+
 		$(function(){
-		  
 		  $list.isotope({
 		    layoutMode : 'straightDown',
-		    filter: '.future',
+		    filter: cur_filter,
 		    masonry : {
 		      columnWidth: 220
 		    },

@@ -7,12 +7,15 @@
     <section id="about">
         <p><strong>The Norfolk Punt</strong> was derived from the flat-bottomed gun punts that roamed the Broadland waters in the mid-to-late 19th century. However, at the turn of the 20th Century, in order to get to and from the hunting grounds more efficiently, the punters developed their highly unstable craft to carry a basic mast and sail for travelling with the wind. It is from these humble beginnings that one of the country’s most exciting and powerful racing dinghy classes was born.</p>
     </section>
-
-    <section id="news">
-        <h2>News</h2>
-        <p><em>This site is new!</em> If you've got comments, suggestions or if your eagle eyes have spotted a glitch please do use the feedback tab on the left. Corrections, photographs, drawings or anecdotes are very welcome, please get in touch with rupert@neontribe.co.uk</p>
-    </section>
-    
+    {% if news %}
+        <section id="news">
+            <h2>News</h2>
+            {% for item in news %}
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.summary }}</p>
+            {% endfor %}
+        </section>
+    {% endif %}
     {% if sales %}
         <section id="forsale">
             <h2>For Sale</h2>
@@ -35,18 +38,29 @@
         {% endwith %}
     </section>
     {% if event %}
-    
         <section id="events">
             <h2>Next Event</h2>
-                <a href="{{ event.get_absolute_url }}">
-                  {{ event.name }}
-                </a>
-                <em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
-
+            <a href="{{ event.get_absolute_url }}">
+              {{ event.name }}
+            </a>
+            <em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
+            <a href="./events/?filter=future" class="more">all events</a>
+            <div class="div-ider"></div>
+        </section>
+    {% endif %}
+    {% if result %}
+        <section id="results">
+            <h2>Latest Results</h2>
+            <a href="{{ result.event.get_absolute_url }}">
+              {{ result.event.name }}
+            </a>
+            <a href="./events/?filter=results" class="more">all results</a>
+            <div class="div-ider"></div>
         </section>
     {% endif %}
     
 </div>
+<div class="div-ider"></div>
 {% endblock content %}
 {% block scripts %}
 	<script type="text/javascript" src="/site_media/js/jquery.cross-slide.min.js"></script>

@@ -333,11 +333,13 @@ line-height:1;
 
 div.left {
   float:left;
+  margin-bottom: 2.5em;
 }
 
 div.right {
   float: right;
   max-width: 50%;
+  margin-bottom: 2.5em;
 }
 
 section {
@@ -345,9 +347,17 @@ section {
 }
 
 /* Home Page */
-#home #events a {
+#home #events a, #home #results a {
   font-size: x-large;
   text-decoration: none;
+  clear: both;
+  display: block;
+}
+
+#home section a.more {
+  float: right;
+  font-size: small !important;
+  font-style: italic;
 }
 
 body#home #about p {
