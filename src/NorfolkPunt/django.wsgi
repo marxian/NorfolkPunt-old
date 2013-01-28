@@ -2,7 +2,7 @@ import os
 import sys
 import site
 
-site.addsitedir('/home/norfolkpunt/NorfolkPunt/vpython/lib/python2.5/site-packages')
+site.addsitedir('/home/norfolkpunt/python/lib/python2.7/site-packages')
 
 path = '/home/norfolkpunt/NorfolkPunt/src/'
 if path not in sys.path:
