@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Norfolk Punts : Contact{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="/site_media/bootstrap/css/bootstrap.min.css">
+{% endblock %}
+{% block bodyid %}contact{% endblock %}
+{% block content %}
+<div class="right">
+    <section>
+        <h2>Contact Us</h2>
+        <form action="/contact/" class="form-horizontal" novalidate method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="control-group">
+                <label for="id_recpient" class="control-label">To the</label>
+                <div class="controls">
+                    <select name="recipient" id="id_recipient" required  class="input-xlarge">
+                        <option value=""></option>
+                        <option value="secretary">Association Secretary</option>
+                        <option value="webmaster">Webmaster</option>
+                    </select>
+                    <p class="help-block">here</p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="id_subject" class="control-label">Subject</label>
+                <div class="controls">
+                    <input type="text" name="subject" id="id_subject" class="input-xlarge"  required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="id_message" class="control-label">Message</label>
+                <div class="controls">
+                    <textarea name="message" id="id_message" required  class="input-xlarge"> </textarea>
+                    <p class="help-block">here</p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="id_sender" class="control-label">Email address</label>
+                <div class="controls">
+                    <input type="email" name="sender" id="id_sender" required  class="input-xlarge">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send <i class="icon-ok icon-white"></i></button>
+            </div>
+        </form>
+    </section>
+</div>
+<div class="left">
+    <section id="officers">
+        <h2>Association Officers</h2>
+    </section>
+</div>
+<div class="div-ider"></div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/site_media/js/jqBootstrapValidation.js"></script>
+    <script>
+         $("input,textarea,select").jqBootstrapValidation(
+            {
+                preventSubmit: true,
+                submitError: function($form, event, errors) {
+                    // Here I do nothing, but you could do something like display 
+                    // the error messages to the user, log, etc.
+                },
+                submitSuccess: function($form, event) {
+                    
+                },
+                filter: function() {
+                    return $(this).is(":visible");
+                }
+            }
+        );
+    </script>
+{% endblock scripts %}

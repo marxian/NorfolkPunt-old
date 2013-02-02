@@ -778,3 +778,21 @@ li.event span.championship {
 li.event span.navigation-race {
   background-color: blue;
 }
+
+/* CONTACT */
+#contact .right {
+  width: 50%;
+  max-width: 50%;
+}
+
+#contact section h2 {
+  text-align: center;
+}
+#contact form {
+  width: 100%;
+}
+
+/* THANKS */
+#thanks section {
+  text-align: center;
+}
