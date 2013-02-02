@@ -1,4 +1,5 @@
 from django.shortcuts import render_to_response, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from localboats.models import Boat, Picture
 from localboats.sale.models import Sale
@@ -44,7 +45,7 @@ def contact(request):
 
             from django.core.mail import send_mail
             send_mail(subject, message, sender, recipients)
-            return HttpResponseRedirect('/thanks/') # Redirect after POST
+            return HttpResponseRedirect('/contact/thanks/') # Redirect after POST
     else:
         form = ContactForm() # An unbound form
 
