@@ -5,6 +5,9 @@
 	<title>{% block title %}Norfolk Punt Owners Association{% endblock title %}</title>
 	<link rel="stylesheet" type="text/css" href="/site_media/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/site_media/css/ui-lightness/jquery-ui-1.8.10.custom.css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="/site_media/css/ltIE9.css" >
+	<![endif]-->
 	{% block styles %}
 	{% endblock styles %}
 </head>
@@ -20,13 +23,13 @@
 				{% url events_index as events %}
 				{% url boats_index as boats %}
 				{% url pictures_index as pictures %}
-				{% url rules as rules %}
+				{% url technical as technical %}
 				<nav id="main">
 					<a href="{{history}}" {% current_nav history %}>history</a>
 					<a href="{{events}}" {% current_nav events %}>events</a>
 					<a href="{{boats}}" {% current_nav boats %}>boats</a>
 					<a href="{{pictures}}" {% current_nav pictures %}>gallery</a>
-					<a href="{{rules}}" {% current_nav rules %}>rules</a>
+					<a href="{{technical}}" {% current_nav technical %}>technical</a>
 				</nav>
 			{% endblock navigation %}
 			

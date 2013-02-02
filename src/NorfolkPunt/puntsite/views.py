@@ -6,8 +6,8 @@ from localboats.news.models import News
 from localboats.events.models import Event, RaceResult
 import datetime
 
-def rules(request):
-    return render_to_response('puntsite/rules.html', 
+def technical(request):
+    return render_to_response('puntsite/technical.html', 
                               {},
                               context_instance=RequestContext(request))
     
