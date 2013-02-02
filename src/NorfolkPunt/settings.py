@@ -15,6 +15,11 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.neontribe.co.uk'
+EMAIL_HOST_USER = 'norfolkpunt.neontribe.co.uk'
+EMAIL_HOST_PASSWORD = 'cometemperorgoosejackdaw'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
