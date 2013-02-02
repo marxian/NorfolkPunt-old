@@ -25,8 +25,9 @@ class ContactForm(forms.Form):
     sender = forms.EmailField()
 
 def contact(request):
-    contacts = { 
+    contacts = {  "chairman": "nevilleandval@gmail.com",
                   "secretary": "nevilleandval@gmail.com",
+                  "publicity": "nevilleandval@gmail.com",
                   "webmaster": "rupert@neontribe.co.uk"
                 }
     if request.method == 'POST': # If the form has been submitted...

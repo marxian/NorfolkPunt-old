@@ -3,6 +3,10 @@
 {% block title %}Norfolk Punts : Contact{% endblock %}
 {% block styles %}
     <link rel="stylesheet" type="text/css" href="/site_media/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/site_media/bootstrap/FortAwesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+<![endif]-->
 {% endblock %}
 {% block bodyid %}contact{% endblock %}
 {% block content %}
@@ -13,14 +17,21 @@
             {% csrf_token %}
             {{ form.non_field_errors }}
             <div class="control-group">
-                <label for="id_recpient" class="control-label">To the</label>
+                <label for="id_recpient" class="control-label">Addressee</label>
                 <div class="controls">
-                    <select name="recipient" id="id_recipient" required  class="input-xlarge">
-                        <option value=""></option>
-                        <option value="secretary">Association Secretary</option>
+                    <div class="input-prepend">
+                      <span class="add-on"><i class="icon-user"></i></span>
+                      <select name="recipient" id="id_recipient" required  class="input-large">
+                        <option value="" disabled="disabled">Choose one</option>
+                        <option value="chairman">Chairman</option>
+                        <option value="secretary">Secretary</option>
+                        <option value="publicity">Publicity Officer</option>
                         <option value="webmaster">Webmaster</option>
                     </select>
-                    <p class="help-block">here</p>
+                                    
+                    </div>
+                    
+                    <p class="help-block">For most matters contact the Secretary.<br/>To advertise your boat or to submit corrections or content for this site contact the Webmaster.</p>
                 </div>
             </div>
             <div class="control-group">
@@ -32,18 +43,23 @@
             <div class="control-group">
                 <label for="id_message" class="control-label">Message</label>
                 <div class="controls">
-                    <textarea name="message" id="id_message" required  class="input-xlarge"> </textarea>
-                    <p class="help-block">here</p>
+                    <textarea name="message" id="id_message" rows="6" required  class="input-xlarge"> </textarea>
                 </div>
             </div>
             <div class="control-group">
                 <label for="id_sender" class="control-label">Email address</label>
                 <div class="controls">
-                    <input type="email" name="sender" id="id_sender" required  class="input-xlarge">
+                    <div class="input-prepend">
+                      <span class="add-on"><i class="icon-envelope-alt"></i></span>
+                      <input type="email" name="sender" id="id_sender" required  class="input-large">
+                                    
+                    </div>
+                    <p class="help-block">We'll respond to the address you give here.</p>
+                    
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Send <i class="icon-ok icon-white"></i></button>
+                <button type="submit" class="btn btn-primary">Make Contact &nbsp;<i class="icon-ok icon-white"></i></button>
             </div>
         </form>
     </section>
@@ -51,6 +67,36 @@
 <div class="left">
     <section id="officers">
         <h2>Association Officers</h2>
+        <section id="chairman">
+            <h2>Chairman</h2>
+            <div class="right">
+                <i class="icon-phone"></i>&nbsp;<span class="tel">13203602 29610</span><br/>
+                <i class="icon-envelope-alt"></i>&nbsp;<a class="email" href="javascript:void(0)">Send Email</a>
+            </div>
+            
+            <div class="left">
+                <h3>Neville Khambatta</h3>
+                <a href="/boats/gamecock-37/">Gamecock</a>
+            </div>    
+            <div class="div-ider"></div>
+
+        </section>
+        <section id="secretary">
+            <h2>Secretary</h2>
+            <strong>TBC</strong>
+        </section>
+        <section id="publicity">
+            <h2>Publicity Officer</h2>
+            <strong>TBC</strong>
+        </section>
+        <section>
+            <h2>Measurers</h2>
+            <strong>TBC</strong>
+        </section>
+        <section>
+            <h2>Technical and Handicap Committee</h2>
+            <strong>TBC</strong>
+        </section>
     </section>
 </div>
 <div class="div-ider"></div>
@@ -60,7 +106,16 @@
 {% block scripts %}
     <script src="/site_media/js/jqBootstrapValidation.js"></script>
     <script>
-         $("input,textarea,select").jqBootstrapValidation(
+        //Unscramble phone numbers
+        $('.tel').each(function(){
+            $(this).text($(this).text().split('').reverse().join(""))
+        });
+        // Select contact form entries
+        $('#officers').on('click', 'a.email', function(evt){
+            evt.preventDefault();
+            $('#id_recipient').val($(this).parents('section:eq(0)').attr('id'));
+        });
+        $("input,textarea,select").jqBootstrapValidation(
             {
                 preventSubmit: true,
                 submitError: function($form, event, errors) {
@@ -68,7 +123,8 @@
                     // the error messages to the user, log, etc.
                 },
                 submitSuccess: function($form, event) {
-                    
+                    alert('It seems that this site is having trouble sending email. Please send your message directly to rupert@neontribe.co.uk')
+                    event.preverntDefault();
                 },
                 filter: function() {
                     return $(this).is(":visible");

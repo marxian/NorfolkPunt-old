@@ -785,11 +785,29 @@ li.event span.navigation-race {
   max-width: 50%;
 }
 
+#contact .left {
+  width: 45%;
+}
+
 #contact section h2 {
   text-align: center;
+  margin-bottom: 10px;
 }
 #contact form {
   width: 100%;
+}
+
+#contact #officers section {
+  font-size: large;
+}
+
+#contact #officers section div.left {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#contact #officers section div.right {
+  margin-bottom: 0px;
 }
 
 /* THANKS */
