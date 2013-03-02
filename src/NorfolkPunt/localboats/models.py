@@ -3,6 +3,8 @@ from django.template.defaultfilters import slugify, truncatewords
 from datetime import datetime
 from photologue.models import ImageModel
 from licenses.models import License
+from base64 import b64encode
+import mimetypes
 
 
 YEAR_CHOICES = [(x,x) for x in list(reversed(range(1890, 2020)))]
@@ -121,6 +123,19 @@ class Boat(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('boat_view', [self.slug])
+
+    def image_data_uri(self):
+        pic = self.preferred_pic or (self.gallery and self.gallery[0] or None)
+        if not pic:
+            return ''
+        furl = pic.get_puntspotter_url() #force the cache to build this size because the next line doesn't
+        fn = pic.get_puntspotter_filename()
+        with open(fn, "rb") as file:
+            data = file.read()
+
+        encoded = b64encode(data)
+        mime = mimetypes.guess_type(fn)[0] + ";"
+        return "data:%sbase64,%s" % (mime, encoded)
     
     @property
     def gallery(self):

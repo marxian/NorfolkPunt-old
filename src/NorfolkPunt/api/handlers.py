@@ -11,6 +11,8 @@ class BoatHandler(BaseHandler):
               'loa',
               'handicap',
               'year_built',
+              'get_absolute_url',
+              'image_data_uri',
               'slug',
               ('builder', ('name',),),
               ('construction', ('name',),),
