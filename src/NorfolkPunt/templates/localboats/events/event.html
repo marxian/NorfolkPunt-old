@@ -23,7 +23,10 @@
 							{% endfor %}
 						{% endif %}
 					</dl>
-					{{ result.report|linebreaks }}
+					{{ result.report|safe|linebreaks }}
+					{% if result.full_results %}
+						<a href="{{result.full_results.url}}">Download full report</a>
+					{% endif %}
 				</div>
 			{% endfor %}
 			<div class="div-ider"></div>
