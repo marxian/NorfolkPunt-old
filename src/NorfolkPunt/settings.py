@@ -3,7 +3,7 @@ import os
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 STATIC_DOC_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'site-media'))
 STATIC_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'site-media'))
