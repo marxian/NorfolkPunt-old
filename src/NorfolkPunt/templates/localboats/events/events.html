@@ -10,17 +10,18 @@
 {% block content %}
 	<nav id="list-options" class="white80 shadow">
       <h3>Show:</h3>
-      <ul id="filter" class="option-set"> 
+      <ul id="filter" class="option-set">
 		<li><a href="#future" data-filter=".future">Future</a></li>
 		<li><a href="#past" data-filter=".past">Past</a></li>
 		<li><a href="#results" data-filter=".results">Results</a></li>
+		<li><a href="#travellers" data-filter=".travellers-series2016">Travellers Series 2016</a></li>
       </ul>
   	</nav>
 
 	<ul id="super-list" class="fitRows clearfix">
 	{% for event in future %}
-	    <li id="{{ event.slug }}" 
-			class="event {{ event.type|slugify }} {% if event.results.count %}results{% endif %} future"
+	    <li id="{{ event.slug }}"
+			class="future {{event.get_filterable_classes}}"
 			data-start="{{ event.start }}"
 			data-results="{{ event.results.count }}"
 			data-tense="future"
@@ -33,8 +34,8 @@
 		</li>
 	{% endfor %}
 	{% for event in past %}
-	    <li id="{{ event.slug }}" 
-			class="event {{ event.type|slugify }} {% if event.results.count %}results{% endif %} past"
+	    <li id="{{ event.slug }}"
+			class="past {{event.get_filterable_classes}}"
 			data-start="{{ event.start }}"
 			data-results="{{ event.results.count }}"
 			data-tense="past"
@@ -46,7 +47,7 @@
 			<em>({{event.start}}{% if event.end %} to {{event.end}}{% endif %})</em>
 		</li>
 	{% endfor %}
-	</ul> 
+	</ul>
 {% endblock content %}
 
 {% block scripts %}
@@ -55,13 +56,13 @@
 		var cur_filter = '.' + (qvars.filter || 'future'),
 			currentLayout = 'straightDown',
 			$list = $('#super-list');
-  
+
 		$('#filter a').live('click',function(){
 		  var filterName = $(this).attr('data-filter');
 		  $list.isotope({ filter : filterName });
 		  return false;
 		});
-			 
+
 		// switches selected class on buttons
 		$('#list-options').find('.option-set a').live('click', function(){
 			var $this = $(this);
@@ -87,12 +88,8 @@
 			  }
 		    }
 		  });
-		  
+
 		});
 
 	</script>
 {% endblock scripts %}
-
-
-
-
